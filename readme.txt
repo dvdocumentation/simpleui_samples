@@ -1,1 +1,1 @@
-Sample #1
+Sample SimpleUI configurations with handler source files.
