@@ -1,0 +1,144 @@
+{
+    "ClientConfiguration": {
+        "ConfigurationName": "Примеры NoSQL",
+        "ConfigurationDescription": "Примеры утилизации класса NoSQL из пайтона, который предоставляет прямую рабту с NoSQL ",
+        "ConfigurationVersion": "0.0.1",
+        "Processes": [
+            {
+                "type": "Process",
+                "ProcessName": "Put, Get",
+                "PlanFactHeader": "План-факт",
+                "DefineOnBackPressed": false,
+                "hidden": false,
+                "login_screen": false,
+                "SC": false,
+                "Operations": [
+                    {
+                        "type": "Operation",
+                        "Name": "Новый экран",
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "noConfirmation": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "send_when_opened": false,
+                        "onlineOnInput": false,
+                        "DefOnlineOnCreate": "",
+                        "DefOnlineOnInput": "",
+                        "DefOnCreate": "putget_start",
+                        "DefOnInput": "putget_input",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "Текст",
+                                        "Variable": "btn_text"
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "Число",
+                                        "Variable": "btn_number"
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "Булево",
+                                        "Variable": "btn_boolean"
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "Все стереть",
+                                        "Variable": "btn_destroy"
+                                    },
+                                    {
+                                        "type": "TableLayout",
+                                        "height": "match_parent",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "@table",
+                                        "Variable": ""
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ProcessName": "Поиск",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "Name": "Новый экран",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "Button",
+                                        "height": "match_parent",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "Запуск",
+                                        "Variable": "btn_run",
+                                        "BackgroundColor": "#FA8072"
+                                    }
+                                ]
+                            }
+                        ],
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "onlineOnInput": false,
+                        "DefOnInput": "search_input"
+                    }
+                ]
+            }
+        ],
+        "ConfigurationSettings": {
+            "uid": "eb0e06078e2c43b48461355fc57b5476"
+        },
+        "ConfigurationTags": "Py,off-line",
+        "PyHandlers": "aW1wb3J0IGpzb24KZnJvbSBydS50cmF2ZWxmb29kLnNpbXBsZV91aSBpbXBvcnQgTm9TUUwgYXMgbm9DbGFzcwpmcm9tIGphdmEgaW1wb3J0IGpjbGFzcwoKI9GN0YLQviDQtNC70Y8g0L3QsNGC0LjQstC90L7Qs9C+INGC0L7RgdGC0LAKZnJvbSBhbmRyb2lkLndpZGdldCBpbXBvcnQgVG9hc3QKZnJvbSBjb20uY2hhcXVvLnB5dGhvbiBpbXBvcnQgUHl0aG9uCiAgICAKZGVmIHB1dGdldF9pbnB1dChoYXNoTWFwLF9maWxlcz1Ob25lLF9kYXRhPU5vbmUpOgogICAKICAgIAoKICAgIG5vQ2xhc3MgPSBqY2xhc3MoInJ1LnRyYXZlbGZvb2Quc2ltcGxlX3VpLk5vU1FMIikKICAgIG5jbCA9IG5vQ2xhc3MoInRlc3RfbmV3X25vc3FsIikKCiAgICBpZiBoYXNoTWFwLmdldCgibGlzdGVuZXIiKT09ImJ0bl90ZXh0IjoKICAgICAgICBuY2wucHV0KCJrMSIsItCt0YLQviDRgdGC0YDQvtC60LAiLFRydWUpCiAgICAgICAgcmVzMSA9IG5jbC5nZXQoImsxIikKCiAgICAgICAgVG9hc3QubWFrZVRleHQoUHl0aG9uLmdldFBsYXRmb3JtKCkuZ2V0QXBwbGljYXRpb24oKSwgc3RyKHJlczEpKyIg0YLQuNC/ICIrc3RyKHR5cGUocmVzMSkpLAogICAgICAgICAgICAgICAgICAgICAgIFRvYXN0LkxFTkdUSF9TSE9SVCkuc2hvdygpCiAgICAKICAgIGlmIGhhc2hNYXAuZ2V0KCJsaXN0ZW5lciIpPT0iYnRuX251bWJlciI6CiAgICAgICAgbmNsLnB1dCgiazIiLDU1NSxUcnVlKQogICAgICAgIHJlczIgPSBuY2wuZ2V0KCJrMiIpCgogICAgICAgIFRvYXN0Lm1ha2VUZXh0KFB5dGhvbi5nZXRQbGF0Zm9ybSgpLmdldEFwcGxpY2F0aW9uKCksIHN0cihyZXMyKSsiINGC0LjQvyAiK3N0cih0eXBlKHJlczIpKSwKICAgICAgICAgICAgICAgICAgICAgICBUb2FzdC5MRU5HVEhfU0hPUlQpLnNob3coKQogICAgCgogICAgaWYgaGFzaE1hcC5nZXQoImxpc3RlbmVyIik9PSJidG5fYm9vbGVhbiI6CiAgICAgICAgbmNsLnB1dCgiazMiLFRydWUsVHJ1ZSkKICAgICAgICByZXMzID0gbmNsLmdldCgiazMiKQoKICAgICAgICBUb2FzdC5tYWtlVGV4dChQeXRob24uZ2V0UGxhdGZvcm0oKS5nZXRBcHBsaWNhdGlvbigpLCBzdHIocmVzMykrIiDRgtC40L8gIitzdHIodHlwZShyZXMzKSksCiAgICAgICAgICAgICAgICAgICAgICAgVG9hc3QuTEVOR1RIX1NIT1JUKS5zaG93KCkKCiAgICBpZiBoYXNoTWFwLmdldCgibGlzdGVuZXIiKT09ImJ0bl9kZXN0cm95IjoKICAgICAgICAKICAgICAgICBuY2wuZGVzdHJveSgpCiAgICAgICAgaGFzaE1hcC5wdXQoInNwZWFrIiwiQXR0ZW50aW9uISBBbGwgZGF0YSBoYXMgYmVlbiBkZXN0cm95ZWQhIikgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgCgogICAgcmV0dXJuIGhhc2hNYXAgCgpkZWYgcHV0Z2V0X3N0YXJ0KGhhc2hNYXAsX2ZpbGVzPU5vbmUsX2RhdGE9Tm9uZSk6CiAgIAogICAgCgogICAgbm9DbGFzcyA9IGpjbGFzcygicnUudHJhdmVsZm9vZC5zaW1wbGVfdWkuTm9TUUwiKQogICAgbmNsID0gbm9DbGFzcygidGVzdF9uZXdfbm9zcWwiKQoKICAgIHJlc3VsdHM9ewogICAgInR5cGUiOiAidGFibGUiLAogICAgInRleHRzaXplIjogIjI1IiwKICAgICJoaWRlY2FwdGlvbiI6ICJmYWxzZSIsCiAgICAiaGlkZWludGVybGluZSI6ICJmYWxzZSIsCiAgICAiY29sdW1ucyI6IFsKICAgIHsKICAgICAgICAibmFtZSI6ICJrIiwKICAgICAgICAiaGVhZGVyIjogItCa0LvRjtGHIiwKICAgICAgICAid2VpZ2h0IjogIjEiCiAgICB9LAogICAgewogICAgICAgICJuYW1lIjogInYiLAogICAgICAgICJoZWFkZXIiOiAi0JfQvdCw0YfQtdC90LjQtSIsCiAgICAgICAgIndlaWdodCI6ICIxIgogICAgfQogICAgXSwKICAgICJyb3dzIjogW10KICAgIH0gICAgICAgICAgICAgCgogICAga2V5cyA9IG5jbC5nZXRhbGxrZXlzKCkKICAgIGhhc2hNYXAucHV0KCJ0b2FzdCIsc3RyKGtleXMpKQogICAgCiAgICBqa2V5cyA9IGpzb24ubG9hZHMoa2V5cykKICAgIGZvciBrIGluIGprZXlzOgogICAgICAgIHJlc3VsdHNbJ3Jvd3MnXS5hcHBlbmQoeyJrIjpzdHIoayksInYiOnN0cihuY2wuZ2V0KGspKX0pCgogICAgaGFzaE1hcC5wdXQoInRhYmxlIixqc29uLmR1bXBzKHJlc3VsdHMpKQoKICAgIHJldHVybiBoYXNoTWFwICAgICAKCmRlZiBzZWFyY2hfaW5wdXQoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICAgIG5jbCA9IG5vQ2xhc3MoInRlc3RfbmV3X25vc3FsIikKCiAgICBqMSA9IHsibmFtZSI6ItCY0LLQsNC9Iiwic3VybmFtZSI6ItCh0LjQvdC40YbRi9C9In0gIAogICAgbmNsLnB1dCgiamsxIixqc29uLmR1bXBzKGoxLGVuc3VyZV9hc2NpaT1GYWxzZSksVHJ1ZSkgIAoKICAgIGoyID0geyJuYW1lIjoi0JTQsNGA0YzRjyIsInN1cm5hbWUiOiLQpNGA0L7Qu9C+0LLQsCJ9ICAKICAgIG5jbC5wdXQoImprMiIsanNvbi5kdW1wcyhqMixlbnN1cmVfYXNjaWk9RmFsc2UpLFRydWUpICAKCiAgICBqMyA9IHsibmFtZSI6ItCU0LDRgNGM0Y8iLCJzdXJuYW1lIjoi0KHQvNC40YDQvdC+0LLQsCJ9ICAKICAgIG5jbC5wdXQoImprMyIsanNvbi5kdW1wcyhqMyxlbnN1cmVfYXNjaWk9RmFsc2UpLFRydWUpICAKCiAgICByZXMgPSBuY2wuZmluZEpTT04oIm5hbWUiLCAi0JTQsNGA0YzRjyIpIAoKICAgIGpyZXMgPSBqc29uLmxvYWRzKHN0cihyZXMpLmVuY29kZSgidXRmLTgiKSkgICAKCiAgICBoYXNoTWFwLnB1dCgidG9hc3QiLHN0cihqcmVzKSkKCiAgICByZXR1cm4gaGFzaE1hcCAgIAoKZGVmIGluaXQoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICAgIAoKICAgIHJldHVybiBoYXNoTWFwICAgICAg",
+        "RunPython": true,
+        "PyTimerTask": [
+            {
+                "PyTimerTaskKey": "init",
+                "PyTimerTaskDef": "init",
+                "PyTimerTaskPeriod": "-1",
+                "PyTimerTaskBuilIn": false
+            }
+        ]
+    }
+}
