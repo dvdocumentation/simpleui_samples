@@ -1,1 +1,1 @@
-UI-cjyfiguration for performance tests.
+UI-configuration for performance tests.
