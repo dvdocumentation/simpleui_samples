@@ -1,0 +1,70 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8"/>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+body { background: #ffffff; margin: 0; font-family: Arial; font-size: 8pt; font-style: normal; }
+tr.R1{ height: 15px; }
+tr.R1 td.R1C2{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; }
+tr.R1 td.R3C1{ text-align: center; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R1 td.R4C1{ border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }
+table {table-layout: fixed; padding: 0; padding-left: 2px; vertical-align:bottom; border-collapse:collapse;width: 100%; font-family: Arial; font-size: 8pt; font-style: normal; }
+td { padding: 0; padding-left: 2px; overflow:hidden; vertical-align: bottom;}
+</STYLE>
+</HEAD>
+<BODY STYLE="background: #ffffff; margin: 0; font-family: Arial; font-size: 8pt; font-style: normal; ">
+<TABLE style="width:100%; height:0px; " CELLSPACING=0>
+<COL WIDTH=25>
+<COL WIDTH=63>
+<COL WIDTH=226>
+<COL WIDTH=99>
+<COL WIDTH=63>
+<COL>
+<TR>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR CLASS=R1>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN STYLE="white-space:nowrap;max-width:0px;">Покупатель</SPAN></TD>
+<TD CLASS="R1C2" COLSPAN=4><SPAN STYLE="white-space:nowrap;max-width:0px;">{{customer}}</SPAN></TD>
+<TD></TD>
+</TR>
+<TR>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR CLASS=R1>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R3C1"><SPAN STYLE="white-space:nowrap;max-width:0px;">№</SPAN></TD>
+<TD CLASS="R3C1"><SPAN STYLE="white-space:nowrap;max-width:0px;">Товар</SPAN></TD>
+<TD CLASS="R3C1"><SPAN STYLE="white-space:nowrap;max-width:0px;">Количество</SPAN></TD>
+<TD CLASS="R3C1"><SPAN STYLE="white-space:nowrap;max-width:0px;">Цена</SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD></TD>
+</TR>
+ {% for line in lines%}
+<TR CLASS=R1>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R4C1"><SPAN STYLE="white-space:nowrap;max-width:0px;">{{line.npp}}</SPAN></TD>
+<TD CLASS="R4C1"><SPAN STYLE="white-space:nowrap;max-width:0px;">{{line.name}}</SPAN></TD>
+<TD CLASS="R4C1"><SPAN STYLE="white-space:nowrap;max-width:0px;">{{line.qty}}</SPAN></TD>
+<TD CLASS="R4C1"><SPAN STYLE="white-space:nowrap;max-width:0px;">{{line.price}}</SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD></TD>
+</TR>
+{% endfor %}
+</TABLE>
+</BODY>
+</HTML>
