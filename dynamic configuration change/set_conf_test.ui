@@ -1,0 +1,119 @@
+{
+    "ClientConfiguration": {
+        "ConfigurationName": "Тест смены конфигурации",
+        "ConfigurationDescription": "Разработка новой конфигурации SimpleUI",
+        "ConfigurationVersion": "0.0.1",
+        "Processes": [
+            {
+                "type": "Process",
+                "ProcessName": "Смена конфигурации",
+                "PlanFactHeader": "План-факт",
+                "DefineOnBackPressed": false,
+                "hidden": false,
+                "login_screen": false,
+                "SC": false,
+                "Operations": [
+                    {
+                        "type": "Operation",
+                        "Name": "Смена конфы",
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "noConfirmation": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "send_when_opened": false,
+                        "onlineOnInput": false,
+                        "DefOnlineOnCreate": "",
+                        "DefOnlineOnInput": "",
+                        "DefOnCreate": "test_open",
+                        "DefOnInput": "test_input",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "wrap_content",
+                                        "weight": "0",
+                                        "Value": "тест",
+                                        "Variable": "btn_change"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "CVOperationName": "Новая операция ActiveCV",
+                "type": "CVOperation",
+                "CVFrames": [
+                    {
+                        "Name": "Новый шаг ActiveCV",
+                        "type": "CVFrame",
+                        "CVOnline": false,
+                        "CVCameraDevice": "Front",
+                        "CVDetector": "Objects_f1",
+                        "CVResolution": "HD1080",
+                        "CVDetectorMode": "train"
+                    }
+                ]
+            },
+            {
+                "ProcessName": "Смена экрана на лету",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "Name": "Новый экран",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "wrap_content",
+                                        "weight": "0",
+                                        "Value": "тест",
+                                        "Variable": "btn_test"
+                                    }
+                                ]
+                            }
+                        ],
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "onlineOnInput": false,
+                        "DefOnCreate": "screen_open",
+                        "DefOnInput": "screen_input"
+                    }
+                ]
+            }
+        ],
+        "ConfigurationSettings": {
+            "uid": "e6283369bf154a7e959e259839b2bffb"
+        },
+        "ConfigurationTags": "Py,off-line,ActiveCV®",
+        "PyHandlers": "aW1wb3J0IGpzb24KCmRlZiB0ZXN0X29wZW4oaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICAKICAKICBoYXNoTWFwLnB1dCgiZ2V0SlNPTkNvbmZpZ3VyYXRpb24iLCIiKQogIAoKICByZXR1cm4gaGFzaE1hcAoKZGVmIHRlc3RfaW5wdXQoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICAKICBjb25maWcgPSBqc29uLmxvYWRzKGhhc2hNYXAuZ2V0KCdfY29uZmlndXJhdGlvbicpKQoKICBmb3IgcHJvY2VzcyBpbiBjb25maWdbJ0NsaWVudENvbmZpZ3VyYXRpb24nXVsnUHJvY2Vzc2VzJ106CiAgICBpZiBwcm9jZXNzWyd0eXBlJ109PSdDVk9wZXJhdGlvbic6CiAgICAgICAgZm9yIGZyYW1lIGluIHByb2Nlc3NbJ0NWRnJhbWVzJ106CiAgICAgICAgICAgIGZyYW1lWydDVkNhbWVyYURldmljZSddPSJCYWNrIgoKCiAgaGFzaE1hcC5wdXQoJ3NldEpTT05Db25maWd1cmF0aW9uJywganNvbi5kdW1wcyhjb25maWcsIGVuc3VyZV9hc2NpaT1GYWxzZSkpCgogIGhhc2hNYXAucHV0KCJ0b2FzdCIsItC/0L7QvNC10L3Rj9C70LgiKQogIAoKICByZXR1cm4gaGFzaE1hcAoKCmRlZiBzY3JlZW5fb3BlbihoYXNoTWFwLF9maWxlcz1Ob25lLF9kYXRhPU5vbmUpOgogCgogIGhhc2hNYXAucHV0KCJnZXRKU09OU2NyZWVuIiwiIikgIAoKICByZXR1cm4gaGFzaE1hcAoKZGVmIHNjcmVlbl9pbnB1dChoYXNoTWFwLF9maWxlcz1Ob25lLF9kYXRhPU5vbmUpOgogIAogIHNjcmVlbiA9IGpzb24ubG9hZHMoaGFzaE1hcC5nZXQoJ0pTT05TY3JlZW4nKSkKCgogIGVsID0gc2NyZWVuWydFbGVtZW50cyddWzBdCiAgbmV3X2J0biA9IHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJ0eXBlIjogIkJ1dHRvbiIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAiaGVpZ2h0IjogIndyYXBfY29udGVudCIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAid2lkdGgiOiAid3JhcF9jb250ZW50IiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJ3ZWlnaHQiOiAiMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAiVmFsdWUiOiAi0YLQtdGB0YIiK3N0cihsZW4oZWxbJ0VsZW1lbnRzJ10rMSkpLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIlZhcmlhYmxlIjogImJ0bl9jaGFuZ2UiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0KICBlbFsnRWxlbWVudHMnXS5hcHBlbmQobmV3X2J0bikKICAgICAgCiAgICAKCiAgaGFzaE1hcC5wdXQoInNldEpTT05TY3JlZW4iLGpzb24uZHVtcHMoc2NyZWVuLCBlbnN1cmVfYXNjaWk9RmFsc2UpKSAgCgogIHJldHVybiBoYXNoTWFwCgogIA==",
+        "RunPython": true
+    }
+}
