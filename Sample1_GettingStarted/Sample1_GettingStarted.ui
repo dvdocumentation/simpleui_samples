@@ -1,0 +1,438 @@
+{
+    "ClientConfiguration": {
+        "ConfigurationName": "Быстрый старт",
+        "ConfigurationDescription": "Простейшие примеры",
+        "ConfigurationVersion": "0.0.1",
+        "Processes": [
+            {
+                "type": "Process",
+                "ProcessName": "Пример ввода и обработчика",
+                "PlanFactHeader": "План-факт",
+                "DefineOnBackPressed": false,
+                "hidden": false,
+                "login_screen": false,
+                "SC": false,
+                "Operations": [
+                    {
+                        "type": "Operation",
+                        "Name": "Экран a+b",
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "noConfirmation": false,
+                        "hideBottomBarScreen": true,
+                        "onlineOnStart": false,
+                        "send_when_opened": false,
+                        "onlineOnInput": false,
+                        
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "TextView",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "Переменная a",
+                                        "Variable": ""
+                                    },
+                                    {
+                                        "type": "EditTextNumeric",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "",
+                                        "Variable": "a"
+                                    },
+                                    {
+                                        "type": "TextView",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "Переменная b",
+                                        "Variable": ""
+                                    },
+                                    {
+                                        "type": "EditTextNumeric",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "",
+                                        "Variable": "b"
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "wrap_content",
+                                        "weight": "0",
+                                        "Value": "a+b=",
+                                        "Variable": "btn_res"
+                                    }
+                                ],
+                                "BackgroundColor": "",
+                                "StrokeWidth": "",
+                                "Padding": ""
+                            }
+                        ],
+                        "onlineOnAfterStart": false,
+                        "Handlers": [
+                            {
+                                "event": "onStart",
+                                "action": "run",
+                                "type": "python",
+                                "method": "sample1_on_create",
+                                "postExecute": ""
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "type": "python",
+                                "method": "sample1_on_input",
+                                "postExecute": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ProcessName": "Сканирование товара",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "Name": "Сканирование штрихкода",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "Elements": [
+                                    {
+                                        "type": "TextView",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "Сканируйте штрихкод",
+                                        "Variable": "",
+                                        "BackgroundColor": "#3f64a1",
+                                        "TextColor": "#ffffff",
+                                        "TextSize": "25",
+                                        "TextBold": true
+                                    },
+                                    {
+                                        "type": "TableLayout",
+                                        "height": "match_parent",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "@table",
+                                        "Variable": "talble_click"
+                                    }
+                                ],
+                                "type": "LinearLayout",
+                                "orientation": "vertical"
+                            },
+                            {
+                                "Value": "",
+                                "Variable": "barcode",
+                                "type": "barcode"
+                            }
+                        ],
+                        "Timer": false,
+                        "hideToolBarScreen": true,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": true,
+                        "onlineOnStart": false,
+                        "onlineOnInput": false,
+                        
+                        "send_when_opened": false,
+                        "onlineOnAfterStart": false,
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "type": "online",
+                                "method": "barcode_on_input",
+                                "postExecute": ""
+                            },
+                            {
+                                "event": "onStart",
+                                "action": "run",
+                                "type": "python",
+                                "method": "on_start_barcode",
+                                "postExecute": ""
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "Ввод количества",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "Elements": [
+                                    {
+                                        "type": "TextView",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "Введите количество",
+                                        "Variable": "",
+                                        "style_name": "Контрастная надпись действие",
+                                        "BackgroundColor": "#3f64a1",
+                                        "TextSize": "25",
+                                        "TextColor": "#ffffff",
+                                        "TextBold": true,
+                                        "gravity_horizontal": "center"
+                                    },
+                                    {
+                                        "type": "TextView",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "@nom",
+                                        "Variable": "",
+                                        "TextSize": "20"
+                                    },
+                                    {
+                                        "type": "LinearLayout",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "",
+                                        "Variable": "",
+                                        "Elements": [
+                                            {
+                                                "type": "TextView",
+                                                "height": "wrap_content",
+                                                "width": "match_parent",
+                                                "weight": "1",
+                                                "Value": "Количество:",
+                                                "Variable": ""
+                                            },
+                                            {
+                                                "type": "EditTextNumeric",
+                                                "height": "wrap_content",
+                                                "width": "match_parent",
+                                                "weight": "1",
+                                                "Value": "",
+                                                "Variable": "qty"
+                                            }
+                                        ],
+                                        "orientation": "horizontal"
+                                    }
+                                ],
+                                "type": "LinearLayout",
+                                "orientation": "vertical"
+                            }
+                        ],
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": true,
+                        "onlineOnStart": false,
+                        "onlineOnInput": false,
+                        "DefOnInput": "input_qty",
+                        "onlineOnAfterStart": false
+                    }
+                ]
+            },
+            {
+                "CVOperationName": "Просмотр остатков в Active CV",
+                "type": "CVOperation",
+                "CVFrames": [
+                    {
+                        "Name": "Новый шаг Active CV",
+                        "type": "CVFrame",
+                        "CVOnline": false,
+                        "CVDetector": "Barcode",
+                        "CVResolution": "HD720",
+                        "CVMode": "list_only",
+                        "CVInfo": "Текущие остатки",
+                        "CVFrameDefOnCreate": "",
+                        "CVAction": "Остатки на складе",
+                        "Handlers": [
+                            {
+                                "event": "OnCreate",
+                                "action": "run",
+                                "type": "python",
+                                "method": "on_start_active_cv",
+                                "postExecute": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ProcessName": "Language",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "Name": "Настройки пользователя",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "LinearLayout",
+                                        "height": "match_parent",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "<a href=\"http://www.google.com\">http://www.google.com</a>",
+                                        "Variable": "",
+                                        "orientation": "vertical",
+                                        "Elements": [
+                                            {
+                                                "type": "TextView",
+                                                "height": "wrap_content",
+                                                "width": "match_parent",
+                                                "weight": "1",
+                                                "Value": "Язык",
+                                                "Variable": "",
+                                                "TextBold": true
+                                            },
+                                            {
+                                                "type": "SpinnerLayout",
+                                                "height": "wrap_content",
+                                                "width": "match_parent",
+                                                "weight": "1",
+                                                "Value": "Русский;Английский",
+                                                "Variable": "lang"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "TextView",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "deviceLocale:",
+                                        "Variable": "",
+                                        "gravity_horizontal": "center"
+                                    },
+                                    {
+                                        "type": "TextView",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "@DEVICE_LOCALE",
+                                        "Variable": "",
+                                        "TextBold": true
+                                    },
+                                    {
+                                        "type": "TextView",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "userLocale:",
+                                        "Variable": ""
+                                    },
+                                    {
+                                        "type": "TextView",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "@USER_LOCALE",
+                                        "Variable": "",
+                                        "TextBold": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": true,
+                        "onlineOnStart": false,
+                        "onlineOnInput": false,
+                        "DefOnCreate": "",
+                        "DefOnInput": "",
+                        "noConfirmation": true,
+                        "send_when_opened": false,
+                        "onlineOnAfterStart": false,
+                        "Handlers": [
+                            {
+                                "event": "onStart",
+                                "action": "run",
+                                "type": "python",
+                                "method": "settings_on_create",
+                                "postExecute": ""
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "type": "python",
+                                "method": "settings_on_input",
+                                "postExecute": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "ConfigurationSettings": {
+            "uid": "62c5b7b0f15741d29b8e65672b7a9193",
+            "dictionaries": "{\"ru\":{\"goods_scanning\":\"*Сканирование товара\",\"scan_barcode\":\"*-*Сканируйте штрихкод*-*\",\"cv_stocks\":\"Просмотр остатков ActiveCV\",\"Barcode\":\"Штрихкод\",\"Qty\":\"Кол-во\",\"stoks\":\"Состояние склада\",\"balances\":\"Текущие остатки\"},\"en\":{\"goods_scanning\":\"Goods performing\",\"scan_barcode\":\"Scan the barcode\",\"cv_stocks\":\"ActiveCV balances\",\"Barcode\":\"Barcode\",\"Qty\":\"Qty.\",\"stoks\":\"Stock balance\",\"balances\":\"Current balance\"}}"
+        },
+        "ConfigurationTags": "Py,off-line,ActiveCV®",
+        "PyHandlers": "aW1wb3J0IGpzb24KZnJvbSBydS50cmF2ZWxmb29kLnNpbXBsZV91aSBpbXBvcnQgU2ltcGxlU1FMUHJvdmlkZXIgYXMgc3FsQ2xhc3MKCmRlZiBzYW1wbGUxX29uX2NyZWF0ZShoYXNoTWFwLF9maWxlcz1Ob25lLF9kYXRhPU5vbmUpOgogICAgaWYgbm90IGhhc2hNYXAuY29udGFpbnNLZXkoImEiKToKICAgICAgICBoYXNoTWFwLnB1dCgiYSIsIiIpICAgIAogICAgaWYgbm90IGhhc2hNYXAuY29udGFpbnNLZXkoImIiKToKICAgICAgICBoYXNoTWFwLnB1dCgiYiIsIiIpICAgICAgICAKICAgIHJldHVybiBoYXNoTWFwCgpkZWYgc2FtcGxlMV9vbl9pbnB1dChoYXNoTWFwLF9maWxlcz1Ob25lLF9kYXRhPU5vbmUpOgogICAgaWYgaGFzaE1hcC5nZXQoImxpc3RlbmVyIik9PSJidG5fcmVzIjoKICAgICAgICBoYXNoTWFwLnB1dCgidG9hc3QiLHN0cihpbnQoaGFzaE1hcC5nZXQoImEiKSkraW50KGhhc2hNYXAuZ2V0KCJiIikpKSkgICAgCiAgICAKICAgIHJldHVybiBoYXNoTWFwICAgIAoKZGVmIGluaXRfb25fc3RhcnQoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICAgIAogICAgaGFzaE1hcC5wdXQoIlNRTENvbm5lY3REYXRhYmFzZSIsInRlc3QxLkRCIikKICAgIGhhc2hNYXAucHV0KCJTUUxFeGVjIixqc29uLmR1bXBzKHsicXVlcnkiOiJjcmVhdGUgdGFibGUgSUYgTk9UIEVYSVNUUyBSZWNvcmQoaWQgaW50ZWdlciBwcmltYXJ5IGtleSBhdXRvaW5jcmVtZW50LGFydCB0ZXh0LCBiYXJjb2RlIHRleHQsIG5hbWUgdGV4dCwgcXR5IHJlYWwpIiwicGFyYW1zIjoiIn0pKQoKICAgIHJldHVybiBoYXNoTWFwCgpkZWYgaW5wdXRfcXR5KGhhc2hNYXAsX2ZpbGVzPU5vbmUsX2RhdGE9Tm9uZSk6CiAgICAKICAgIGlmIGhhc2hNYXAuZ2V0KCJsaXN0ZW5lciIpPT0iYmFyY29kZSI6CgogICAgICAgIHNxbCA9IHNxbENsYXNzKCkKICAgICAgICBzdWNjZXNzPXNxbC5TUUxFeGVjKCJpbnNlcnQgaW50byBSZWNvcmQoYmFyY29kZSxuYW1lLHF0eSkgdmFsdWVzKD8sPyw/KSIsaGFzaE1hcC5nZXQoJ2JhcmNvZGUnKSsiLCIrIlNvbWUgaXRlbSBuYW1lLi4uIisiLCIrc3RyKDEpKQogICAgICAgIAogICAgICAgIGlmIHN1Y2Nlc3M6ICAgIAogICAgICAgICAgICBoYXNoTWFwLnB1dCgiU2hvd1NjcmVlbiIsItCh0LrQsNC90LjRgNC+0LLQsNC90LjQtSDRiNGC0YDQuNGF0LrQvtC00LAiKQogICAgICAgICAgICBoYXNoTWFwLnB1dCgidG9hc3QiLCLQlNC+0LHQsNCy0LvQtdC90L4iKQoKICAgIAogICAgcmV0dXJuIGhhc2hNYXAKCmRlZiBvbl9zdGFydF9iYXJjb2RlKGhhc2hNYXAsX2ZpbGVzPU5vbmUsX2RhdGE9Tm9uZSk6CgogICAgcm93cz1bXSAgICAKCiAgICB0YWJsZSAgPSB7CiAgICAidHlwZSI6ICJ0YWJsZSIsCiAgICAidGV4dHNpemUiOiAiMjAiLAoKICAgICJjb2x1bW5zIjogWwogICAgewogICAgICAgICJuYW1lIjogImJhcmNvZGUiLAogICAgICAgICJoZWFkZXIiOiAiW0JhcmNvZGVdIiwKICAgICAgICAid2VpZ2h0IjogIjIiCiAgICB9LAogICAgewogICAgICAgICJuYW1lIjogIm5hbWUiLAogICAgICAgICJoZWFkZXIiOiAiTmFtZSIsCiAgICAgICAgIndlaWdodCI6ICIyIgogICAgfSwKICAgICAgewogICAgICAgICJuYW1lIjogInF0eSIsCiAgICAgICAgImhlYWRlciI6ICJbUXR5XSIsCiAgICAgICAgIndlaWdodCI6ICIxIgogICAgfQogICAgXQogICAgfQogICAgCiAgICBzcWwgPSBzcWxDbGFzcygpCiAgICByZXMgPSBzcWwuU1FMUXVlcnkoInNlbGVjdCAqIGZyb20gUmVjb3JkIiwiIikKCiAgICByZWNvcmRzID0ganNvbi5sb2FkcyhyZXMpCiAgICBmb3IgcmVjb3JkIGluIHJlY29yZHM6CiAgICAgICAgcm93cy5hcHBlbmQoeyJiYXJjb2RlIjpyZWNvcmQuYmFyY29kZSwibmFtZSI6cmVjb3JkLm5hbWUsInF0eSI6cmVjb3JkLnF0eX0pCgogICAgdGFibGVbJ3Jvd3MnXSA9cm93cyAgIAogICAgaGFzaE1hcC5wdXQoInRhYmxlIixqc29uLmR1bXBzKHRhYmxlKSkKCiAgICByZXR1cm4gaGFzaE1hcAoKZGVmIG9uX3N0YXJ0X2FjdGl2ZV9jdihoYXNoTWFwLF9maWxlcz1Ob25lLF9kYXRhPU5vbmUpOgogICAgaW1wb3J0IGpzb24KICAgIAogICAgc3FsID0gc3FsQ2xhc3MoKQogICAgcmVzID0gc3FsLlNRTFF1ZXJ5KCJzZWxlY3QgKiBmcm9tIFJlY29yZCIsIiIpCgogICAgcmVzdWx0cyA9IGpzb24ubG9hZHMocmVzKQogICAKCiAgICBncmVlbl9saXN0ID0gW10KICAgIHJlZF9saXN0PSBbXQogICAgaW5mb19saXN0ID0gW10KICAgIGZvciBsaW5rIGluIHJlc3VsdHM6CiAgICAgICAgam9iID0geyJvYmplY3QiOnN0cihsaW5rWydiYXJjb2RlJ10pLCJpbmZvIjpzdHIobGlua1snbmFtZSddKSsiIDwvbj4g0J7RgdGC0LDRgtC+0Lo6IDxiaWc+IitzdHIobGlua1sncXR5J10pKyI8L2JpZz4ifQogICAgICAgIGluZm9fbGlzdC5hcHBlbmQoam9iKQogICAgICAgIGdyZWVuX2xpc3QuYXBwZW5kKGxpbmtbMF0pICAgIAogICAgICAgICAgICAKICAgIGNvbm4uY2xvc2UoKSAgICAgCgogICAgaGFzaE1hcC5wdXQoIm9iamVjdF9pbmZvX2xpc3QiLGpzb24uZHVtcHMoaW5mb19saXN0LGVuc3VyZV9hc2NpaT1GYWxzZSkpCiAgICBoYXNoTWFwLnB1dCgiZ3JlZW5fbGlzdCIsJzsnLmpvaW4oZ3JlZW5fbGlzdCkpCiAgICAKICAgIHJldHVybiBoYXNoTWFwCgpkZWYgc2V0dGluZ3Nfb25fY3JlYXRlKGhhc2hNYXAsX2ZpbGVzPU5vbmUsX2RhdGE9Tm9uZSk6CiAgICBpZiBub3QgaGFzaE1hcC5jb250YWluc0tleSgiX1VzZXJMb2NhbGUiKToKICAgICAgICBoYXNoTWFwLnB1dCgiZ2V0X3VzZXJfbG9jYWxlIiwiX1VzZXJMb2NhbGUiKSAjZ2V0IGZyb20gTm9TUUwKICAgIGVsc2U6CiAgICAgICAgaGFzaE1hcC5wdXQoImxhbmciLGhhc2hNYXAuZ2V0KCJfVXNlckxvY2FsZSIpKSAjc2V0IGRlZmF1bCBsaXN0IHZhbHVlCiAgICAKICAgIHJldHVybiBoYXNoTWFwIAoKZGVmIHNldHRpbmdzX29uX2lucHV0KGhhc2hNYXAsX2ZpbGVzPU5vbmUsX2RhdGE9Tm9uZSk6CiAgICBpZiBoYXNoTWFwLmdldCgibGlzdGVuZXIiKT09ImxhbmciOgogICAgICAgIGhhc2hNYXAucHV0KCJwdXRfdXNlcl9sb2NhbGUiLGhhc2hNYXAuZ2V0KCJsYW5nIikpCiAgICAgICAgaGFzaE1hcC5wdXQoIl9Vc2VyTG9jYWxlIixoYXNoTWFwLmdldCgibGFuZyIpKSAKCiAgICAgICAgaWYgaGFzaE1hcC5nZXQoImxhbmciKT09ItCg0YPRgdGB0LrQuNC5IjoKICAgICAgICAgICAgaGFzaE1hcC5wdXQoInNldExvY2FsZSIsInJ1IikgICAKICAgICAgICBlbGlmIGhhc2hNYXAuZ2V0KCJsYW5nIik9PSLQkNC90LPQu9C40LnRgdC60LjQuSI6CiAgICAgICAgICAgIGhhc2hNYXAucHV0KCJzZXRMb2NhbGUiLCJlbiIpICAgICAgCiAgICAKICAgIHJldHVybiBoYXNoTWFwICAgIAoK",
+        "RunPython": true,
+        "StyleTemplates": [
+            {
+                "name": "Контрастная надпись действие",
+                "height": "wrap_content",
+                "width": "match_parent",
+                "BackgroundColor": "#3f64a1",
+                "TextSize": "25",
+                "TextColor": "#ffffff",
+                "TextBold": true,
+                "gravity_horizontal": "center"
+            }
+        ],
+        "PyFiles": [],
+        "PyTimerTask": [],
+        "CommonHandlers": [
+            {
+                "alias": "",
+                "event": "onLaunch",
+                "action": "run",
+                "type": "python",
+                "method": "init_on_start",
+                "postExecute": ""
+            },
+            {
+                "alias": "",
+                "event": "onSQLError",
+                "action": "run",
+                "type": "set",
+                "method": "toast=@SQLError",
+                "postExecute": ""
+            }
+        ],
+        "arch2": true
+    },
+    "RunPython": true
+}
