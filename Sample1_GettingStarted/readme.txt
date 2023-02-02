@@ -1,1 +1,1 @@
-Simple development examples. Appendix to the article https://uitxt.readthedocs.io/ru/latest/gettingstarted.html
+Simple development examples. Attachement to the article https://uitxt.readthedocs.io/ru/latest/gettingstarted.html
