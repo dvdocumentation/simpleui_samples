@@ -1,0 +1,174 @@
+{
+    "ClientConfiguration": {
+        "ConfigurationName": "Новая конфигурация",
+        "ConfigurationDescription": "Разработка новой конфигурации SimpleUI",
+        "ConfigurationVersion": "0.0.1",
+        "Processes": [
+            {
+                "type": "Process",
+                "ProcessName": "Проверка накладной",
+                "PlanFactHeader": "План-факт",
+                "DefineOnBackPressed": false,
+                "hidden": false,
+                "login_screen": false,
+                "SC": false,
+                "Operations": [
+                    {
+                        "type": "Operation",
+                        "Name": "Новый экран",
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "noConfirmation": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "send_when_opened": false,
+                        "send_after_opened": false,
+                        "onlineOnInput": false,
+                        "DefOnlineOnCreate": "",
+                        "DefOnlineOnInput": "",
+                        "DefOnCreate": "",
+                        "DefOnInput": "",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "Скачать накладную",
+                                        "Variable": "btn_get_doc"
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "Сканировать товар",
+                                        "Variable": "btn_run_scan"
+                                    },
+                                    {
+                                        "type": "TableLayout",
+                                        "height": "match_parent",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "@table",
+                                        "Variable": "",
+                                        "height_value": "0"
+                                    }
+                                ],
+                                "BackgroundColor": "",
+                                "StrokeWidth": "",
+                                "Padding": ""
+                            },
+                            {
+                                "Value": "",
+                                "Variable": "barcode",
+                                "type": "barcode"
+                            }
+                        ],
+                        "onlineOnAfterStart": false,
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "type": "python",
+                                "method": "start_cv_download",
+                                "postExecute": "",
+                                "listener": "btn_get_doc"
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "type": "python",
+                                "method": "main_input",
+                                "postExecute": "",
+                                "listener": ""
+                            },
+                            {
+                                "event": "onStart",
+                                "action": "run",
+                                "type": "python",
+                                "method": "main_open",
+                                "postExecute": ""
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "type": "python",
+                                "method": "run_scan_goods",
+                                "postExecute": "",
+                                "listener": "btn_run_scan"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "CVOperationName": "Скачать накладную",
+                "type": "CVOperation",
+                "CVFrames": [
+                    {
+                        "Name": "Новый шаг ActiveCV",
+                        "type": "CVFrame",
+                        "CVOnline": false,
+                        "CVDetector": "Barcode",
+                        "CVResolution": "HD1080",
+                        "CVMode": "green_and_red",
+                        "CVAction": "Проведите по всем QR-кодам",
+                        "Handlers": [
+                            {
+                                "event": "OnObjectDetected",
+                                "action": "run",
+                                "type": "python",
+                                "method": "new_part_cv",
+                                "postExecute": ""
+                            }
+                        ],
+                        "CVFrameDefOnNewObject": ""
+                    }
+                ],
+                "hidden": true
+            },
+            {
+                "CVOperationName": "Сканировать накладную",
+                "type": "CVOperation",
+                "CVFrames": [
+                    {
+                        "Name": "Новый шаг ActiveCV",
+                        "type": "CVFrame",
+                        "CVOnline": false,
+                        "CVMode": "list_only",
+                        "CVAction": "Сканируйте товар",
+                        "CVInfo": "@info",
+                        "Handlers": [
+                            {
+                                "event": "OnObjectDetected",
+                                "action": "run",
+                                "type": "python",
+                                "method": "scan_cv_new_object",
+                                "postExecute": ""
+                            }
+                        ]
+                    }
+                ],
+                "hidden": true
+            }
+        ],
+        "ConfigurationSettings": {
+            "uid": "f9db4af9e4a04313ad40d543be54cbf0"
+        },
+        "ConfigurationTags": "Py,off-line,ActiveCV®",
+        "PyHandlers": "CmltcG9ydCBqc29uCgpkZWYgbmV3X3BhcnRfY3YoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKTogICAKCiAgcXIgPSBoYXNoTWFwLmdldCgiY3VycmVudF9vYmplY3QiKSAgCiAgbXFyID0gcXIuc3BsaXQoIn4iKQogIAogIGlmIGxlbihtcXIpPj0yOgogICAgaWYgaGFzaE1hcC5jb250YWluc0tleSgiZ3JlZW5fbGlzdCIpOgogICAgICAgIGdyZWVubGlzdCA9ICAgaGFzaE1hcC5nZXQoImdyZWVuX2xpc3QiKS5zcGxpdCgiOyIpCiAgICBlbHNlOgogICAgICAgIGdyZWVubGlzdD1bXSAgCgogICAgZ3JlZW5saXN0LmFwcGVuZChxcikgICAgCiAgICBoYXNoTWFwLnB1dCgiZ3JlZW5fbGlzdCIsIjsiLmpvaW4oZ3JlZW5saXN0KSkKCiAgICAKICAgIGlmIGxlbihncmVlbmxpc3QpPT1pbnQobXFyWzFdKTogI25vdyB3ZSBoYXZlIGNvbXBsZXRlIHZhbHVlIGZyb20gYWxsIHBhcnRzCiAgICAgICAgCgogICAgICAgIHRvdGFsID0gW10KICAgICAgICBmb3IgZWwgaW4gZ3JlZW5saXN0OgogICAgICAgICAgICBtcXJsID0gZWwuc3BsaXQoIn4iKQogICAgICAgICAgICB0b3RhbC5hcHBlbmQoeyJudW1iZXIiOmludChtcXJsWzBdKSwidmFsdWUiOm1xcmxbMl19KQogICAgICAgIHNvcnRlZF90b3RhbCA9IHNvcnRlZCh0b3RhbCwga2V5PWxhbWJkYSBkOiBkWydudW1iZXInXSkKICAgICAgICByZXN1bHQ9IiIKICAgICAgICBmb3IgZWwgaW4gc29ydGVkX3RvdGFsOgogICAgICAgICAgICByZXN1bHQrPWVsWyd2YWx1ZSddCiAgICAgICAgCiAgICAgICAgaGFzaE1hcC5wdXQoInJlc3VsdCIscmVzdWx0KQogICAgICAgIGhhc2hNYXAucHV0KCJGaW5pc2hQcm9jZXNzIiwiIikKICAgICAgICAKCiAgcmV0dXJuIGhhc2hNYXAKCmRlZiBzdGFydF9jdl9kb3dubG9hZChoYXNoTWFwLF9maWxlcz1Ob25lLF9kYXRhPU5vbmUpOiAgIAogIAogIGlmIGhhc2hNYXAuY29udGFpbnNLZXkoImdyZWVuX2xpc3QiKToKICAgICAgICBoYXNoTWFwLnJlbW92ZSgiZ3JlZW5fbGlzdCIpCiAgCiAgaWYgaGFzaE1hcC5jb250YWluc0tleSgicmVzdWx0Iik6CiAgICAgICAgaGFzaE1hcC5yZW1vdmUoInJlc3VsdCIpICAgICAgCgogIGhhc2hNYXAucHV0KCJSdW5DViIsItCh0LrQsNGH0LDRgtGMINC90LDQutC70LDQtNC90YPRjiIpICAKCiAgcmV0dXJuIGhhc2hNYXAKCmRlZiBydW5fc2Nhbl9nb29kcyhoYXNoTWFwLF9maWxlcz1Ob25lLF9kYXRhPU5vbmUpOiAgIAogIAogIGhhc2hNYXAucHV0KCJSdW5DViIsItCh0LrQsNC90LjRgNC+0LLQsNGC0Ywg0L3QsNC60LvQsNC00L3Rg9GOIikgIAoKICByZXR1cm4gaGFzaE1hcCAgCgpjaGVja2VkID0gW10KCgpkZWYgbWFpbl9pbnB1dChoYXNoTWFwLF9maWxlcz1Ob25lLF9kYXRhPU5vbmUpOiAgIAogIGdsb2JhbCBjaGVja2VkCiAgCiAgaWYgaGFzaE1hcC5nZXQoImxpc3RlbmVyIik9PSJBY3RpdmVDViI6ICAKICAgIAogICAgaWYgaGFzaE1hcC5jb250YWluc0tleSgicmVzdWx0Iik6CiAgICAgICAgaGFzaE1hcC5wdXQoImJlZXAiLCI0MiIpICAKICBpZiBoYXNoTWFwLmdldCgibGlzdGVuZXIiKT09ImJhcmNvZGUiOiAKICAgIGNoZWNrZWQuYXBwZW5kKGhhc2hNYXAuZ2V0KCJiYXJjb2RlIikpIAogICAgICAgIAoKICByZXR1cm4gaGFzaE1hcCAKCmRlZiBzY2FuX2N2X25ld19vYmplY3QoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKTogICAKICBnbG9iYWwgY2hlY2tlZAoKICBpZiBoYXNoTWFwLmNvbnRhaW5zS2V5KCJncmVlbl9saXN0Iik6CiAgICAgICAgZ3JlZW5saXN0ID0gICBoYXNoTWFwLmdldCgiZ3JlZW5fbGlzdCIpLnNwbGl0KCI7IikKICBlbHNlOgogICAgICAgIGdyZWVubGlzdD1bXQoKICBncmVlbmxpc3QuYXBwZW5kKGhhc2hNYXAuZ2V0KCJjdXJyZW50X29iamVjdCIpKSAgICAKICBoYXNoTWFwLnB1dCgiZ3JlZW5fbGlzdCIsIjsiLmpvaW4oZ3JlZW5saXN0KSkgICAgICAKICAgIAogIGNoZWNrZWQuYXBwZW5kKGhhc2hNYXAuZ2V0KCJjdXJyZW50X29iamVjdCIpKQogIGhhc2hNYXAucHV0KCJpbmZvIiwi0J3QsNC50LTQtdC90L4gOiIrc3RyKGxlbihjaGVja2VkKSkpCiAgICAgICAgCgogIHJldHVybiBoYXNoTWFwICAgIAoKc2Nhbl9jdl9uZXdfb2JqZWN0CgpkZWYgbWFpbl9vcGVuKGhhc2hNYXAsX2ZpbGVzPU5vbmUsX2RhdGE9Tm9uZSk6ICAgCiAgZ2xvYmFsIGNoZWNrZWQKICAKICBpZiBub3QgaGFzaE1hcC5jb250YWluc0tleSgicmVzdWx0Iik6CiAgICBjaGVja2VkLmNsZWFyKCkKICBlbHNlOiAgCiAgICAgICAgCiAgICBqID0gewogICAgInR5cGUiOiAidGFibGUiLAogICAgInRleHRzaXplIjogIjIwIiwKICAgICJoaWRlY2FwdGlvbiI6ICJmYWxzZSIsCiAgICAiaGlkZWludGVybGluZSI6ICJmYWxzZSIsCiAgICAiY29sdW1ucyI6IFsKICAgIHsKICAgICAgICAibmFtZSI6ICJub20iLAogICAgICAgICJoZWFkZXIiOiAi0KLQvtCy0LDRgCIsCiAgICAgICAgIndlaWdodCI6ICIzIgogICAgfSwKICAgIAogICAgewogICAgICAgICJuYW1lIjogInVuaXQiLAogICAgICAgICJoZWFkZXIiOiAi0JXQtC4iLAogICAgICAgICJ3ZWlnaHQiOiAiMSIKICAgIH0sCiAgICB7CiAgICAgICAgIm5hbWUiOiAicXR5IiwKICAgICAgICAiaGVhZGVyIjogItCa0L7Quy3QstC+IiwKICAgICAgICAid2VpZ2h0IjogIjEiCiAgICB9CiAgICBdLAogICAgInJvd3MiOltdLAogICAgImNvbG9yY2VsbHMiOltdCgoKICAgIH0KCiAgIAogICAganJlc3VsdCA9IGpzb24ubG9hZHMoaGFzaE1hcC5nZXQoInJlc3VsdCIpKQogICAgZm9yIGkgaW4ganJlc3VsdDoKICAgICAKICAgICAgalsncm93cyddLmFwcGVuZChpKQoKICAgIGZvciBjIGluIGNoZWNrZWQ6CiAgICAgICAgcj0wCiAgICAgICAgZm9yIGkgaW4galsncm93cyddOgogICAgICAgICAgICByKz0xCiAgICAgICAgICAgIGlmIGlbJ2JhcmNvZGUnXT09YzoKICAgICAgICAgICAgICAgIGpbImNvbG9yY2VsbHMiXS5hcHBlbmQoeyJyb3ciOnN0cihyKSwiY29sdW1uIjoiMCIsImNvbG9yIjogIiMzM0NDOTkifSkKICAgICAgICAgICAgICAgIGpbImNvbG9yY2VsbHMiXS5hcHBlbmQoeyJyb3ciOnN0cihyKSwiY29sdW1uIjoiMSIsImNvbG9yIjogIiMzM0NDOTkifSkKICAgICAgICAgICAgICAgIGpbImNvbG9yY2VsbHMiXS5hcHBlbmQoeyJyb3ciOnN0cihyKSwiY29sdW1uIjoiMiIsImNvbG9yIjogIiMzM0NDOTkifSkKCgogICAgaGFzaE1hcC5wdXQoInRhYmxlIixqc29uLmR1bXBzKGosZW5zdXJlX2FzY2lpPUZhbHNlKS5lbmNvZGUoJ3V0ZjgnKS5kZWNvZGUoKSkKCiAgcmV0dXJuIGhhc2hNYXAgICAg",
+        "RunPython": true
+    }
+}
