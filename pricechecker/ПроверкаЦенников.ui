@@ -1,0 +1,84 @@
+{
+    "ClientConfiguration": {
+        "ConfigurationName": "Автоматическая проверка ценников",
+        "ConfigurationDescription": "Автоматизированная проверка ценников с целью снизить человеский фактор",
+        "ConfigurationVersion": "0.0.1",
+        "Processes": [
+            {
+                "CVOperationName": "Новая операция ActiveCV",
+                "type": "CVOperation",
+                "CVFrames": [
+                    {
+                        "Name": "Поиск товара",
+                        "type": "CVFrame",
+                        "CVOnline": false,
+                        "CVDetector": "Barcode",
+                        "CVResolution": "HD720",
+                        "CVMode": "list_and_grey",
+                        "CVAction": "Сканируйте ценник",
+                        "Handlers": [
+                            {
+                                "event": "OnObjectDetected",
+                                "action": "run",
+                                "type": "online",
+                                "method": "get_nom_cv",
+                                "postExecute": "",
+                                "listener": ""
+                            }
+                        ],
+                        "CVRecognitionSettings": "{\n    \"name\": \"Распознавание цен\",\n    \"TypeRecognition\": \"Text\",\n    \"NumberRecognition\": false,\n    \"DateRecognition\": false,\n    \"PlateNumberRecognition\": false,\n    \"ReplaceO\": true\n}",
+                        "RecognitionTemplate": "Распознавание цен"
+                    },
+                    {
+                        "Name": "Проверка цены",
+                        "type": "CVFrame",
+                        "CVOnline": false,
+                        "CVDetector": "OCR",
+                        "CVInfo": "@info",
+                        "CVAction": "Проверяем цену",
+                        "Handlers": [
+                            {
+                                "event": "OnObjectDetected",
+                                "action": "run",
+                                "type": "online",
+                                "method": "price_found_cv",
+                                "postExecute": "",
+                                "listener": ""
+                            },
+                            {
+                                "event": "OnInput",
+                                "action": "run",
+                                "type": "online",
+                                "method": "wrong_price",
+                                "postExecute": ""
+                            }
+                        ],
+                        "CVRecognitionSettings": "{\n    \"name\": \"Распознавание цен\",\n    \"TypeRecognition\": \"Text\",\n    \"NumberRecognition\": false,\n    \"DateRecognition\": false,\n    \"PlateNumberRecognition\": false,\n    \"ReplaceO\": true,\n    \"values_list\": \"@source_list\",\n    \"min_length\": \"3\",\n    \"max_length\": \"6\"\n}",
+                        "RecognitionTemplate": "Распознавание цен",
+                        "CVMode": "list_and_grey",
+                        "CVActionButtons": "Цена не совпадает",
+                        "CVResolution": "VGA"
+                    }
+                ]
+            }
+        ],
+        "ConfigurationSettings": {
+            "uid": "3a416e0d7c0048c1b2d449cb8f6b6e28"
+        },
+        "ConfigurationTags": "ActiveCV®",
+        "RecognitionTemplates": [
+            {
+                "name": "Распознавание цен",
+                "TypeRecognition": "Text",
+                "NumberRecognition": false,
+                "DateRecognition": false,
+                "PlateNumberRecognition": false,
+                "ReplaceO": true,
+                "values_list": "@source_list",
+                "min_length": "3",
+                "max_length": "6"
+            }
+        ],
+        "arch2": true
+    }
+}
