@@ -1,0 +1,1085 @@
+{
+    "ClientConfiguration": {
+        "ConfigurationName": "Новая конфигурация",
+        "ConfigurationDescription": "Разработка новой конфигурации SimpleUI",
+        "ConfigurationVersion": "0.0.1",
+        "Processes": [
+            {
+                "type": "Process",
+                "ProcessName": "Процесс 1",
+                "PlanFactHeader": "План-факт",
+                "DefineOnBackPressed": false,
+                "hidden": false,
+                "login_screen": false,
+                "SC": false,
+                "Operations": [
+                    {
+                        "type": "Operation",
+                        "Name": "Новый экран",
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "noConfirmation": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "send_when_opened": false,
+                        "send_after_opened": false,
+                        "onlineOnInput": false,
+                        "DefOnlineOnCreate": "",
+                        "DefOnlineOnInput": "",
+                        "DefOnCreate": "",
+                        "DefOnInput": "",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "TextView",
+                                        "height": "match_parent",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "Процесс 1",
+                                        "Variable": "",
+                                        "TextSize": "30"
+                                    }
+                                ],
+                                "BackgroundColor": "",
+                                "StrokeWidth": "",
+                                "Padding": ""
+                            }
+                        ],
+                        "onlineOnAfterStart": false
+                    }
+                ]
+            },
+            {
+                "ProcessName": "Процесс 2",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "Name": "Новый экран",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "TextView",
+                                        "height": "match_parent",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "Процесс 2",
+                                        "Variable": "",
+                                        "TextSize": "30"
+                                    }
+                                ],
+                                "BackgroundColor": "",
+                                "StrokeWidth": "",
+                                "Padding": ""
+                            }
+                        ],
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "onlineOnAfterStart": false,
+                        "onlineOnInput": false
+                    }
+                ]
+            },
+            {
+                "type": "Process",
+                "ProcessName": "Шаблоны стартовая страница",
+                "PlanFactHeader": "План-факт",
+                "DefineOnBackPressed": false,
+                "hidden": true,
+                "login_screen": false,
+                "SC": false,
+                "Operations": [
+                    {
+                        "type": "Operation",
+                        "Name": "Плитки",
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "noConfirmation": false,
+                        "hideBottomBarScreen": true,
+                        "onlineOnStart": false,
+                        "send_when_opened": true,
+                        "onlineOnInput": false,
+                        "PythonOnCreate": "",
+                        "PythonOnInput": "",
+                        "PythonCommonScreen": "",
+                        "DefOnlineOnCreate": "",
+                        "DefOnlineOnInput": "",
+                        "DefOnCreate": "",
+                        "DefOnInput": "",
+                        "Elements": [
+                            {
+                                "type": "Tiles",
+                                "show_by_condition": "",
+                                "Value": "@tiles",
+                                "Header": "",
+                                "document_type": "",
+                                "mask": "",
+                                "Variable": ""
+                            }
+                        ],
+                        "onlineOnAfterStart": false
+                    },
+                    {
+                        "type": "Operation",
+                        "Name": "Узкая плитка 1",
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "noConfirmation": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "send_when_opened": false,
+                        "onlineOnInput": false,
+                        "PythonOnCreate": "",
+                        "PythonOnInput": "",
+                        "PythonCommonScreen": "",
+                        "DefOnlineOnCreate": "",
+                        "DefOnlineOnInput": "",
+                        "DefOnCreate": "",
+                        "DefOnInput": "",
+                        "Elements": [
+                            {
+                                "type": "LinearLayout",
+                                "orientation": "vertical",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "weight": "0",
+                                "Elements": [
+                                    {
+                                        "type": "TextView",
+                                        "show_by_condition": "",
+                                        "Value": "@room",
+                                        "NoRefresh": false,
+                                        "document_type": "",
+                                        "mask": "",
+                                        "Variable": "",
+                                        "TextSize": "15",
+                                        "TextColor": "#FFFFFF",
+                                        "TextBold": true,
+                                        "TextItalic": false,
+                                        "BackgroundColor": "",
+                                        "width": "match_parent",
+                                        "height": "wrap_content",
+                                        "weight": 0,
+                                        "gravity_horizontal": "center"
+                                    },
+                                    {
+                                        "type": "LinearLayout",
+                                        "orientation": "horizontal",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "1",
+                                        "Elements": [
+                                            {
+                                                "type": "TextView",
+                                                "show_by_condition": "",
+                                                "Value": "Текущая",
+                                                "NoRefresh": false,
+                                                "document_type": "",
+                                                "mask": "",
+                                                "Variable": "",
+                                                "TextSize": "0",
+                                                "TextColor": "#ffffff",
+                                                "TextBold": false,
+                                                "TextItalic": false,
+                                                "BackgroundColor": "",
+                                                "width": "wrap_content",
+                                                "height": "wrap_content",
+                                                "weight": 0
+                                            },
+                                            {
+                                                "type": "TextView",
+                                                "show_by_condition": "",
+                                                "Value": "@temp",
+                                                "NoRefresh": false,
+                                                "document_type": "",
+                                                "mask": "",
+                                                "Variable": "",
+                                                "TextSize": "0",
+                                                "TextColor": "#ffffff",
+                                                "TextBold": false,
+                                                "TextItalic": false,
+                                                "BackgroundColor": "",
+                                                "width": "wrap_content",
+                                                "height": "wrap_content",
+                                                "weight": 0
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "LinearLayout",
+                                        "orientation": "horizontal",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "1",
+                                        "Elements": [
+                                            {
+                                                "type": "TextView",
+                                                "show_by_condition": "",
+                                                "Value": "Диапазон",
+                                                "NoRefresh": false,
+                                                "document_type": "",
+                                                "mask": "",
+                                                "Variable": "",
+                                                "TextSize": "0",
+                                                "TextColor": "#ffffff",
+                                                "TextBold": false,
+                                                "TextItalic": false,
+                                                "BackgroundColor": "",
+                                                "width": "wrap_content",
+                                                "height": "wrap_content",
+                                                "weight": 0
+                                            },
+                                            {
+                                                "type": "TextView",
+                                                "show_by_condition": "",
+                                                "Value": "@rate",
+                                                "NoRefresh": false,
+                                                "document_type": "",
+                                                "mask": "",
+                                                "Variable": "",
+                                                "TextSize": "0",
+                                                "TextColor": "#ffffff",
+                                                "TextBold": false,
+                                                "TextItalic": false,
+                                                "BackgroundColor": "",
+                                                "width": "wrap_content",
+                                                "height": "wrap_content",
+                                                "weight": 0
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "TextView",
+                                        "show_by_condition": "",
+                                        "Value": "@port",
+                                        "NoRefresh": false,
+                                        "document_type": "",
+                                        "mask": "",
+                                        "Variable": "",
+                                        "TextSize": "-1",
+                                        "TextColor": "#ffffff",
+                                        "TextBold": true,
+                                        "TextItalic": false,
+                                        "BackgroundColor": "",
+                                        "width": "match_parent",
+                                        "height": "wrap_content",
+                                        "weight": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "onlineOnAfterStart": false
+                    },
+                    {
+                        "type": "Operation",
+                        "Name": "Широкая плитка 3",
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "noConfirmation": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "send_when_opened": false,
+                        "onlineOnInput": false,
+                        "PythonOnCreate": "",
+                        "PythonOnInput": "",
+                        "PythonCommonScreen": "",
+                        "DefOnlineOnCreate": "",
+                        "DefOnlineOnInput": "",
+                        "DefOnCreate": "",
+                        "DefOnInput": "",
+                        "Elements": [
+                            {
+                                "type": "LinearLayout",
+                                "orientation": "vertical",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "weight": "0",
+                                "Elements": [
+                                    {
+                                        "type": "TextView",
+                                        "show_by_condition": "",
+                                        "Value": "@room",
+                                        "NoRefresh": false,
+                                        "document_type": "",
+                                        "mask": "",
+                                        "Variable": "",
+                                        "TextSize": "15",
+                                        "TextColor": "#FFFFFF",
+                                        "TextBold": true,
+                                        "TextItalic": false,
+                                        "BackgroundColor": "",
+                                        "width": "match_parent",
+                                        "height": "wrap_content",
+                                        "weight": 0,
+                                        "gravity_horizontal": "center"
+                                    },
+                                    {
+                                        "type": "Chart",
+                                        "show_by_condition": "",
+                                        "Value": "@pie1",
+                                        "NoRefresh": false,
+                                        "document_type": "",
+                                        "mask": "",
+                                        "Variable": "",
+                                        "TextSize": "11",
+                                        "TextColor": "",
+                                        "TextBold": false,
+                                        "TextItalic": false,
+                                        "BackgroundColor": "",
+                                        "width": "match_parent",
+                                        "height": "match_parent",
+                                        "weight": 1
+                                    }
+                                ]
+                            }
+                        ],
+                        "onlineOnAfterStart": false
+                    },
+                    {
+                        "type": "Operation",
+                        "Name": "Редактирование экран",
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "noConfirmation": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "send_when_opened": false,
+                        "onlineOnInput": false,
+                        "PythonOnCreate": "",
+                        "PythonOnInput": "",
+                        "PythonCommonScreen": "",
+                        "DefOnlineOnCreate": "",
+                        "DefOnlineOnInput": "",
+                        "DefOnCreate": "",
+                        "DefOnInput": "",
+                        "Elements": [
+                            {
+                                "type": "LinearLayout",
+                                "orientation": "vertical",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "weight": "0",
+                                "Elements": [
+                                    {
+                                        "type": "TextView",
+                                        "show_by_condition": "",
+                                        "Value": "@room",
+                                        "NoRefresh": false,
+                                        "document_type": "",
+                                        "mask": "",
+                                        "Variable": ""
+                                    },
+                                    {
+                                        "type": "TextView",
+                                        "show_by_condition": "",
+                                        "Value": "@temp",
+                                        "NoRefresh": false,
+                                        "document_type": "",
+                                        "mask": "",
+                                        "Variable": ""
+                                    },
+                                    {
+                                        "type": "LinearLayout",
+                                        "orientation": "horizontal",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Elements": [
+                                            {
+                                                "type": "TextView",
+                                                "show_by_condition": "",
+                                                "Value": "Диапазон",
+                                                "NoRefresh": false,
+                                                "document_type": "",
+                                                "mask": "",
+                                                "Variable": ""
+                                            },
+                                            {
+                                                "type": "TextView",
+                                                "show_by_condition": "",
+                                                "Value": "@range",
+                                                "NoRefresh": false,
+                                                "document_type": "",
+                                                "mask": "",
+                                                "Variable": ""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "TextView",
+                                        "show_by_condition": "",
+                                        "Value": "@port",
+                                        "NoRefresh": false,
+                                        "document_type": "",
+                                        "mask": "",
+                                        "Variable": ""
+                                    },
+                                    {
+                                        "type": "LinearLayout",
+                                        "orientation": "horizontal",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Elements": [
+                                            {
+                                                "type": "TextView",
+                                                "show_by_condition": "",
+                                                "Value": "Заданная температура",
+                                                "NoRefresh": false,
+                                                "document_type": "",
+                                                "mask": "",
+                                                "Variable": "",
+                                                "TextSize": "15",
+                                                "TextColor": "",
+                                                "TextBold": false,
+                                                "TextItalic": false,
+                                                "BackgroundColor": "",
+                                                "width": "match_parent",
+                                                "height": "wrap_content",
+                                                "weight": 1,
+                                                "gravity_horizontal": "right"
+                                            },
+                                            {
+                                                "type": "EditTextNumeric",
+                                                "show_by_condition": "",
+                                                "Value": "24",
+                                                "NoRefresh": false,
+                                                "document_type": "",
+                                                "mask": "",
+                                                "Variable": "et_temp",
+                                                "TextSize": "15",
+                                                "TextColor": "",
+                                                "TextBold": false,
+                                                "TextItalic": false,
+                                                "BackgroundColor": "",
+                                                "width": "match_parent",
+                                                "height": "wrap_content",
+                                                "weight": 1,
+                                                "gravity_horizontal": "right"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "show_by_condition": "",
+                                        "Value": "Остановить/Запустить",
+                                        "NoRefresh": false,
+                                        "document_type": "",
+                                        "mask": "",
+                                        "Variable": "btn_startstop"
+                                    }
+                                ]
+                            }
+                        ],
+                        "onlineOnAfterStart": false
+                    },
+                    {
+                        "type": "Operation",
+                        "Name": "Узкая плитка 2",
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "noConfirmation": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "send_when_opened": false,
+                        "onlineOnInput": false,
+                        "PythonOnCreate": "",
+                        "PythonOnInput": "",
+                        "PythonCommonScreen": "",
+                        "DefOnlineOnCreate": "",
+                        "DefOnlineOnInput": "",
+                        "DefOnCreate": "",
+                        "DefOnInput": "",
+                        "Elements": [
+                            {
+                                "type": "LinearLayout",
+                                "orientation": "vertical",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "weight": "0",
+                                "Elements": [
+                                    {
+                                        "type": "Picture",
+                                        "show_by_condition": "",
+                                        "Value": "@pic1",
+                                        "NoRefresh": false,
+                                        "document_type": "",
+                                        "mask": "",
+                                        "Variable": "",
+                                        "TextSize": "0",
+                                        "TextColor": "",
+                                        "TextBold": false,
+                                        "TextItalic": false,
+                                        "BackgroundColor": "",
+                                        "width": "match_parent",
+                                        "height": "match_parent",
+                                        "weight": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "onlineOnAfterStart": false
+                    },
+                    {
+                        "type": "Operation",
+                        "Name": "Плитка с индикатором",
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "noConfirmation": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "send_when_opened": false,
+                        "onlineOnInput": false,
+                        "PythonOnCreate": "",
+                        "PythonOnInput": "",
+                        "PythonCommonScreen": "",
+                        "DefOnlineOnCreate": "",
+                        "DefOnlineOnInput": "",
+                        "DefOnCreate": "",
+                        "DefOnInput": "",
+                        "Elements": [
+                            {
+                                "type": "LinearLayout",
+                                "orientation": "vertical",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "weight": "1",
+                                "Elements": [
+                                    {
+                                        "type": "Gauge",
+                                        "show_by_condition": "",
+                                        "Value": "@gauge1",
+                                        "NoRefresh": false,
+                                        "document_type": "",
+                                        "mask": "",
+                                        "Variable": "",
+                                        "TextSize": "0",
+                                        "TextColor": "",
+                                        "TextBold": false,
+                                        "TextItalic": false,
+                                        "BackgroundColor": "",
+                                        "width": "match_parent",
+                                        "height": "wrap_content",
+                                        "weight": 0,
+                                        "gravity_horizontal": "center"
+                                    }
+                                ]
+                            }
+                        ],
+                        "onlineOnAfterStart": false
+                    },
+                    {
+                        "type": "Operation",
+                        "Name": "Широкая плитка 2",
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "noConfirmation": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "send_when_opened": false,
+                        "onlineOnInput": false,
+                        "PythonOnCreate": "",
+                        "PythonOnInput": "",
+                        "PythonCommonScreen": "",
+                        "DefOnlineOnCreate": "",
+                        "DefOnlineOnInput": "",
+                        "DefOnCreate": "",
+                        "DefOnInput": "",
+                        "Elements": [
+                            {
+                                "type": "LinearLayout",
+                                "orientation": "vertical",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "weight": "1",
+                                "Elements": [
+                                    {
+                                        "type": "TextView",
+                                        "show_by_condition": "",
+                                        "Value": "@room",
+                                        "NoRefresh": false,
+                                        "document_type": "",
+                                        "mask": "",
+                                        "Variable": "",
+                                        "TextSize": "15",
+                                        "TextColor": "#FFFFFF",
+                                        "TextBold": true,
+                                        "TextItalic": false,
+                                        "BackgroundColor": "",
+                                        "width": "match_parent",
+                                        "height": "wrap_content",
+                                        "weight": 0,
+                                        "gravity_horizontal": "center"
+                                    },
+                                    {
+                                        "type": "LinearLayout",
+                                        "orientation": "horizontal",
+                                        "height": "match_parent",
+                                        "width": "match_parent",
+                                        "weight": "1",
+                                        "gravity_horizontal": "center",
+                                        "Elements": [
+                                            {
+                                                "type": "LinearLayout",
+                                                "orientation": "vertical",
+                                                "height": "match_parent",
+                                                "width": "match_parent",
+                                                "weight": "1",
+                                                "Elements": [
+                                                    {
+                                                        "type": "Chart",
+                                                        "show_by_condition": "",
+                                                        "Value": "@line",
+                                                        "NoRefresh": false,
+                                                        "document_type": "",
+                                                        "mask": "",
+                                                        "Variable": "",
+                                                        "TextSize": "0",
+                                                        "TextColor": "",
+                                                        "TextBold": false,
+                                                        "TextItalic": false,
+                                                        "BackgroundColor": "",
+                                                        "width": "match_parent",
+                                                        "height": "match_parent",
+                                                        "weight": 0
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "LinearLayout",
+                                                "orientation": "vertical",
+                                                "height": "wrap_content",
+                                                "width": "match_parent",
+                                                "weight": "2",
+                                                "Elements": [
+                                                    {
+                                                        "type": "TextView",
+                                                        "show_by_condition": "",
+                                                        "Value": "Текущая",
+                                                        "NoRefresh": false,
+                                                        "document_type": "",
+                                                        "mask": "",
+                                                        "Variable": "",
+                                                        "TextSize": "0",
+                                                        "TextColor": "#ffffff",
+                                                        "TextBold": false,
+                                                        "TextItalic": false,
+                                                        "BackgroundColor": "",
+                                                        "width": "wrap_content",
+                                                        "height": "wrap_content",
+                                                        "weight": 0
+                                                    },
+                                                    {
+                                                        "type": "TextView",
+                                                        "show_by_condition": "",
+                                                        "Value": "@temp",
+                                                        "NoRefresh": false,
+                                                        "document_type": "",
+                                                        "mask": "",
+                                                        "Variable": "",
+                                                        "TextSize": "-1",
+                                                        "TextColor": "#ffffff",
+                                                        "TextBold": true,
+                                                        "TextItalic": false,
+                                                        "BackgroundColor": "",
+                                                        "width": "match_parent",
+                                                        "height": "wrap_content",
+                                                        "weight": 0
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "onlineOnAfterStart": false
+                    },
+                    {
+                        "type": "Operation",
+                        "Name": "Широкая плитка 1",
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "noConfirmation": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "send_when_opened": false,
+                        "onlineOnInput": false,
+                        "PythonOnCreate": "",
+                        "PythonOnInput": "",
+                        "PythonCommonScreen": "",
+                        "DefOnlineOnCreate": "",
+                        "DefOnlineOnInput": "",
+                        "DefOnCreate": "",
+                        "DefOnInput": "",
+                        "Elements": [
+                            {
+                                "type": "LinearLayout",
+                                "orientation": "vertical",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "weight": "0",
+                                "Elements": [
+                                    {
+                                        "type": "TextView",
+                                        "show_by_condition": "",
+                                        "Value": "@room",
+                                        "NoRefresh": false,
+                                        "document_type": "",
+                                        "mask": "",
+                                        "Variable": "",
+                                        "TextSize": "15",
+                                        "TextColor": "#FFFFFF",
+                                        "TextBold": true,
+                                        "TextItalic": false,
+                                        "BackgroundColor": "",
+                                        "width": "match_parent",
+                                        "height": "wrap_content",
+                                        "weight": "0",
+                                        "gravity_horizontal": "left"
+                                    },
+                                    {
+                                        "type": "LinearLayout",
+                                        "orientation": "horizontal",
+                                        "height": "match_parent",
+                                        "width": "match_parent",
+                                        "weight": "1",
+                                        "Elements": [
+                                            {
+                                                "type": "LinearLayout",
+                                                "orientation": "vertical",
+                                                "height": "match_parent",
+                                                "width": "match_parent",
+                                                "weight": "1",
+                                                "Elements": [
+                                                    {
+                                                        "type": "TextView",
+                                                        "show_by_condition": "",
+                                                        "Value": "Поддержание",
+                                                        "NoRefresh": false,
+                                                        "document_type": "",
+                                                        "mask": "",
+                                                        "Variable": "",
+                                                        "TextSize": "-1",
+                                                        "TextColor": "#ffffff",
+                                                        "TextBold": true,
+                                                        "TextItalic": false,
+                                                        "BackgroundColor": "",
+                                                        "width": "match_parent",
+                                                        "height": "wrap_content",
+                                                        "weight": 0
+                                                    },
+                                                    {
+                                                        "type": "TextView",
+                                                        "show_by_condition": "",
+                                                        "Value": "@default_temp",
+                                                        "NoRefresh": false,
+                                                        "document_type": "",
+                                                        "mask": "",
+                                                        "Variable": "",
+                                                        "TextSize": "15",
+                                                        "TextColor": "#ffffff",
+                                                        "TextBold": true,
+                                                        "TextItalic": false,
+                                                        "BackgroundColor": "",
+                                                        "width": "match_parent",
+                                                        "height": "match_parent",
+                                                        "weight": "0"
+                                                    }
+                                                ],
+                                                "Variable": "",
+                                                "BackgroundColor": "",
+                                                "StrokeWidth": "",
+                                                "Padding": ""
+                                            },
+                                            {
+                                                "type": "LinearLayout",
+                                                "orientation": "vertical",
+                                                "height": "match_parent",
+                                                "width": "match_parent",
+                                                "weight": "1",
+                                                "Elements": [
+                                                    {
+                                                        "type": "TextView",
+                                                        "show_by_condition": "",
+                                                        "Value": "Текущая",
+                                                        "NoRefresh": false,
+                                                        "document_type": "",
+                                                        "mask": "",
+                                                        "Variable": "",
+                                                        "TextSize": "-1",
+                                                        "TextColor": "#ffffff",
+                                                        "TextBold": true,
+                                                        "TextItalic": false,
+                                                        "BackgroundColor": "",
+                                                        "width": "match_parent",
+                                                        "height": "wrap_content",
+                                                        "weight": 0
+                                                    },
+                                                    {
+                                                        "type": "TextView",
+                                                        "show_by_condition": "",
+                                                        "Value": "@temp",
+                                                        "NoRefresh": false,
+                                                        "document_type": "",
+                                                        "mask": "",
+                                                        "Variable": "",
+                                                        "TextSize": "15",
+                                                        "TextColor": "#ffffff",
+                                                        "TextBold": true,
+                                                        "TextItalic": false,
+                                                        "BackgroundColor": "",
+                                                        "width": "match_parent",
+                                                        "height": "match_parent",
+                                                        "weight": "0"
+                                                    }
+                                                ],
+                                                "Variable": "",
+                                                "BackgroundColor": "",
+                                                "StrokeWidth": "",
+                                                "Padding": ""
+                                            },
+                                            {
+                                                "type": "LinearLayout",
+                                                "orientation": "vertical",
+                                                "height": "match_parent",
+                                                "width": "match_parent",
+                                                "weight": "1",
+                                                "Elements": [
+                                                    {
+                                                        "type": "TextView",
+                                                        "show_by_condition": "",
+                                                        "Value": "Сост.",
+                                                        "NoRefresh": false,
+                                                        "document_type": "",
+                                                        "mask": "",
+                                                        "Variable": "",
+                                                        "TextSize": "-1",
+                                                        "TextColor": "#ffffff",
+                                                        "TextBold": true,
+                                                        "TextItalic": false,
+                                                        "BackgroundColor": "",
+                                                        "width": "match_parent",
+                                                        "height": "wrap_content",
+                                                        "weight": 0
+                                                    },
+                                                    {
+                                                        "type": "TextView",
+                                                        "show_by_condition": "",
+                                                        "Value": "#f06d",
+                                                        "NoRefresh": false,
+                                                        "document_type": "",
+                                                        "mask": "",
+                                                        "Variable": "",
+                                                        "TextSize": "20",
+                                                        "TextColor": "#ffffff",
+                                                        "TextBold": false,
+                                                        "TextItalic": false,
+                                                        "BackgroundColor": "",
+                                                        "width": "match_parent",
+                                                        "height": "match_parent",
+                                                        "weight": "0"
+                                                    }
+                                                ],
+                                                "Variable": "",
+                                                "BackgroundColor": "",
+                                                "StrokeWidth": "",
+                                                "Padding": ""
+                                            }
+                                        ],
+                                        "Variable": "",
+                                        "BackgroundColor": "",
+                                        "StrokeWidth": "",
+                                        "Padding": ""
+                                    }
+                                ],
+                                "gravity_horizontal": "left"
+                            }
+                        ],
+                        "onlineOnAfterStart": false
+                    },
+                    {
+                        "type": "Operation",
+                        "Name": "Маленькая плитка",
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "noConfirmation": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "send_when_opened": false,
+                        "onlineOnInput": false,
+                        "PythonOnCreate": "",
+                        "PythonOnInput": "",
+                        "PythonCommonScreen": "",
+                        "DefOnlineOnCreate": "",
+                        "DefOnlineOnInput": "",
+                        "DefOnCreate": "",
+                        "DefOnInput": "",
+                        "Elements": [
+                            {
+                                "type": "LinearLayout",
+                                "orientation": "vertical",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "weight": "0",
+                                "Elements": [
+                                    {
+                                        "type": "Picture",
+                                        "show_by_condition": "",
+                                        "Value": "^pic",
+                                        "NoRefresh": false,
+                                        "document_type": "",
+                                        "mask": "",
+                                        "Variable": "",
+                                        "TextSize": "11",
+                                        "TextColor": "",
+                                        "TextBold": false,
+                                        "TextItalic": false,
+                                        "BackgroundColor": "",
+                                        "width": "match_parent",
+                                        "height": "match_parent",
+                                        "weight": 1
+                                    }
+                                ]
+                            }
+                        ],
+                        "onlineOnAfterStart": false
+                    },
+                    {
+                        "type": "Operation",
+                        "Name": "Маленькая плитка Awesome",
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "noConfirmation": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "send_when_opened": false,
+                        "onlineOnInput": false,
+                        "PythonOnCreate": "",
+                        "PythonOnInput": "",
+                        "PythonCommonScreen": "",
+                        "DefOnlineOnCreate": "",
+                        "DefOnlineOnInput": "",
+                        "DefOnCreate": "",
+                        "DefOnInput": "",
+                        "Elements": [
+                            {
+                                "type": "LinearLayout",
+                                "orientation": "vertical",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "weight": "0",
+                                "Elements": [
+                                    {
+                                        "type": "TextView",
+                                        "show_by_condition": "",
+                                        "Value": "@pic",
+                                        "NoRefresh": false,
+                                        "document_type": "",
+                                        "mask": "",
+                                        "Variable": "",
+                                        "TextSize": "30",
+                                        "TextColor": "#ffffff",
+                                        "TextBold": false,
+                                        "TextItalic": false,
+                                        "BackgroundColor": "",
+                                        "width": "match_parent",
+                                        "height": "match_parent",
+                                        "weight": "1"
+                                    }
+                                ],
+                                "Variable": "",
+                                "BackgroundColor": "",
+                                "StrokeWidth": "",
+                                "Padding": ""
+                            }
+                        ],
+                        "onlineOnAfterStart": false
+                    }
+                ]
+            }
+        ],
+        "ConfigurationSettings": {
+            "uid": "2498cf73f3214fc2924abf2248ff0c5d"
+        },
+        "ConfigurationTags": "Py,off-line",
+        "arch2": true,
+        "Launch": "Tiles",
+        "LaunchProcess": "Шаблоны стартовая страница",
+        "LaunchVar": "_tiles",
+        "PyHandlers": "aW1wb3J0IGpzb24KaW1wb3J0IHJhbmRvbQoKaiA9ewogICJ0aWxlcyI6IFsKICAgIFsKICAgICAgewogICAgICAgICJ0ZW1wbGF0ZSI6ICLQo9C30LrQsNGPINC/0LvQuNGC0LrQsCAxIiwKICAgICAgICAiZGF0YSI6IHsKICAgICAgICAgICJyb29tIjogItC60L7RgtC10LvRjNC90LDRjyIsCiAgICAgICAgICAidGVtcCI6IHN0cihyYW5kb20ucmFuZGludCgwLDEwMCkpKyAiIMKwQyIsCiAgICAgICAgICAicmF0ZSI6ICIxMcKwQy4uLjI4wrBDIiwKICAgICAgICAgICJwb3J0IjogIk4xIgogICAgICB9LAogICAgICAiY29sb3IiOiAiIzc4MDAyZSIsCiAgICAgICJzdGFydF9zY3JlZW4iOiAiIiwKICAgICAgInN0YXJ0X3Byb2Nlc3MiOiAi0J/RgNC+0YbQtdGB0YEgMSIKICAgIH0sCiAgICB7CiAgICAgICJ0ZW1wbGF0ZSI6ICLQo9C30LrQsNGPINC/0LvQuNGC0LrQsCAxIiwKICAgICAgImRhdGEiOiB7CiAgICAgICAgInJvb20iOiAi0LLQvtC00L7Qv9C+0LTQs9C+0YLQvtCy0LrQsCIsCiAgICAgICAgInRlbXAiOiAiMjTCsEMiLAogICAgICAgICJyYXRlIjogIjExwrBDLi4uMjnCsEMiLAogICAgICAgICJwb3J0IjogIk4xIgogICAgICAgIH0sCiAgICAgICAgImNvbG9yIjogIiM3ODAwMmUiLAogICAgICAgICJzdGFydF9zY3JlZW4iOiAiIiwKICAgICAgICAic3RhcnRfcHJvY2VzcyI6ICLQn9GA0L7RhtC10YHRgSAyIgogICAgICB9CiAgICBdLAogICAgWwogICAgICB7CiAgICAgICAgInRlbXBsYXRlIjogItCo0LjRgNC+0LrQsNGPINC/0LvQuNGC0LrQsCAxIiwKICAgICAgICAiZGF0YSI6IHsKICAgICAgICAgICJyb29tIjogItCe0YLQvtC/0LvQtdC90LjQtSIsCiAgICAgICAgICAiZGVmYXVsdF90ZW1wIjogIjIzwrBDIiwKICAgICAgICAgICJ0ZW1wIjpzdHIocmFuZG9tLnJhbmRpbnQoMCwxMDApKSsgIiDCsEMiCiAgICAgICAgfSwKICAgICAgICAiY29sb3IiOiAiIzRiODMwZCIsCiAgICAgICAgInN0YXJ0X3NjcmVlbiI6ICIiLAogICAgICAgICJzdGFydF9wcm9jZXNzIjogItCg0LXQtNCw0LrRgtC40YDQvtCy0LDQvdC40LUg0L/RgNC+0YbQtdGB0YEiCiAgICAgIH0KICAgIF0sCiAgICBbCiAgICAgIHsKICAgICAgICAidGVtcGxhdGUiOiAi0JzQsNC70LXQvdGM0LrQsNGPINC/0LvQuNGC0LrQsCBBd2Vzb21lIiwKICAgICAgICAiZGF0YSI6IHsKICAgICAgICAgICJwaWMiOiAiI2YwMTkiCiAgICAgICAgfSwKICAgICAgICAiY29sb3IiOiAiIzI2YTY5YSIsCiAgICAgICAgInN0YXJ0X3NjcmVlbiI6ICIiLAogICAgICAgICJzdGFydF9wcm9jZXNzIjogItCf0YDQvtGG0LXRgdGBIDEiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidGVtcGxhdGUiOiAi0JzQsNC70LXQvdGM0LrQsNGPINC/0LvQuNGC0LrQsCBBd2Vzb21lIiwKICAgICAgICAiZGF0YSI6IHsKICAgICAgICAgICJwaWMiOiAiI2Y0OGIiCiAgICAgICAgfSwKICAgICAgICAiY29sb3IiOiAiIzAwYWNjMSIsCiAgICAgICAgInN0YXJ0X3NjcmVlbiI6ICIiLAogICAgICAgICJzdGFydF9wcm9jZXNzIjogItCf0YDQvtGG0LXRgdGBIDIiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidGVtcGxhdGUiOiAi0JzQsNC70LXQvdGM0LrQsNGPINC/0LvQuNGC0LrQsCIsCiAgICAgICAgImRhdGEiOiB7CiAgICAgICAgICAicGljIjogImxpc3QiCiAgICAgICAgfSwKICAgICAgICAiY29sb3IiOiAiIzMyMGI4NiIsCiAgICAgICAgInN0YXJ0X3NjcmVlbiI6ICIiLAogICAgICAgICJzdGFydF9wcm9jZXNzIjogItCf0YDQvtGG0LXRgdGBIDIiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidGVtcGxhdGUiOiAi0JzQsNC70LXQvdGM0LrQsNGPINC/0LvQuNGC0LrQsCIsCiAgICAgICAgImRhdGEiOiB7CiAgICAgICAgICAicGljIjogImNoYXQiCiAgICAgICAgfSwKICAgICAgICAiY29sb3IiOiAiIzMyMGI4NiIsCiAgICAgICAgInN0YXJ0X3NjcmVlbiI6ICIiLAogICAgICAgICJzdGFydF9wcm9jZXNzIjogItCf0YDQvtGG0LXRgdGBIDIiCiAgICAgIH0KICAgIF0KICBdLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiNmNWY1ZjUiCn0KCmRlZiB0aW1lcihoYXNoTWFwLF9maWxlcz1Ob25lLF9kYXRhPU5vbmUpOgoKICAjaGFzaE1hcC5wdXQoImJlZXAiLCIiKQoKIAogIGhhc2hNYXAucHV0KCJSZWZyZXNoTWVudSIsIiIpCiAgaGFzaE1hcC5wdXQoIl90aWxlcyIsanNvbi5kdW1wcyhqKSkKICBoYXNoTWFwLnB1dCgidGVtcCIsc3RyKHJhbmRvbS5yYW5kaW50KDAsMTAwKSkpCgogIHJldHVybiBoYXNoTWFwCgpkZWYgb25fb3BlbihoYXNoTWFwLF9maWxlcz1Ob25lLF9kYXRhPU5vbmUpOgogIAogCiAgaGFzaE1hcC5wdXQoIlJlZnJlc2hNZW51IiwiIikKICBoYXNoTWFwLnB1dCgiX3RpbGVzIixqc29uLmR1bXBzKGopKQogIGhhc2hNYXAucHV0KCJ0ZW1wIixzdHIocmFuZG9tLnJhbmRpbnQoMCw1KSkpCiAgCgogIHJldHVybiBoYXNoTWFw",
+        "RunPython": true,
+        "CommonHandlers": [
+            {
+                "alias": "",
+                "event": "onLaunch",
+                "action": "run",
+                "type": "python",
+                "method": "on_open",
+                "postExecute": ""
+            }
+        ],
+        "PyTimerTask": [
+            {
+                "PyTimerTaskKey": "timer",
+                "PyTimerTaskDef": "timer",
+                "PyTimerTaskPeriod": "2000",
+                "PyTimerTaskBuilIn": false
+            }
+        ],
+        "Mediafile": [
+            {
+                "MediafileKey": "chat",
+                "MediafileData": "iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAmUlEQVR4Ae3TgQXDUByE8f8IBRRBN34DZIACOkpQFFBAAG+ELwOEOCJyj/tNcB+uYi8CeAIz8OV+C9CAhzp+Alb8/KUI4I2vpgR0fC1CgLcE3C0BdTGDgAQkwEAC8oEEJMBVAuok+4AEJMBZAhKQgN/oAfPIAR2YRgzowAd4lYJjrdx5jxd4jxd4jxd4jxd4jxd4jxeMNT4iNm6DaBdRHoB8AAAAAElFTkSuQmCC",
+                "MediafileExt": "png"
+            },
+            {
+                "MediafileKey": "list",
+                "MediafileData": "iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAb0lEQVR4Ae3UoRWAMAAD0Q6FZAcGYFgkEolggAqGOEbgtaKNuLNR36SYmWUGbMDN/E5g6QFUcjraAWEJKIMLBwgQ8L83FgIQIMAXEiDAFxIgwBcSIMAXEiDAFxIgYH4CXnK6egA7UJnfA6wlMjOzD98j8X1W9SpSAAAAAElFTkSuQmCC",
+                "MediafileExt": "png"
+            }
+        ]
+    }
+}
