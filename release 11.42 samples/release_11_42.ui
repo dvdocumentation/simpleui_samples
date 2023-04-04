@@ -1,0 +1,1031 @@
+{
+    "ClientConfiguration": {
+        "ConfigurationName": "Новая конфигурация",
+        "ConfigurationDescription": "Разработка новой конфигурации SimpleUI",
+        "ConfigurationVersion": "0.0.1",
+        "Processes": [
+            {
+                "ProcessName": "Запуск runprogress",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "Name": "Новый экран",
+                        "type": "Operation",
+                        "Elements": [],
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "onlineOnAfterStart": false,
+                        "onlineOnInput": false,
+                        "Handlers": [
+                            {
+                                "event": "onStart",
+                                "action": "runprogress",
+                                "type": "python",
+                                "method": "longroutine",
+                                "postExecute": ""
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "Экран2",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "TextView",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "ЭКРАН 2",
+                                        "Variable": ""
+                                    }
+                                ],
+                                "BackgroundColor": "",
+                                "StrokeWidth": "",
+                                "Padding": ""
+                            }
+                        ],
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "onlineOnAfterStart": false,
+                        "onlineOnInput": false
+                    }
+                ]
+            },
+            {
+                "ProcessName": "Биометрия",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "Name": "Новый экран",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "Запустить проверку",
+                                        "Variable": "btn_run"
+                                    }
+                                ],
+                                "BackgroundColor": "",
+                                "StrokeWidth": "",
+                                "Padding": ""
+                            }
+                        ],
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "onlineOnAfterStart": false,
+                        "onlineOnInput": false,
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "type": "set",
+                                "method": "ShowBiometric={\"title\":\"Проверка входа\",\"body\":\"Необходима аутенификация\"}",
+                                "postExecute": "",
+                                "listener": "btn_run"
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "type": "set",
+                                "method": "toast=Добро пожаловать!",
+                                "postExecute": "",
+                                "listener": "BiometricAuthenticationSucceeded"
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "type": "set",
+                                "method": "toast=You shall not pass!",
+                                "postExecute": "",
+                                "listener": "BiometricAuthenticationError"
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "type": "set",
+                                "method": "toast=@BiometricError",
+                                "postExecute": "",
+                                "listener": "BiometricError"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ProcessName": "Уведомления с прогресс-баром",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "Name": "Новый экран",
+                        "type": "Operation",
+                        "Elements": [],
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "onlineOnAfterStart": false,
+                        "onlineOnInput": false,
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "runasync",
+                                "type": "python",
+                                "method": "longroutine_progress_notification",
+                                "postExecute": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ProcessName": "ПИН",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "Name": "Новый экран",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "wrap_content",
+                                        "weight": "0",
+                                        "Value": "Запустить экран ПИН-кода",
+                                        "Variable": "btn_pin"
+                                    }
+                                ],
+                                "BackgroundColor": "",
+                                "StrokeWidth": "",
+                                "Padding": ""
+                            }
+                        ],
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "onlineOnAfterStart": false,
+                        "onlineOnInput": false,
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "type": "python",
+                                "method": "show_pin",
+                                "postExecute": "",
+                                "listener": "btn_pin"
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "type": "set",
+                                "method": "toast=ПИН получен",
+                                "postExecute": "",
+                                "listener": "pin"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ProcessName": "Автозаполнение по SQL",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "Name": "fab",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "EditTextAutocomplete",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "SELECT nom FROM goods limit 100",
+                                        "Variable": "inp_sql"
+                                    },
+                                    {
+                                        "type": "SpinnerLayout",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "SELECT nom FROM goods limit 100",
+                                        "Variable": "inp_sql"
+                                    }
+                                ],
+                                "BackgroundColor": "",
+                                "StrokeWidth": "",
+                                "Padding": ""
+                            }
+                        ],
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "onlineOnAfterStart": false,
+                        "onlineOnInput": false
+                    }
+                ]
+            },
+            {
+                "ProcessName": "Floating action buttons",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "Name": "Новый экран",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "barcode",
+                                "type": "barcode"
+                            },
+                            {
+                                "Value": "backward",
+                                "Variable": "b_1",
+                                "type": "fab"
+                            },
+                            {
+                                "Value": "",
+                                "Variable": "v",
+                                "type": "voice"
+                            },
+                            {
+                                "Value": "#f1d8;1;-20",
+                                "Variable": "btn_plus",
+                                "type": "fab"
+                            }
+                        ],
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "onlineOnAfterStart": false,
+                        "onlineOnInput": false,
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "type": "set",
+                                "method": "toast=@listener",
+                                "postExecute": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ProcessName": "Поле объекта, BackScreen",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "Name": "Новый экран",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "object",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "@obj",
+                                        "Variable": "obj",
+                                        "TextBold": true,
+                                        "TextSize": "20"
+                                    }
+                                ],
+                                "BackgroundColor": "",
+                                "StrokeWidth": "",
+                                "Padding": ""
+                            }
+                        ],
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "onlineOnAfterStart": false,
+                        "onlineOnInput": false,
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "type": "set",
+                                "method": "ShowScreen=Выбор из списка",
+                                "postExecute": "",
+                                "listener": "obj"
+                            },
+                            {
+                                "event": "onStart",
+                                "action": "run",
+                                "type": "set",
+                                "method": "field=obj",
+                                "postExecute": ""
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "Выбор из списка",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "CardsLayout",
+                                        "height": "match_parent",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "@cards",
+                                        "Variable": ""
+                                    }
+                                ],
+                                "BackgroundColor": "",
+                                "StrokeWidth": "",
+                                "Padding": ""
+                            }
+                        ],
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": true,
+                        "onlineOnStart": false,
+                        "onlineOnAfterStart": false,
+                        "onlineOnInput": false,
+                        "Handlers": [
+                            {
+                                "event": "onStart",
+                                "action": "run",
+                                "type": "python",
+                                "method": "openobjectslist_on_open",
+                                "postExecute": ""
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "type": "set",
+                                "method": "@field=@selected_card_key; BackScreen",
+                                "postExecute": "",
+                                "listener": "CardsClick"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ProcessName": "Функция с *args",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "Name": "Новый экран",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [],
+                                "BackgroundColor": "",
+                                "StrokeWidth": "",
+                                "Padding": ""
+                            }
+                        ],
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "onlineOnAfterStart": false,
+                        "onlineOnInput": false,
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "runasync",
+                                "type": "pythonargs",
+                                "method": "testargs(@ANDROID_ID,3,5)",
+                                "postExecute": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ProcessName": "Подключение(modern)/Отключение событий",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "Name": "Новый экран",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "ModernEditText",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "{\"hint\":\"Показатель\",\"default_text\":\"@f1\",\"events\":true}",
+                                        "Variable": "f1"
+                                    },
+                                    {
+                                        "type": "CheckBox",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "Галка 1",
+                                        "Variable": "g1"
+                                    },
+                                    {
+                                        "type": "DateField",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "@d1",
+                                        "Variable": "d1"
+                                    },
+                                    {
+                                        "type": "ModernEditText",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "{\"hint\":\"Кол-во\",\"default_text\":\"@f1\",\"events\":true,\"input_type\":4}",
+                                        "Variable": "f1"
+                                    },
+                                    {
+                                        "type": "ModernEditText",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "{\"hint\":\"Комментарий\",\"default_text\":\"@f1\",\"events\":true,\"input_type\":131073}",
+                                        "Variable": "f1",
+                                        "gravity_horizontal": "left"
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "wrap_content",
+                                        "weight": "0",
+                                        "Value": "Убрать события ",
+                                        "Variable": "btn_disable"
+                                    }
+                                ],
+                                "BackgroundColor": "",
+                                "StrokeWidth": "",
+                                "Padding": ""
+                            }
+                        ],
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "onlineOnAfterStart": false,
+                        "onlineOnInput": false,
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "type": "set",
+                                "method": "object=@f1;toast=@f1",
+                                "postExecute": ""
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "type": "set",
+                                "method": "disable_events",
+                                "postExecute": "",
+                                "listener": "btn_disable"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ProcessName": "Переопределение поиска",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "Name": "Новый экран",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "CardsLayout",
+                                        "height": "match_parent",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "@cards",
+                                        "Variable": ""
+                                    }
+                                ],
+                                "BackgroundColor": "",
+                                "StrokeWidth": "",
+                                "Padding": ""
+                            }
+                        ],
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "onlineOnAfterStart": false,
+                        "onlineOnInput": false,
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "type": "set",
+                                "method": "toast=@SearchString",
+                                "postExecute": "",
+                                "listener": "Search"
+                            },
+                            {
+                                "event": "onStart",
+                                "action": "run",
+                                "type": "python",
+                                "method": "set_list_search",
+                                "postExecute": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ProcessName": "Запуск редактора карт",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "Name": "Новый экран",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "Открыть редактор",
+                                        "Variable": "btn_run"
+                                    }
+                                ],
+                                "BackgroundColor": "",
+                                "StrokeWidth": "",
+                                "Padding": ""
+                            }
+                        ],
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "onlineOnAfterStart": false,
+                        "onlineOnInput": false,
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "type": "set",
+                                "method": "toast =Карта сохранена;vibrate",
+                                "postExecute": "",
+                                "listener": "vector_editor"
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "type": "set",
+                                "method": "RunVectorEditor=@mapname",
+                                "postExecute": "",
+                                "listener": "btn_run"
+                            },
+                            {
+                                "event": "onStart",
+                                "action": "run",
+                                "type": "python",
+                                "method": "map_on_start",
+                                "postExecute": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ProcessName": "ShowProcessResult,SetResultListener, return_selected_data, selected_card_data",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "Name": "Новый экран",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "object",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "@obj",
+                                        "Variable": "obj",
+                                        "TextBold": true,
+                                        "TextSize": "20"
+                                    }
+                                ],
+                                "BackgroundColor": "",
+                                "StrokeWidth": "",
+                                "Padding": ""
+                            }
+                        ],
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "onlineOnAfterStart": false,
+                        "onlineOnInput": false,
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "type": "set",
+                                "method": "ShowProcessResult=Единицы|Выбор из списка;SetResultListener=obj_res;field=obj",
+                                "postExecute": "",
+                                "listener": "obj"
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "type": "set",
+                                "method": "beep;toast=@selected_card_data",
+                                "postExecute": "",
+                                "listener": "obj_res"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ProcessName": "Единицы",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "Name": "Новый экран",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "TextView",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "Экран 1",
+                                        "Variable": ""
+                                    }
+                                ],
+                                "BackgroundColor": "",
+                                "StrokeWidth": "",
+                                "Padding": ""
+                            }
+                        ],
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "onlineOnAfterStart": false,
+                        "onlineOnInput": false,
+                        "Handlers": []
+                    },
+                    {
+                        "Name": "Выбор из списка",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "LinearLayout",
+                                        "height": "match_parent",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "",
+                                        "Variable": "",
+                                        "orientation": "vertical",
+                                        "Elements": [
+                                            {
+                                                "type": "CardsLayout",
+                                                "height": "match_parent",
+                                                "width": "match_parent",
+                                                "weight": "0",
+                                                "Value": "@cards",
+                                                "Variable": ""
+                                            }
+                                        ],
+                                        "BackgroundColor": "",
+                                        "StrokeWidth": "",
+                                        "Padding": ""
+                                    }
+                                ],
+                                "BackgroundColor": "",
+                                "StrokeWidth": "",
+                                "Padding": ""
+                            }
+                        ],
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "onlineOnAfterStart": false,
+                        "onlineOnInput": false,
+                        "Handlers": [
+                            {
+                                "event": "onStart",
+                                "action": "run",
+                                "type": "python",
+                                "method": "units_on_open",
+                                "postExecute": ""
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "type": "set",
+                                "method": "@field=@selected_card_key; FinishProcessResult",
+                                "postExecute": "",
+                                "listener": "CardsClick"
+                            },
+                            {
+                                "event": "onStart",
+                                "action": "run",
+                                "type": "set",
+                                "method": "return_selected_data",
+                                "postExecute": ""
+                            }
+                        ]
+                    }
+                ],
+                "hidden": true
+            },
+            {
+                "ProcessName": "Подсветка полей ввода",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "Name": "Новый экран",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "EditTextText",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "",
+                                        "Variable": "et1"
+                                    },
+                                    {
+                                        "type": "EditTextNumeric",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "",
+                                        "Variable": "et2"
+                                    },
+                                    {
+                                        "type": "EditTextText",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "",
+                                        "Variable": "et3"
+                                    },
+                                    {
+                                        "type": "EditTextAutocomplete",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "раз;два;три",
+                                        "Variable": "et4"
+                                    },
+                                    {
+                                        "type": "ModernEditText",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "",
+                                        "Variable": "et5"
+                                    },
+                                    {
+                                        "type": "EditTextAuto",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "",
+                                        "Variable": "et6"
+                                    },
+                                    {
+                                        "type": "object",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "",
+                                        "Variable": "et7"
+                                    }
+                                ],
+                                "BackgroundColor": "",
+                                "StrokeWidth": "",
+                                "Padding": ""
+                            }
+                        ],
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "onlineOnAfterStart": false,
+                        "onlineOnInput": false,
+                        "Handlers": [
+                            {
+                                "event": "onStart",
+                                "action": "run",
+                                "type": "python",
+                                "method": "highlight_lists",
+                                "postExecute": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "ConfigurationSettings": {
+            "uid": "e04ad1fc1b31478d8bbb06d318b8796e"
+        },
+        "ConfigurationTags": "Py,off-line",
+        "arch2": true,
+        "PyHandlers": "aW1wb3J0IGpzb24KZnJvbSBydS50cmF2ZWxmb29kLnNpbXBsZV91aSBpbXBvcnQgU2ltcGxlVXRpbGl0ZXMgYXMgc3VDbGFzcwppbXBvcnQgcmFuZG9tCgoKZGVmIGluaXQoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKCiAgICBoYXNoTWFwLnB1dCgiU1FMQ29ubmVjdERhdGFiYXNlIiwidGVzdDU1LkRCIikKICAgICAKICAgIHJldHVybiBoYXNoTWFwCgpkZWYgbG9uZ3JvdXRpbmUoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICAgIGltcG9ydCB0aW1lCiAgICB0aW1lLnNsZWVwKDMpCiAgICAKICAgIGhhc2hNYXAucHV0KCJiZWVwIiwiIikKICAgIGhhc2hNYXAucHV0KCJTaG93U2NyZWVuIiwi0K3QutGA0LDQvTIiKQogICAgcmV0dXJuIGhhc2hNYXAgCgpkZWYgdGVzdHByb2dyZXNzKGhhc2hNYXAsX2ZpbGVzPU5vbmUsX2RhdGE9Tm9uZSk6CiAgICBoYXNoTWFwLnB1dCgiUnVuUHlUaHJlYWRQcm9ncmVzc0RlZiIsImxvbmdyb3V0aW5lIikKICAgICAgICAKICAgIHJldHVybiBoYXNoTWFwICAgIAoKZGVmIGxvbmdyb3V0aW5lMihoYXNoTWFwLF9maWxlcz1Ob25lLF9kYXRhPU5vbmUpOgogICAgaW1wb3J0IHRpbWUKICAgIHRpbWUuc2xlZXAoMykKCiAgICBoYXNoTWFwLnB1dCgibGFiZWwxIiwi0KPRgdGC0LDQvdC+0LLQu9C10L3QviDQsNGB0LjQvdGF0YDQvtC90L3QviIpCiAgICAKICAgIGhhc2hNYXAucHV0KCJSZWZyZXNoU2NyZWVuIiwiIikKICAgIAogICAgcmV0dXJuIGhhc2hNYXAKCmRlZiBsb25ncm91dGluZV9wcm9ncmVzc19ub3RpZmljYXRpb24oaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICAgIGltcG9ydCB0aW1lCgogICAgc3VDbGFzcy5VcGRhdGVQcm9ncmVzc05vdGlmaWNhdGlvbihqc29uLmR1bXBzKHsiaWQiOjExMSwicHJvZ3Jlc3MiOjAsInRpdGxlIjoiVGl0bGUiLCJib2R5IjoiTWFpbiB0ZXh0In0pKQoKICAKICAgIHRpbWUuc2xlZXAoMykKICAgIHN1Q2xhc3MuVXBkYXRlUHJvZ3Jlc3NOb3RpZmljYXRpb24oanNvbi5kdW1wcyh7ImlkIjoxMTEsInByb2dyZXNzIjoyNSwidGl0bGUiOiJUaXRsZSIsImJvZHkiOiJNYWluIHRleHQifSkpCiAgICB0aW1lLnNsZWVwKDIpCiAgICBzdUNsYXNzLlVwZGF0ZVByb2dyZXNzTm90aWZpY2F0aW9uKGpzb24uZHVtcHMoeyJpZCI6MTExLCJwcm9ncmVzcyI6NTAsInRpdGxlIjoiVGl0bGUiLCJib2R5IjoiTWFpbiB0ZXh0In0pKQogICAgdGltZS5zbGVlcCgyKQogICAgc3VDbGFzcy5VcGRhdGVQcm9ncmVzc05vdGlmaWNhdGlvbihqc29uLmR1bXBzKHsiaWQiOjExMSwicHJvZ3Jlc3MiOjc1LCJ0aXRsZSI6IlRpdGxlIiwiYm9keSI6Ik1haW4gdGV4dCJ9KSkKICAgIHRpbWUuc2xlZXAoMikKICAgIHN1Q2xhc3MuVXBkYXRlUHJvZ3Jlc3NOb3RpZmljYXRpb24oanNvbi5kdW1wcyh7ImlkIjoxMTEsInByb2dyZXNzIjoxMDAsInRpdGxlIjoiVGl0bGUiLCJib2R5IjoiTWFpbiB0ZXh0In0pKQoKICAgCiAgICAKICAgIHJldHVybiBoYXNoTWFwCgpkZWYgb3Blbm9iamVjdHNsaXN0X29uX29wZW4oaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICAgIAogICAgaiA9IHsgImN1c3RvbWNhcmRzIjogICAgICAgICB7CiAgICAgICAgICAgICJvcHRpb25zIjp7CiAgICAgICAgICAgICAgInNlYXJjaF9lbmFibGVkIjpUcnVlLAogICAgICAgICAgICAgICJzYXZlX3Bvc2l0aW9uIjpUcnVlCiAgICAgICAgICAgIAoKICAgICAgICAgICAgfSwKICAgICAgICAgICAgImxheW91dCI6IHsKICAgICAgICAgICAgInR5cGUiOiAiTGluZWFyTGF5b3V0IiwKICAgICAgICAgICAgIm9yaWVudGF0aW9uIjogInZlcnRpY2FsIiwKICAgICAgICAgICAgImhlaWdodCI6ICJtYXRjaF9wYXJlbnQiLAogICAgICAgICAgICAid2lkdGgiOiAibWF0Y2hfcGFyZW50IiwKICAgICAgICAgICAgIndlaWdodCI6ICIwIiwKICAgICAgICAgICAgIkVsZW1lbnRzIjogWwogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAidHlwZSI6ICJMaW5lYXJMYXlvdXQiLAogICAgICAgICAgICAgICAgIm9yaWVudGF0aW9uIjogImhvcml6b250YWwiLAogICAgICAgICAgICAgICAgImhlaWdodCI6ICJ3cmFwX2NvbnRlbnQiLAogICAgICAgICAgICAgICAgIndpZHRoIjogIm1hdGNoX3BhcmVudCIsCiAgICAgICAgICAgICAgICAid2VpZ2h0IjogIjAiLAogICAgICAgICAgICAgICAgIkVsZW1lbnRzIjogWwogICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAidHlwZSI6ICJMaW5lYXJMYXlvdXQiLAogICAgICAgICAgICAgICAgIm9yaWVudGF0aW9uIjogInZlcnRpY2FsIiwKICAgICAgICAgICAgICAgICJoZWlnaHQiOiAid3JhcF9jb250ZW50IiwKICAgICAgICAgICAgICAgICJ3aWR0aCI6ICJtYXRjaF9wYXJlbnQiLAogICAgICAgICAgICAgICAgIndlaWdodCI6ICIxIiwKICAgICAgICAgICAgICAgICJFbGVtZW50cyI6IFsKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAidHlwZSI6ICJUZXh0VmlldyIsCiAgICAgICAgICAgICAgICAgICAgInNob3dfYnlfY29uZGl0aW9uIjogIiIsCiAgICAgICAgICAgICAgICAgICAgIlZhbHVlIjogIkBzdHJpbmcxIiwKICAgICAgICAgICAgICAgICAgICAiTm9SZWZyZXNoIjogRmFsc2UsCiAgICAgICAgICAgICAgICAgICAgImRvY3VtZW50X3R5cGUiOiAiIiwKICAgICAgICAgICAgICAgICAgICAibWFzayI6ICIiLAogICAgICAgICAgICAgICAgICAgICJWYXJpYWJsZSI6ICIiCiAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICJ0eXBlIjogIlRleHRWaWV3IiwKICAgICAgICAgICAgICAgICAgICAic2hvd19ieV9jb25kaXRpb24iOiAiIiwKICAgICAgICAgICAgICAgICAgICAiVmFsdWUiOiAiQHN0cmluZzIiLAogICAgICAgICAgICAgICAgICAgICJOb1JlZnJlc2giOiBGYWxzZSwKICAgICAgICAgICAgICAgICAgICAiZG9jdW1lbnRfdHlwZSI6ICIiLAogICAgICAgICAgICAgICAgICAgICJtYXNrIjogIiIsCiAgICAgICAgICAgICAgICAgICAgIlZhcmlhYmxlIjogIiIKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgInR5cGUiOiAiVGV4dFZpZXciLAogICAgICAgICAgICAgICAgICAgICJzaG93X2J5X2NvbmRpdGlvbiI6ICIiLAogICAgICAgICAgICAgICAgICAgICJWYWx1ZSI6ICJAc3RyaW5nMyIsCiAgICAgICAgICAgICAgICAgICAgIk5vUmVmcmVzaCI6IEZhbHNlLAogICAgICAgICAgICAgICAgICAgICJkb2N1bWVudF90eXBlIjogIiIsCiAgICAgICAgICAgICAgICAgICAgIm1hc2siOiAiIiwKICAgICAgICAgICAgICAgICAgICAiVmFyaWFibGUiOiAiIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgXQogICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICJ0eXBlIjogIlRleHRWaWV3IiwKICAgICAgICAgICAgICAgICJzaG93X2J5X2NvbmRpdGlvbiI6ICIiLAogICAgICAgICAgICAgICAgIlZhbHVlIjogIkB2YWwiLAogICAgICAgICAgICAgICAgIk5vUmVmcmVzaCI6IEZhbHNlLAogICAgICAgICAgICAgICAgImRvY3VtZW50X3R5cGUiOiAiIiwKICAgICAgICAgICAgICAgICJtYXNrIjogIiIsCiAgICAgICAgICAgICAgICAiVmFyaWFibGUiOiAiIiwKICAgICAgICAgICAgICAgICJUZXh0U2l6ZSI6ICIxNiIsCiAgICAgICAgICAgICAgICAiVGV4dENvbG9yIjogIiNEQjcwOTMiLAogICAgICAgICAgICAgICAgIlRleHRCb2xkIjogVHJ1ZSwKICAgICAgICAgICAgICAgICJUZXh0SXRhbGljIjogRmFsc2UsCiAgICAgICAgICAgICAgICAiQmFja2dyb3VuZENvbG9yIjogIiIsCiAgICAgICAgICAgICAgICAid2lkdGgiOiAibWF0Y2hfcGFyZW50IiwKICAgICAgICAgICAgICAgICJoZWlnaHQiOiAid3JhcF9jb250ZW50IiwKICAgICAgICAgICAgICAgICJ3ZWlnaHQiOiAyCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBdCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICJ0eXBlIjogIlRleHRWaWV3IiwKICAgICAgICAgICAgICAgICJzaG93X2J5X2NvbmRpdGlvbiI6ICIiLAogICAgICAgICAgICAgICAgIlZhbHVlIjogIkBkZXNjciIsCiAgICAgICAgICAgICAgICAiTm9SZWZyZXNoIjogRmFsc2UsCiAgICAgICAgICAgICAgICAiZG9jdW1lbnRfdHlwZSI6ICIiLAogICAgICAgICAgICAgICAgIm1hc2siOiAiIiwKICAgICAgICAgICAgICAgICJWYXJpYWJsZSI6ICIiLAogICAgICAgICAgICAgICAgIlRleHRTaXplIjogIi0xIiwKICAgICAgICAgICAgICAgICJUZXh0Q29sb3IiOiAiIzZGOTM5MyIsCiAgICAgICAgICAgICAgICAiVGV4dEJvbGQiOiBGYWxzZSwKICAgICAgICAgICAgICAgICJUZXh0SXRhbGljIjogVHJ1ZSwKICAgICAgICAgICAgICAgICJCYWNrZ3JvdW5kQ29sb3IiOiAiIiwKICAgICAgICAgICAgICAgICJ3aWR0aCI6ICJ3cmFwX2NvbnRlbnQiLAogICAgICAgICAgICAgICAgImhlaWdodCI6ICJ3cmFwX2NvbnRlbnQiLAogICAgICAgICAgICAgICAgIndlaWdodCI6IDAKICAgICAgICAgICAgfQogICAgICAgICAgICBdCiAgICAgICAgfQoKICAgIH0KICAgIH0KICAgCiAgICBqWyJjdXN0b21jYXJkcyJdWyJjYXJkc2RhdGEiXT1bXQogICAgZm9yIGkgaW4gcmFuZ2UoMCw1KToKICAgICAgaWYgaT09MDoKICAgICAgICBjID0gIHsKICAgICAgIAogICAgICAgICAgImdyb3VwIjogItCa0L7QvNC/0LvQtdC60YLRg9GO0YnQuNC1IgogICAgICAgCiAgICAgICAgfQogICAgICAKICAgICAgICBqWyJjdXN0b21jYXJkcyJdWyJjYXJkc2RhdGEiXS5hcHBlbmQoYykKCiAgICAgIGlmIGk9PTQ6CiAgICAgICAgYyA9ICB7CiAgICAgICAKICAgICAgICAgICJncm91cCI6ICLQo9GG0LXQvdC60LAiCiAgICAgICAKICAgICAgICB9CiAgICAgIAogICAgICAgIGpbImN1c3RvbWNhcmRzIl1bImNhcmRzZGF0YSJdLmFwcGVuZChjKSAgIAoKICAgICAgcHJpY2UgPSAgc3RyKHJhbmRvbS5yYW5kaW50KDEwLCAxMDAwMCkpKyIg0YDRg9CxLiIgCiAgICAgIGMgPSAgewogICAgICAgICJrZXkiOiAi0JzQsNGC0LXRgNC40L3RgdC60LDRjyDQv9C70LDRgtCwIEFTVVMgUk9HIE1BWElNVVMgWjY5MCBBUEVYIisiLCAiK3N0cihwcmljZSksCiAgICAgICAKICAgICAgICAiZGVzY3IiOiAiUG9zLiAiK3N0cihpKSwKICAgICAgICAidmFsIjogc3RyKHByaWNlKSsiINGA0YPQsS4iLAogICAgICAgICJzdHJpbmcxIjogItCc0LDRgtC10YDQuNC90YHQutCw0Y8g0L/Qu9Cw0YLQsCBBU1VTIFJPRyBNQVhJTVVTIFo2OTAgQVBFWCIsCiAgICAgICAgInN0cmluZzIiOiAi0JPQvdC10LfQtNC+INC/0YDQvtGG0LXRgdGB0L7RgNCwIExHQSAxNzAwIiwKICAgICAgICAic3RyaW5nMyI6ICLQp9Cw0YHRgtC+0YLQvdCw0Y8g0YHQv9C10YbQuNGE0LjQutCw0YbQuNGPINC/0LDQvNGP0YLQuCA0ODAwINCc0JPRhiIKICAgICAgfQogICAgICAKICAgICAgalsiY3VzdG9tY2FyZHMiXVsiY2FyZHNkYXRhIl0uYXBwZW5kKGMpCgogICAgaWYgbm90IGhhc2hNYXAuY29udGFpbnNLZXkoImNhcmRzIik6CiAgICAgIGhhc2hNYXAucHV0KCJjYXJkcyIsanNvbi5kdW1wcyhqLGVuc3VyZV9hc2NpaT1GYWxzZSkuZW5jb2RlKCd1dGY4JykuZGVjb2RlKCkpCiAgICAKICAgIHJldHVybiBoYXNoTWFwCgoKZGVmIHVuaXRzX29uX29wZW4oaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICAgIAogICAgaiA9IHsgImN1c3RvbWNhcmRzIjogICAgICAgICB7CiAgICAgICAgICAgICJvcHRpb25zIjp7CiAgICAgICAgICAgICAgInNlYXJjaF9lbmFibGVkIjpUcnVlLAogICAgICAgICAgICAgICJzYXZlX3Bvc2l0aW9uIjpUcnVlCiAgICAgICAgICAgICAgCgogICAgICAgICAgICB9LAogICAgICAgICAgICAibGF5b3V0IjogewogICAgICAgICAgICAidHlwZSI6ICJMaW5lYXJMYXlvdXQiLAogICAgICAgICAgICAib3JpZW50YXRpb24iOiAidmVydGljYWwiLAogICAgICAgICAgICAiaGVpZ2h0IjogIm1hdGNoX3BhcmVudCIsCiAgICAgICAgICAgICJ3aWR0aCI6ICJtYXRjaF9wYXJlbnQiLAogICAgICAgICAgICAid2VpZ2h0IjogIjAiLAogICAgICAgICAgICAiRWxlbWVudHMiOiBbCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICJ0eXBlIjogIkxpbmVhckxheW91dCIsCiAgICAgICAgICAgICAgICAib3JpZW50YXRpb24iOiAiaG9yaXpvbnRhbCIsCiAgICAgICAgICAgICAgICAiaGVpZ2h0IjogIndyYXBfY29udGVudCIsCiAgICAgICAgICAgICAgICAid2lkdGgiOiAibWF0Y2hfcGFyZW50IiwKICAgICAgICAgICAgICAgICJ3ZWlnaHQiOiAiMCIsCiAgICAgICAgICAgICAgICAiRWxlbWVudHMiOiBbCiAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICJ0eXBlIjogIkxpbmVhckxheW91dCIsCiAgICAgICAgICAgICAgICAib3JpZW50YXRpb24iOiAidmVydGljYWwiLAogICAgICAgICAgICAgICAgImhlaWdodCI6ICJ3cmFwX2NvbnRlbnQiLAogICAgICAgICAgICAgICAgIndpZHRoIjogIm1hdGNoX3BhcmVudCIsCiAgICAgICAgICAgICAgICAid2VpZ2h0IjogIjEiLAogICAgICAgICAgICAgICAgIkVsZW1lbnRzIjogWwogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICJ0eXBlIjogIlRleHRWaWV3IiwKICAgICAgICAgICAgICAgICAgICAic2hvd19ieV9jb25kaXRpb24iOiAiIiwKICAgICAgICAgICAgICAgICAgICAiVmFsdWUiOiAiQHN0cmluZzEiLAogICAgICAgICAgICAgICAgICAgICJOb1JlZnJlc2giOiBGYWxzZSwKICAgICAgICAgICAgICAgICAgICAiZG9jdW1lbnRfdHlwZSI6ICIiLAogICAgICAgICAgICAgICAgICAgICJtYXNrIjogIiIsCiAgICAgICAgICAgICAgICAgICAgIlZhcmlhYmxlIjogIiIKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgInR5cGUiOiAiVGV4dFZpZXciLAogICAgICAgICAgICAgICAgICAgICJzaG93X2J5X2NvbmRpdGlvbiI6ICIiLAogICAgICAgICAgICAgICAgICAgICJWYWx1ZSI6ICJAc3RyaW5nMiIsCiAgICAgICAgICAgICAgICAgICAgIk5vUmVmcmVzaCI6IEZhbHNlLAogICAgICAgICAgICAgICAgICAgICJkb2N1bWVudF90eXBlIjogIiIsCiAgICAgICAgICAgICAgICAgICAgIm1hc2siOiAiIiwKICAgICAgICAgICAgICAgICAgICAiVmFyaWFibGUiOiAiIgogICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAidHlwZSI6ICJUZXh0VmlldyIsCiAgICAgICAgICAgICAgICAgICAgInNob3dfYnlfY29uZGl0aW9uIjogIiIsCiAgICAgICAgICAgICAgICAgICAgIlZhbHVlIjogIkBzdHJpbmczIiwKICAgICAgICAgICAgICAgICAgICAiTm9SZWZyZXNoIjogRmFsc2UsCiAgICAgICAgICAgICAgICAgICAgImRvY3VtZW50X3R5cGUiOiAiIiwKICAgICAgICAgICAgICAgICAgICAibWFzayI6ICIiLAogICAgICAgICAgICAgICAgICAgICJWYXJpYWJsZSI6ICIiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBdCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBdCiAgICAgICAgICAgIH0KICAgICAgICAgICAgXQogICAgICAgIH0KCiAgICB9CiAgICB9CiAgIAogICAgalsiY3VzdG9tY2FyZHMiXVsiY2FyZHNkYXRhIl09W10KCiAgICBjID0gIHsKICAgICAgICAia2V5IjogItCo0YIiLAogICAgICAgCiAgICAgICAgCiAgICAgICAgInZhbCI6ICIwMDEiLAogICAgICAgICJzdHJpbmcxIjogItCo0YIuIiwKICAgICAgICAic3RyaW5nMiI6ICLQmtC+0LvQuNGH0LXRgdGC0LLQviDQsiDRg9C/0LDQutC+0LLQutC1PTEiLAogICAgICAgICJzdHJpbmczIjogItCo0YLRg9C60LgiCiAgICAgIH0KICAgICAgCiAgICBqWyJjdXN0b21jYXJkcyJdWyJjYXJkc2RhdGEiXS5hcHBlbmQoYykKCiAgICBjID0gIHsKICAgICAgICAia2V5IjogItCa0LMiLAogICAgICAgCiAgICAgICAgCiAgICAgICAgInZhbCI6ICIwMDEiLAogICAgICAgICJzdHJpbmcxIjogItCa0LMuIiwKICAgICAgICAic3RyaW5nMiI6ICLQmtC+0LvQuNGH0LXRgdGC0LLQviDQsiDRg9C/0LDQutC+0LLQutC1PTEiLAogICAgICAgICJzdHJpbmczIjogItCa0LjQu9C+0LPRgNCw0LzQvNGLIgogICAgICB9CiAgICAgIAogICAgalsiY3VzdG9tY2FyZHMiXVsiY2FyZHNkYXRhIl0uYXBwZW5kKGMpCgogICAgYyA9ICB7CiAgICAgICAgImtleSI6ICLQo9C/0LDQuiIsCiAgICAgICAKICAgICAgICAKICAgICAgICAidmFsIjogIjAwMSIsCiAgICAgICAgInN0cmluZzEiOiAi0KPQv9Cw0LouIiwKICAgICAgICAic3RyaW5nMiI6ICLQmtC+0LvQuNGH0LXRgdGC0LLQviDQsiDRg9C/0LDQutC+0LLQutC1PTEiLAogICAgICAgICJzdHJpbmczIjogItCj0L/QsNC60L7QstC60LgiCiAgICAgIH0KICAgICAgCiAgICBqWyJjdXN0b21jYXJkcyJdWyJjYXJkc2RhdGEiXS5hcHBlbmQoYykKCiAgICAKCiAgICBpZiBub3QgaGFzaE1hcC5jb250YWluc0tleSgiY2FyZHMiKToKICAgICAgaGFzaE1hcC5wdXQoImNhcmRzIixqc29uLmR1bXBzKGosZW5zdXJlX2FzY2lpPUZhbHNlKS5lbmNvZGUoJ3V0ZjgnKS5kZWNvZGUoKSkKICAgIAogICAgcmV0dXJuIGhhc2hNYXAKCmRlZiBjYXJkX2lucHV0KGhhc2hNYXAsX2ZpbGVzPU5vbmUsX2RhdGE9Tm9uZSk6CiAgICAKICAgCiAgIGhhc2hNYXAucHV0KGhhc2hNYXAuZ2V0KCJmaWVsZCIpLGhhc2hNYXAuZ2V0KCJzZWxlY3RlZF9jYXJkX2tleSIpKQoKICAgaGFzaE1hcC5wdXQoIkZpbmlzaFByb2Nlc3NSZXN1bHQiLCIiKQoKICAgIAogICByZXR1cm4gaGFzaE1hcAoKCgpkZWYgdGVzdGFyZ3MoaGFzaE1hcCwqYXJncyk6CiAKICAgCiAgCiAgaGFzaE1hcC5wdXQoInZpYnJhdGUiLCIiKQogIGhhc2hNYXAucHV0KCJ0b2FzdCIsYXJnc1swXSthcmdzWzFdK2FyZ3NbMl0pCgogIHJldHVybiBoYXNoTWFwCgpkZWYgc2V0X2xpc3Rfc2VhcmNoKGhhc2hNYXAsX2ZpbGVzPU5vbmUsX2RhdGE9Tm9uZSk6CiAgICAKICAgCiAgIAoKICAgIGogPSB7ICJjdXN0b21jYXJkcyI6ICAgICAgICAgewogICAgICAgICAgICAib3B0aW9ucyI6ewogICAgICAgICAgICAgICJzZWFyY2hfZW5hYmxlZCI6VHJ1ZSwKICAgICAgICAgICAgICAic2F2ZV9wb3NpdGlvbiI6VHJ1ZSwKICAgICAgICAgICAgICAib3ZlcnJpZGVfc2VhcmNoIjpUcnVlCgogICAgICAgICAgICB9LAogICAgICAgICAgICAibGF5b3V0IjogewogICAgICAgICAgICAidHlwZSI6ICJMaW5lYXJMYXlvdXQiLAogICAgICAgICAgICAib3JpZW50YXRpb24iOiAidmVydGljYWwiLAogICAgICAgICAgICAiaGVpZ2h0IjogIm1hdGNoX3BhcmVudCIsCiAgICAgICAgICAgICJ3aWR0aCI6ICJtYXRjaF9wYXJlbnQiLAogICAgICAgICAgICAid2VpZ2h0IjogIjAiLAogICAgICAgICAgICAiRWxlbWVudHMiOiBbCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICJ0eXBlIjogIkxpbmVhckxheW91dCIsCiAgICAgICAgICAgICAgICAib3JpZW50YXRpb24iOiAiaG9yaXpvbnRhbCIsCiAgICAgICAgICAgICAgICAiaGVpZ2h0IjogIndyYXBfY29udGVudCIsCiAgICAgICAgICAgICAgICAid2lkdGgiOiAibWF0Y2hfcGFyZW50IiwKICAgICAgICAgICAgICAgICJ3ZWlnaHQiOiAiMCIsCiAgICAgICAgICAgICAgICAiRWxlbWVudHMiOiBbCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAidHlwZSI6ICJDaGVja0JveCIsCiAgICAgICAgICAgICAgICAiVmFsdWUiOiAiQGNiMSIsCiAgICAgICAgICAgICAgICAiTm9SZWZyZXNoIjogRmFsc2UsCiAgICAgICAgICAgICAgICAiZG9jdW1lbnRfdHlwZSI6ICIiLAogICAgICAgICAgICAgICAgIm1hc2siOiAiIiwKICAgICAgICAgICAgICAgICJWYXJpYWJsZSI6ICJjYjEiLAogICAgICAgICAgICAgICAgIkJhY2tncm91bmRDb2xvciI6ICIjREI3MDkzIiwKICAgICAgICAgICAgICAgICJ3aWR0aCI6ICJtYXRjaF9wYXJlbnQiLAogICAgICAgICAgICAgICAgImhlaWdodCI6ICJ3cmFwX2NvbnRlbnQiLAogICAgICAgICAgICAgICAgIndlaWdodCI6IDIKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAidHlwZSI6ICJMaW5lYXJMYXlvdXQiLAogICAgICAgICAgICAgICAgIm9yaWVudGF0aW9uIjogInZlcnRpY2FsIiwKICAgICAgICAgICAgICAgICJoZWlnaHQiOiAid3JhcF9jb250ZW50IiwKICAgICAgICAgICAgICAgICJ3aWR0aCI6ICJtYXRjaF9wYXJlbnQiLAogICAgICAgICAgICAgICAgIndlaWdodCI6ICIxIiwKICAgICAgICAgICAgICAgICJFbGVtZW50cyI6IFsKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAidHlwZSI6ICJUZXh0VmlldyIsCiAgICAgICAgICAgICAgICAgICAgInNob3dfYnlfY29uZGl0aW9uIjogIiIsCiAgICAgICAgICAgICAgICAgICAgIlZhbHVlIjogIkBzdHJpbmcxIiwKICAgICAgICAgICAgICAgICAgICAiTm9SZWZyZXNoIjogRmFsc2UsCiAgICAgICAgICAgICAgICAgICAgImRvY3VtZW50X3R5cGUiOiAiIiwKICAgICAgICAgICAgICAgICAgICAibWFzayI6ICIiLAogICAgICAgICAgICAgICAgICAgICJWYXJpYWJsZSI6ICIiCiAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICJ0eXBlIjogIlRleHRWaWV3IiwKICAgICAgICAgICAgICAgICAgICAic2hvd19ieV9jb25kaXRpb24iOiAiIiwKICAgICAgICAgICAgICAgICAgICAiVmFsdWUiOiAiQHN0cmluZzIiLAogICAgICAgICAgICAgICAgICAgICJOb1JlZnJlc2giOiBGYWxzZSwKICAgICAgICAgICAgICAgICAgICAiZG9jdW1lbnRfdHlwZSI6ICIiLAogICAgICAgICAgICAgICAgICAgICJtYXNrIjogIiIsCiAgICAgICAgICAgICAgICAgICAgIlZhcmlhYmxlIjogIiIKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgInR5cGUiOiAiVGV4dFZpZXciLAogICAgICAgICAgICAgICAgICAgICJzaG93X2J5X2NvbmRpdGlvbiI6ICIiLAogICAgICAgICAgICAgICAgICAgICJWYWx1ZSI6ICJAc3RyaW5nMyIsCiAgICAgICAgICAgICAgICAgICAgIk5vUmVmcmVzaCI6IEZhbHNlLAogICAgICAgICAgICAgICAgICAgICJkb2N1bWVudF90eXBlIjogIiIsCiAgICAgICAgICAgICAgICAgICAgIm1hc2siOiAiIiwKICAgICAgICAgICAgICAgICAgICAiVmFyaWFibGUiOiAiIgogICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAidHlwZSI6ICJCdXR0b24iLAogICAgICAgICAgICAgICAgICAgICJzaG93X2J5X2NvbmRpdGlvbiI6ICIiLAogICAgICAgICAgICAgICAgICAgICJWYWx1ZSI6ICIjZjI5MCIsCiAgICAgICAgICAgICAgICAgICAgIlRleHRDb2xvciI6ICIjREI3MDkzIiwKICAgICAgICAgICAgICAgICAgICAiVmFyaWFibGUiOiAiYnRuX3RzdDEiLAogICAgICAgICAgICAgICAgICAgICJOb1JlZnJlc2giOiBGYWxzZSwKICAgICAgICAgICAgICAgICAgICAiZG9jdW1lbnRfdHlwZSI6ICIiLAogICAgICAgICAgICAgICAgICAgICJtYXNrIjogIiIKICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgInR5cGUiOiAiQnV0dG9uIiwKICAgICAgICAgICAgICAgICAgICAic2hvd19ieV9jb25kaXRpb24iOiAiIiwKICAgICAgICAgICAgICAgICAgICAiVmFsdWUiOiAiI2Y0NjkiLAogICAgICAgICAgICAgICAgICAgICJUZXh0Q29sb3IiOiAiI0RCNzA5MyIsCiAgICAgICAgICAgICAgICAgICAgIlZhcmlhYmxlIjogImJ0bl90c3QyIiwKICAgICAgICAgICAgICAgICAgICAiTm9SZWZyZXNoIjogRmFsc2UsCiAgICAgICAgICAgICAgICAgICAgImRvY3VtZW50X3R5cGUiOiAiIiwKICAgICAgICAgICAgICAgICAgICAibWFzayI6ICIiCiAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBdCiAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgInR5cGUiOiAiVGV4dFZpZXciLAogICAgICAgICAgICAgICAgInNob3dfYnlfY29uZGl0aW9uIjogIiIsCiAgICAgICAgICAgICAgICAiVmFsdWUiOiAiQHZhbCIsCiAgICAgICAgICAgICAgICAiTm9SZWZyZXNoIjogRmFsc2UsCiAgICAgICAgICAgICAgICAiZG9jdW1lbnRfdHlwZSI6ICIiLAogICAgICAgICAgICAgICAgIm1hc2siOiAiIiwKICAgICAgICAgICAgICAgICJWYXJpYWJsZSI6ICIiLAogICAgICAgICAgICAgICAgIlRleHRTaXplIjogIjE2IiwKICAgICAgICAgICAgICAgICJUZXh0Q29sb3IiOiAiI0RCNzA5MyIsCiAgICAgICAgICAgICAgICAiVGV4dEJvbGQiOiBUcnVlLAogICAgICAgICAgICAgICAgIlRleHRJdGFsaWMiOiBGYWxzZSwKICAgICAgICAgICAgICAgICJCYWNrZ3JvdW5kQ29sb3IiOiAiIiwKICAgICAgICAgICAgICAgICJ3aWR0aCI6ICJtYXRjaF9wYXJlbnQiLAogICAgICAgICAgICAgICAgImhlaWdodCI6ICJ3cmFwX2NvbnRlbnQiLAogICAgICAgICAgICAgICAgIndlaWdodCI6IDIKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICJ0eXBlIjogIlBvcHVwTWVudUJ1dHRvbiIsCiAgICAgICAgICAgICAgICAic2hvd19ieV9jb25kaXRpb24iOiAiIiwKICAgICAgICAgICAgICAgICJWYWx1ZSI6ICLQo9C00LDQu9C40YLRjDvQn9GA0L7QstC10YDQuNGC0YwiLAogICAgICAgICAgICAgICAgIk5vUmVmcmVzaCI6IEZhbHNlLAogICAgICAgICAgICAgICAgImRvY3VtZW50X3R5cGUiOiAiIiwKICAgICAgICAgICAgICAgICJtYXNrIjogIiIsCiAgICAgICAgICAgICAgICAiVmFyaWFibGUiOiAibWVudV9kZWxldGUiCiAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIF0KICAgICAgICAgICAgfSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgInR5cGUiOiAiVGV4dFZpZXciLAogICAgICAgICAgICAgICAgInNob3dfYnlfY29uZGl0aW9uIjogIiIsCiAgICAgICAgICAgICAgICAiVmFsdWUiOiAiQGRlc2NyIiwKICAgICAgICAgICAgICAgICJOb1JlZnJlc2giOiBGYWxzZSwKICAgICAgICAgICAgICAgICJkb2N1bWVudF90eXBlIjogIiIsCiAgICAgICAgICAgICAgICAibWFzayI6ICIiLAogICAgICAgICAgICAgICAgIlZhcmlhYmxlIjogIiIsCiAgICAgICAgICAgICAgICAiVGV4dFNpemUiOiAiLTEiLAogICAgICAgICAgICAgICAgIlRleHRDb2xvciI6ICIjNkY5MzkzIiwKICAgICAgICAgICAgICAgICJUZXh0Qm9sZCI6IEZhbHNlLAogICAgICAgICAgICAgICAgIlRleHRJdGFsaWMiOiBUcnVlLAogICAgICAgICAgICAgICAgIkJhY2tncm91bmRDb2xvciI6ICIiLAogICAgICAgICAgICAgICAgIndpZHRoIjogIndyYXBfY29udGVudCIsCiAgICAgICAgICAgICAgICAiaGVpZ2h0IjogIndyYXBfY29udGVudCIsCiAgICAgICAgICAgICAgICAid2VpZ2h0IjogMAogICAgICAgICAgICB9CiAgICAgICAgICAgIF0KICAgICAgICB9CgogICAgfQogICAgfQogICAKICAgIGpbImN1c3RvbWNhcmRzIl1bImNhcmRzZGF0YSJdPVtdCiAgICBmb3IgaSBpbiByYW5nZSgwLDUpOgogICAgICBpZiBpPT0wOgogICAgICAgIGMgPSAgewogICAgICAgCiAgICAgICAgICAiZ3JvdXAiOiAi0JrQvtC80L/Qu9C10LrRgtGD0Y7RidC40LUiCiAgICAgICAKICAgICAgICB9CiAgICAgIAogICAgICAgIGpbImN1c3RvbWNhcmRzIl1bImNhcmRzZGF0YSJdLmFwcGVuZChjKQoKICAgICAgaWYgaT09NDoKICAgICAgICBjID0gIHsKICAgICAgIAogICAgICAgICAgImdyb3VwIjogItCj0YbQtdC90LrQsCIKICAgICAgIAogICAgICAgIH0KICAgICAgCiAgICAgICAgalsiY3VzdG9tY2FyZHMiXVsiY2FyZHNkYXRhIl0uYXBwZW5kKGMpICAgCgogICAgcHJpY2UgPSAgc3RyKHJhbmRvbS5yYW5kaW50KDEwLCAxMDAwMCkpKyIg0YDRg9CxLiIgCiAgICBjID0gIHsKICAgICAgICAia2V5IjogItCc0LDRgtC10YDQuNC90YHQutCw0Y8g0L/Qu9Cw0YLQsCBBU1VTIFJPRyBNQVhJTVVTIFo2OTAgQVBFWCIrIiwgIitzdHIocHJpY2UpLAogICAgICAgCiAgICAgICAgImRlc2NyIjogIlBvcy4gIitzdHIoaSksCiAgICAgICAgInZhbCI6IHN0cihwcmljZSkrIiDRgNGD0LEuIiwKICAgICAgICAic3RyaW5nMSI6ICLQnNCw0YLQtdGA0LjQvdGB0LrQsNGPINC/0LvQsNGC0LAgQVNVUyBST0cgTUFYSU1VUyBaNjkwIEFQRVgiLAogICAgICAgICJzdHJpbmcyIjogItCT0L3QtdC30LTQviDQv9GA0L7RhtC10YHRgdC+0YDQsCBMR0EgMTcwMCIsCiAgICAgICAgInN0cmluZzMiOiAi0KfQsNGB0YLQvtGC0L3QsNGPINGB0L/QtdGG0LjRhNC40LrQsNGG0LjRjyDQv9Cw0LzRj9GC0LggNDgwMCDQnNCT0YYiCiAgICAgIH0KICAgICAgCiAgICBqWyJjdXN0b21jYXJkcyJdWyJjYXJkc2RhdGEiXS5hcHBlbmQoYykKCiAgICAKICAgIGhhc2hNYXAucHV0KCJjYXJkcyIsanNvbi5kdW1wcyhqLGVuc3VyZV9hc2NpaT1GYWxzZSkuZW5jb2RlKCd1dGY4JykuZGVjb2RlKCkpCiAgICBoYXNoTWFwLnB1dCgidG9hc3QiLGhhc2hNYXAuZ2V0KCJjYXJkcyIpKQoKICAgIAogICAgcmV0dXJuIGhhc2hNYXAKCmRlZiBtYXBfb25fc3RhcnQoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICAgaW1wb3J0IG9zCiAgICAKICAgZmlsZW5hbWUgPSBzdUNsYXNzLmdldF90ZW1wX2RpcigpK29zLnNlcCsidGVzdF9tYXAuc3VnIgogICAKICAgaGFzaE1hcC5wdXQoIm1hcG5hbWUiLGZpbGVuYW1lKQoKICAgCgogICAgCiAgIHJldHVybiBoYXNoTWFwCgpkZWYgc2hvd19waW4oaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICAgIAogICBoPVt7ImFjdGlvbiI6InJ1biIsInR5cGUiOiJweXRob24iLCJsaXN0ZW5lciI6InBpbl9zdWNjZXNzIiwibWV0aG9kIjoiY2hlY2tfcGluIn0sCiAgICAgICAgICAgICAgIHsiYWN0aW9uIjoicnVuIiwidHlwZSI6InNldCIsImxpc3RlbmVyIjoicGluX2NhbmNlbCIsIm1ldGhvZCI6InZpYnJhdGUifQogICAgICAgICAgICAgICBdCiAgIGhhc2hNYXAucHV0KCJTaG93UElOIixqc29uLmR1bXBzKHsiaGVhZGVyIjoi0JLQstC10LTQuNGC0LUg0J/QmNCdIiwiaGFuZGxlcnMiOmgsImJsb2NrX2NhbmNlbCI6RmFsc2V9LGVuc3VyZV9hc2NpaT1GYWxzZSkpCgogICAgCiAgIHJldHVybiBoYXNoTWFwCgpkZWYgY2hlY2tfcGluKGhhc2hNYXAsX2ZpbGVzPU5vbmUsX2RhdGE9Tm9uZSk6CiAgICAKICAgaGFzaE1hcC5wdXQoInRvYXN0IixoYXNoTWFwLmdldCgicGluIikpCgogICBpZiBoYXNoTWFwLmdldCgicGluIik9PSIxMTExIjoKICAgICAgaGFzaE1hcC5wdXQoImJlZXAiLCIiKQogICAgICBoYXNoTWFwLnB1dCgiQ2xvc2VQSU4iLCIiKQogICAKICAgIAogICByZXR1cm4gaGFzaE1hcAoKCmRlZiBzaG93X2Jpb21ldHJpYyhoYXNoTWFwLF9maWxlcz1Ob25lLF9kYXRhPU5vbmUpOgogICAgCiAgIGg9W3siYWN0aW9uIjoicnVuIiwidHlwZSI6InB5dGhvbiIsImxpc3RlbmVyIjoiQmlvbWV0cmljQXV0aGVudGljYXRpb25TdWNjZWVkZWQiLCJtZXRob2QiOiJiaW9tZXRyaWNfc3VjY2VzcyJ9LAogICAgICAgICAgICAgICB7ImFjdGlvbiI6InJ1biIsInR5cGUiOiJzZXQiLCJsaXN0ZW5lciI6IkJpb21ldHJpY0F1dGhlbnRpY2F0aW9uRmFpbGVkIiwibWV0aG9kIjoiYXBwX3NodXRkb3duIn0sCiAgICAgICAgICAgICAgIHsiYWN0aW9uIjoicnVuIiwidHlwZSI6InNldCIsImxpc3RlbmVyIjoiQmlvbWV0cmljQXV0aGVudGljYXRpb25FcnJvciIsIm1ldGhvZCI6ImFwcF9zaHV0ZG93biJ9CiAgICAgICAgICAgICAgIF0KICAgaGFzaE1hcC5wdXQoIlNob3dCaW9tZXRyaWMiLGpzb24uZHVtcHMoeyJ0aXRsZSI6ItCf0YDQvtCy0LXRgNC60LAg0LLRhdC+0LTQsCIsImJvZHkiOiLQndC10L7QsdGF0L7QtNC40LzQsCDQsNGD0YLQtdC90LjRhNC40LrQsNGG0LjRjyIsImhhbmRsZXJzIjpofSxlbnN1cmVfYXNjaWk9RmFsc2UpKQoKICAgIAogICByZXR1cm4gaGFzaE1hcAoKZGVmIGJpb21ldHJpY19zdWNjZXNzKGhhc2hNYXAsX2ZpbGVzPU5vbmUsX2RhdGE9Tm9uZSk6CiAgICAKICAgaGFzaE1hcC5wdXQoInRvYXN0Iiwid2lsbGtvbW1lbiB6dXLDvGNrIikKCiAgIAogICAgCiAgIHJldHVybiBoYXNoTWFwCgpkZWYgYmlvbWV0cmljX3N1Y2Nlc3MoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICAgIAogICBoYXNoTWFwLnB1dCgidG9hc3QiLCJ3aWxsa29tbWVuIHp1csO8Y2siKQoKICAgCiAgICAKICAgcmV0dXJuIGhhc2hNYXAKCmRlZiBoaWdobGlnaHRfbGlzdHMoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICAgIAogICBoYXNoTWFwLnB1dCgiU2V0UmVkIiwiZXQxO2V0MjtldDMiKQogICBoYXNoTWFwLnB1dCgiU2V0R3JlZW4iLCJldDU7ZXQ2O2V0NyIpCgogICAKICAgIAogICByZXR1cm4gaGFzaE1hcAoKZGVmIGZvbyhoYXNoTWFwLCphcmdzKToKICAgIHBhcmFtMSA9ICBhcmdzWzBdIAogICAgcGFyYW0yID0gIGFyZ3NbMV0gCiAgICBwYXJhbTMgPSAgYXJnc1syXSAgCgogICAgcmV0dXJuIGhhc2hNYXA=",
+        "RunPython": true,
+        "CommonHandlers": [
+            {
+                "alias": "",
+                "event": "onLaunch",
+                "action": "run",
+                "type": "python",
+                "method": "init",
+                "postExecute": ""
+            },
+            {
+                "alias": "",
+                "event": "onLaunch",
+                "action": "run",
+                "type": "python",
+                "method": "[удалите для разблокировки]show_biometric",
+                "postExecute": ""
+            },
+            {
+                "alias": "",
+                "event": "onLaunch",
+                "action": "run",
+                "type": "set",
+                "method": "toast=Заходи",
+                "postExecute": "",
+                "listener": "BiometricAuthenticationSucceeded"
+            }
+        ]
+    }
+}
