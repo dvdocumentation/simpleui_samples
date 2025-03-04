@@ -1,0 +1,466 @@
+{
+    "ClientConfiguration": {
+        "ConfigurationName": "Pelican примеры для SimpleUI",
+        "ConfigurationDescription": "Pelican SimpleUI примеры",
+        "ConfigurationVersion": "0.0.1",
+        "Processes": [
+            {
+                "ProcessName": "Pelican базовые примеры python",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "Name": "Новый экран",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "insert",
+                                        "Variable": "btn_insert",
+                                        "type_s": "Кнопка"
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "insert many",
+                                        "Variable": "btn_insert_many",
+                                        "type_s": "Кнопка"
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "upsert",
+                                        "Variable": "btn_upsert",
+                                        "type_s": "Кнопка"
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "upsert_many",
+                                        "Variable": "btn_upsert_many",
+                                        "type_s": "Кнопка"
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "update",
+                                        "Variable": "btn_update",
+                                        "type_s": "Кнопка"
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "delete",
+                                        "Variable": "btn_delete",
+                                        "type_s": "Кнопка"
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "all",
+                                        "Variable": "btn_all",
+                                        "type_s": "Кнопка"
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "find",
+                                        "Variable": "btn_find",
+                                        "type_s": "Кнопка"
+                                    }
+                                ],
+                                "type_s": "Контейнер"
+                            }
+                        ],
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_insert",
+                                "type": "pythonscript",
+                                "method": "ZnJvbSBnZW5lcmFsIGltcG9ydCAqCgphID0gcGVsaWNhbnNbJ3Rlc3QnXVsnb3BlcmF0aW9ucyddLmluc2VydCh7InR5cGUiOiLQn9GA0LjQtdC80LrQsCIsICJ0b3RhbCI6NTAwfSkKYW5kcm9pZC50b2FzdCgi0JLRgdGC0LDQstC40LvQuDogIitzdHIoYSkp",
+                                "postExecute": "",
+                                "alias": ""
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_insert_many",
+                                "type": "pythonscript",
+                                "method": "ZnJvbSBnZW5lcmFsIGltcG9ydCAqCgphID0gcGVsaWNhbnNbJ3Rlc3QnXVsnb3BlcmF0aW9ucyddLmluc2VydChbeyJ0eXBlIjoi0J7RgtCz0YDRg9C30LrQsCAxIiwidG90YWwiOjIwfSx7InR5cGUiOiLQntGC0LPRgNGD0LfQutCwIDIiLCJ0b3RhbCI6MzB9XSkKYW5kcm9pZC50b2FzdCgi0JLRgdGC0LDQstC40LvQuCDQvdC10YHQutC+0LvRjNC60L4g0LfQsNC/0LjRgdC10Lk6ICIrc3RyKGEpKQ==",
+                                "postExecute": "",
+                                "alias": ""
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_upsert",
+                                "type": "pythonscript",
+                                "method": "ZnJvbSBnZW5lcmFsIGltcG9ydCAqCgphID0gcGVsaWNhbnNbJ3Rlc3QnXVsnb3BlcmF0aW9ucyddLmluc2VydCh7Il9pZCI6IjUiLCJ0eXBlIjoi0J7RgtCz0YDRg9C30LrQsCAxIiwidG90YWwiOjIwfSx1cHNlcnQ9VHJ1ZSkKYW5kcm9pZC50b2FzdCgi0JLRgdGC0LDQstC40LvQuCDQt9Cw0L/QuNGB0Ywg0YEgaWQ9NTogIitzdHIoYSkp",
+                                "postExecute": "",
+                                "alias": ""
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_upsert_many",
+                                "type": "pythonscript",
+                                "method": "ZnJvbSBnZW5lcmFsIGltcG9ydCAqCgphID0gcGVsaWNhbnNbJ3Rlc3QnXVsnb3BlcmF0aW9ucyddLmluc2VydChbeyJfaWQiOiI2IiwidHlwZSI6ItCe0YLQs9GA0YPQt9C60LAgMSIsInRvdGFsIjoyMH0seyJfaWQiOiI3IiwidHlwZSI6ItCe0YLQs9GA0YPQt9C60LAgMSIsInRvdGFsIjoyMH1dLHVwc2VydD1UcnVlKQphbmRyb2lkLnRvYXN0KCLQktGB0YLQsNCy0LjQu9C4INC30LDQv9C40YHQuCDRgSBpZCA2INC4IDc6ICIrc3RyKGEpKQ==",
+                                "postExecute": "",
+                                "alias": ""
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_update",
+                                "type": "pythonscript",
+                                "method": "ZnJvbSBnZW5lcmFsIGltcG9ydCAqCgphID0gcGVsaWNhbnNbJ3Rlc3QnXVsnb3BlcmF0aW9ucyddLnVwZGF0ZSh7InRvdGFsIjoyMH0sIHsidHh0IjoiVVBEIiwiZG9uZSI6MX0pCmFuZHJvaWQudG9hc3QoItCe0LHQvdC+0LLQuNC70Lgg0LfQsNC/0LjRgdC4OiAiK3N0cihhKSkgCg==",
+                                "postExecute": "",
+                                "alias": ""
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_delete",
+                                "type": "pythonscript",
+                                "method": "ZnJvbSBnZW5lcmFsIGltcG9ydCAqCgphID0gcGVsaWNhbnNbJ3Rlc3QnXVsnb3BlcmF0aW9ucyddLmRlbGV0ZSh7Il9pZCI6IjcifSkKYW5kcm9pZC50b2FzdCgi0KPQtNCw0LvQuNC70Lg6ICIrc3RyKGEpKQ==",
+                                "postExecute": "",
+                                "alias": ""
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_all",
+                                "type": "pythonscript",
+                                "method": "ZnJvbSBnZW5lcmFsIGltcG9ydCAqCgphID0gcGVsaWNhbnNbJ3Rlc3QnXVsnb3BlcmF0aW9ucyddLmFsbCgpCmFuZHJvaWQudG9hc3QoItCS0YHQtSDQt9Cw0L/QuNGB0Lg6ICIrc3RyKGEpKQ==",
+                                "postExecute": "",
+                                "alias": ""
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_find",
+                                "type": "pythonscript",
+                                "method": "ZnJvbSBnZW5lcmFsIGltcG9ydCAqCgphID0gcGVsaWNhbnNbJ3Rlc3QnXVsnb3BlcmF0aW9ucyddLmZpbmQoeyJ0b3RhbCI6NTAwfSkKYW5kcm9pZC50b2FzdCgi0JfQsNC/0LjRgdC4INGBINGB0YPQvNC80L7QuT01MDA6ICIrc3RyKGEpKQ==",
+                                "postExecute": "",
+                                "alias": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ProcessName": "Pelican через feed",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "Name": "Новый экран",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "insert",
+                                        "Variable": "btn_insert"
+                                    },
+                                    {
+                                        "type": "TableLayout",
+                                        "height": "match_parent",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "@table"
+                                    }
+                                ],
+                                "type_s": "Контейнер"
+                            }
+                        ],
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_insert",
+                                "type": "pelican",
+                                "method": "[\n    {\n        \"test\": [\n            {\n                \"goods_1\": {\n                    \"upsert\": {\n                        \n                        \"name\": \"banana\"\n                    },\n                    \"uid\": \"s1\"\n\n                }\n            },\n            {\n                \"operations_1\": {\n                    \"insert\": {\n                        \n                        \"type\": \"client_operation\", \"total\":555\n                    },\n                    \"uid\": \"s2\"\n                }\n            }\n        ]\n    }\n]",
+                                "postExecute": "",
+                                "alias": ""
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "",
+                                "type": "set",
+                                "method": "toast=@PelicanResults",
+                                "postExecute": "",
+                                "alias": ""
+                            },
+                            {
+                                "event": "onStart",
+                                "action": "run",
+                                "listener": "",
+                                "type": "pythonscript",
+                                "method": "ZnJvbSBnZW5lcmFsIGltcG9ydCAqCgpyZXMgPSBwZWxpY2Fuc1sndGVzdCddWydvcGVyYXRpb25zXzEnXS5hbGwoKQoKCmogPSB7CiJ0eXBlIjogInRhYmxlIiwKCiJjb2x1bW5zIjogWwogIHsKICAgICJuYW1lIjogImlkIiwKICAgICJoZWFkZXIiOiAiaWQiLAogICAgIndlaWdodCI6ICIyIgogIH0sCiAgewogICAgIm5hbWUiOiAidHlwZSIsCiAgICAiaGVhZGVyIjogInR5cGUiLAogICAgIndlaWdodCI6ICIyIgogIH0sCiAgewogICAgIm5hbWUiOiAidG90YWwiLAogICAgImhlYWRlciI6ICJ0b3RhbCIsCiAgICAid2VpZ2h0IjogIjEiCiAgfQpdLAoicm93cyI6IFtdCn0KCmZvciBpdGVtIGluIHJlczoKICAgalsncm93cyddLmFwcGVuZCh7ImlkIjppdGVtWyJfaWQiXSwidHlwZSI6aXRlbS5nZXQoInR5cGUiKSwidG90YWwiOml0ZW0uZ2V0KCJ0b3RhbCIpfSkKCmhhc2hNYXAucHV0KCJ0YWJsZSIsanNvbi5kdW1wcyhqLGVuc3VyZV9hc2NpaT1GYWxzZSkp",
+                                "postExecute": "",
+                                "alias": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "Process",
+                "ProcessName": "Pelican примеры через библиотеку",
+                "PlanFactHeader": "План-факт",
+                "Operations": [
+                    {
+                        "type": "Operation",
+                        "Name": "Новый экран",
+                        "Elements": [
+                            {
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "test",
+                                        "Variable": "btn_test"
+                                    }
+                                ],
+                                "type_s": "Контейнер"
+                            }
+                        ],
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_test",
+                                "type": "pythonscript",
+                                "method": "ZnJvbSBydS50cmF2ZWxmb29kLnNpbXBsZV91aSBpbXBvcnQgU2ltcGxlVXRpbGl0ZXMgYXMgc3VDbGFzcwpmcm9tIHBlbGljYW5kYiBpbXBvcnQgUGVsaWNhbgpmcm9tIGdlbmVyYWwgaW1wb3J0ICoKCmRiZGlyID0gc3VDbGFzcy5nZXRfc2ltcGxlYmFzZV9kaXIoKQoKZGIgPSBQZWxpY2FuKCJ0ZXN0X3BlbGljYW4iLHBhdGg9ZGJkaXIsUkFNID0gRmFsc2UsIHNpbmdsZXRvbj1UcnVlKQoKaWQgPSBkYlsiaW5pdCJdLmluc2VydCh7Im5hbWUiOiJ0ZXN0MSIsIlJBTSI6RmFsc2UsICJzaW5nbGV0b24iOlRydWUsICJsb2FkaW5nIjpUcnVlfSwgdXBzZXJ0PVRydWUpCmFuZHJvaWQudG9hc3Qoc3RyKGlkKSk=",
+                                "postExecute": "",
+                                "alias": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ProcessName": "Pelican через переменные",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "Name": "Новый экран",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "insert",
+                                        "Variable": "btn_insert"
+                                    },
+                                    {
+                                        "type": "TableLayout",
+                                        "height": "match_parent",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "@table"
+                                    }
+                                ],
+                                "type_s": "Контейнер"
+                            }
+                        ],
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_insert",
+                                "type": "pythonscript",
+                                "method": "ZnJvbSBnZW5lcmFsIGltcG9ydCAqCgpyZWNvcmRzID0gWwogICAgewogICAgICAgICJ0ZXN0IjogWwogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAiZ29vZHNfMSI6IHsKICAgICAgICAgICAgICAgICAgICAidXBzZXJ0IjogewogICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgIm5hbWUiOiAiYmFuYW5hIgogICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgInVpZCI6ICJzMSIKCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICJvcGVyYXRpb25zXzEiOiB7CiAgICAgICAgICAgICAgICAgICAgImluc2VydCI6IHsKICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICJ0eXBlIjogImNsaWVudF9vcGVyYXRpb24iLCAidG90YWwiOjU1NQogICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgInVpZCI6ICJzMiIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgIF0KICAgIH0KXQoKaGFzaE1hcC5wdXQoIkZlZWRQZWxpY2FuIixqc29uLmR1bXBzKHJlY29yZHMsZW5zdXJlX2FzY2lpPUZhbHNlKSk=",
+                                "postExecute": "",
+                                "alias": ""
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "",
+                                "type": "set",
+                                "method": "toast=@PelicanResults",
+                                "postExecute": "",
+                                "alias": ""
+                            },
+                            {
+                                "event": "onStart",
+                                "action": "run",
+                                "listener": "",
+                                "type": "pythonscript",
+                                "method": "ZnJvbSBnZW5lcmFsIGltcG9ydCAqCgpyZXMgPSBwZWxpY2Fuc1sndGVzdCddWydvcGVyYXRpb25zXzEnXS5hbGwoKQoKCmogPSB7CiJ0eXBlIjogInRhYmxlIiwKCiJjb2x1bW5zIjogWwogIHsKICAgICJuYW1lIjogImlkIiwKICAgICJoZWFkZXIiOiAiaWQiLAogICAgIndlaWdodCI6ICIyIgogIH0sCiAgewogICAgIm5hbWUiOiAidHlwZSIsCiAgICAiaGVhZGVyIjogInR5cGUiLAogICAgIndlaWdodCI6ICIyIgogIH0sCiAgewogICAgIm5hbWUiOiAidG90YWwiLAogICAgImhlYWRlciI6ICJ0b3RhbCIsCiAgICAid2VpZ2h0IjogIjEiCiAgfQpdLAoicm93cyI6IFtdCn0KCmZvciBpdGVtIGluIHJlczoKICAgalsncm93cyddLmFwcGVuZCh7ImlkIjppdGVtWyJfaWQiXSwidHlwZSI6aXRlbS5nZXQoInR5cGUiKSwidG90YWwiOml0ZW0uZ2V0KCJ0b3RhbCIpfSkKCmhhc2hNYXAucHV0KCJ0YWJsZSIsanNvbi5kdW1wcyhqLGVuc3VyZV9hc2NpaT1GYWxzZSkp",
+                                "postExecute": "",
+                                "alias": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ProcessName": "Использование индексов",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "type": "Operation",
+                        "Name": "Новый экран",
+                        "Elements": [
+                            {
+                                "type": "LinearLayout",
+                                "orientation": "vertical",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "Elements": [
+                                    {
+                                        "type": "Button",
+                                        "orientation": "vertical",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "Value": "Тест hash",
+                                        "Variable": "btn_hash",
+                                        "type_s": "Кнопка",
+                                        "weight": "0"
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "orientation": "vertical",
+                                        "height": "match_parent",
+                                        "width": "match_parent",
+                                        "Value": "Тест текстовый",
+                                        "Variable": "btn_text",
+                                        "type_s": "Кнопка",
+                                        "weight": "0"
+                                    }
+                                ],
+                                "type_s": "Контейнер",
+                                "weight": "0"
+                            }
+                        ],
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_hash",
+                                "type": "pythonscript",
+                                "method": "ZnJvbSBnZW5lcmFsIGltcG9ydCAqCgpkYiA9cGVsaWNhbnNbJ3Rlc3QnXSAKciA9IGRiWydvcGVyYXRpb25zJ10uZ2V0X2J5X2luZGV4KGRiWyJoYXNoX3R5cGUiXSwi0J/RgNC40LXQvNC60LAiKQphbmRyb2lkLnRvYXN0KHN0cihyKSk=",
+                                "postExecute": "",
+                                "alias": ""
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_text",
+                                "type": "pythonscript",
+                                "method": "ZnJvbSBnZW5lcmFsIGltcG9ydCAqCgpkYiA9cGVsaWNhbnNbJ3Rlc3QnXSAKciA9IGRiWyd0ZXh0X3JlZ3VsYXInXS5zZWFyY2hfdGV4dF9pbmRleCgi0J7RgtCz0YAiKQphbmRyb2lkLnRvYXN0KHN0cihyKSk=",
+                                "postExecute": "",
+                                "alias": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "ConfigurationSettings": {
+            "uid": "84d2c50362e3471da4277b25d30bf1d0",
+            "dictionaries": "",
+            "vendor": "",
+            "vendor_url": "",
+            "vendor_password": "",
+            "handler_split_mode": false,
+            "handler_url": "",
+            "handler_password": ""
+        },
+        "ConfigurationTags": "Py,off-line",
+        "PyHandlers": "ZnJvbSBweXNpbXBsZWJhc2UgaW1wb3J0IFNpbXBsZUJhc2UKaW1wb3J0IGpzb24KZnJvbSBwYXRobGliIGltcG9ydCBQYXRoCgpmcm9tIHJ1LnRyYXZlbGZvb2Quc2ltcGxlX3VpIGltcG9ydCBTaW1wbGVVdGlsaXRlcyBhcyBzdUNsYXNzCmltcG9ydCB0aW1lCmltcG9ydCBvcwoKCmRlZiBpbml0KGhhc2hNYXAsX2ZpbGVzPU5vbmUsX2RhdGE9Tm9uZSk6CiAgICAKICAgIAogICAgaGFzaE1hcC5wdXQoIlN0YWNrQWRkTW9kZSIsIiIpCiAgICAKCiAgICByZXR1cm4gaGFzaE1hcAoKZGVmIHRlc3QoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICAgIAoKICAgIGhhc2hNYXAucHV0KCJiZWVwIiwiMTAiKQogICAgCiAgICBkYiA9IFNpbXBsZUJhc2UoInRlc3RkYjMiLHBhdGg9c3VDbGFzcy5nZXRfc2ltcGxlYmFzZV9kaXIoKSx0aW1lb3V0PTIwMCkKICAgIAogICAgcmVzID0gZGJbJ3Rlc3RfMyddLmluc2VydCh7Im5vbSI6ItC80LjQutGB0LXRgCJ9LCB1cHNlcnQgPVRydWUsbm9faW5kZXg9VHJ1ZSkKICAgIGhhc2hNYXAucHV0KCJ0b2FzdCIsc3RyKHJlcykpCgogICAgc2V0PVtdCiAgICBmb3IgaSBpbiByYW5nZSgxMCk6CiAgICAgICAgc2V0LmFwcGVuZCh7Im5vbSI6ItCT0YDQsNCx0LvQuCAtIitzdHIoaSl9KQoKICAgIGluc2VydGVkID0gZGJbJ3Rlc3RfMyddLmluc2VydChzZXQsdXBzZXJ0PVRydWUpCiAgICBzdGFydF90aW1lID0gdGltZS50aW1lKCkKICAgIGEgPSBkYlsndGVzdF8zJ10uZ2V0KCIyIikKICAgIHN0YXJ0X3RpbWUgPSB0aW1lLnRpbWUoKQogICAgaGFzaE1hcC5wdXQoInRvYXN0IiwicmVhZCBkYXRhc2V0OiAtLS0gJXMgc2Vjb25kcyAtLS0iICUgKHRpbWUudGltZSgpIC0gc3RhcnRfdGltZSkpCgogICAgcmVzID0gZGJbJ3Rlc3RfMyddLmluc2VydCh7Im5vbSI6ItC80LjQutGB0LXRgC0yIn0sIHVwc2VydCA9VHJ1ZSkKICAgIGhhc2hNYXAucHV0KCJ0b2FzdCIsImluc2VydCAxIHJlY29yZDogLS0tICVzIHNlY29uZHMgLS0tIiAlICh0aW1lLnRpbWUoKSAtIHN0YXJ0X3RpbWUpKQogICAgCgogICAgI2RiWyd0ZXN0X2QnXS5pbnNlcnQoeyJub20iOiLQutC+0LzQsdCw0LnQvSIsIl9pZCI6ImQ1NTJhMWIwLTdlYzAtNDhhNS05YjM5LTNjZjZkMTlkNWM3ZiJ9LCB1cHNlcnQgPVRydWUsIGZhc3Q9VHJ1ZSkKCiAgICByZXR1cm4gaGFzaE1hcCAgICAgICAgCgoKZGVmIHJlYWRfZmlsZShoYXNoTWFwLGltYWdlQnl0ZXMpOgogICAgICAgIGZyb20gcnUudHJhdmVsZm9vZC5zaW1wbGVfdWkgaW1wb3J0IFNpbXBsZVV0aWxpdGVzIGFzIHN1Q2xhc3MKICAgICAgICBmaWxlbmFtZSA9IHN1Q2xhc3MuZ2V0X3RlbXBfZGlyKCkrb3Muc2VwKyJ0ZXN0X2ZpbGUuRklMRSIKICAgICAgICBoYXNoTWFwLnB1dCgidG9hc3QiLGZpbGVuYW1lKQogICAgICAgIGhhc2hNYXAucHV0KCJiZWVwIiwiIikKICAgICAgICB3aXRoIG9wZW4oZmlsZW5hbWUsICd3YicpIGFzIGY6IAogICAgICAgICAgICBmLndyaXRlKGltYWdlQnl0ZXMpCgogICAgICAgIHN1Q2xhc3MuZG93bmxvYWRfZmlsZShmaWxlbmFtZSkKCiAgICAgICAgaGFzaE1hcC5wdXQoImZpbGVuYW1lIixmaWxlbmFtZSkKCiAgICAgICAgcmV0dXJuIGhhc2hNYXAKCmRlZiBmaWxlX2Rvd25sb2FkKGhhc2hNYXAsX2ZpbGVzPU5vbmUsX2RhdGE9Tm9uZSk6CiAgICAKICAgIGZpbGVuYW1lID0gIi9kYXRhL2RhdGEvcnUudHJhdmVsZm9vZC5zaW1wbGVfdWkvYXBwX2ZpbGVzL1NpbXBsZVVJIGltYWdlcy90ZXN0X2ZpbGUuRklMRSIKICAgIGhhc2hNYXAucHV0KCJ0b2FzdCIsZmlsZW5hbWUpCiAgICBzdUNsYXNzLmRvd25sb2FkX2ZpbGUoZmlsZW5hbWUpCgogICAgcmV0dXJuIGhhc2hNYXAgCgpkZWYgcnVuX25vc3FsKGhhc2hNYXAsX2ZpbGVzPU5vbmUsX2RhdGE9Tm9uZSk6CiAgICAKICAgIGhhc2hNYXAucHV0KCJSdW5TaW1wbGVCYXNlIixqc29uLmR1bXBzKFt7ImRhdGFiYXNlIjoiZGJuYXRpdmUiLCJjb2xsZWN0aW9uIjoidGVzdF8xIiwiY29tbWFuZCI6Imluc2VydCIsInZhbHVlIjp7ImNhcHRpb24iOiJIZWxsbyB3b3JsZCJ9fV0pKQoKICAgIHJldHVybiBoYXNoTWFwIAoKZGVmIHNldF92aXNpb25zZXR0aW5ncyhoYXNoTWFwLF9maWxlcz1Ob25lLF9kYXRhPU5vbmUpOgogICAgCiAgICB2YWx1ZXNfbGlzdCA9ICIxMjM7NTMyOzM0NTsxMTEiCgogICAgaGFzaE1hcC5wdXQoIlNldFZpc2lvblNldHRpbmdzIixqc29uLmR1bXBzKHsidmFsdWVzX2xpc3QiOnZhbHVlc19saXN0LCJtaW5fbGVuZ3RoIjozLCJtYXhfbGVuZ3RoIjo1LCJSZXBsYWNlTyI6VHJ1ZSwiVG9VcGNhc2UiOlRydWV9KSkKCiAgICBoYXNoTWFwLnB1dCgiZ3JlZW5fbGlzdCIsdmFsdWVzX2xpc3QpCgogICAgcmV0dXJuIGhhc2hNYXAgCgpkZWYgbm9zcWxfb25fc3RhcnQoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICAgIAoKICAgIAogICAgZGJwYXRoID0gc3VDbGFzcy5nZXRfdGVtcF9kaXIoKQoKICAgIGRiID0gU2ltcGxlQmFzZSgiZGJuYXRpdmUiLHBhdGg9ZGJwYXRoLHRpbWVvdXQ9MjAwKQogICAgCiAgICByZXMgPSBkYlsndGVzdF8xJ10uYWxsKCkKCiAgICBqID0gewoidHlwZSI6ICJ0YWJsZSIsCgoiY29sdW1ucyI6IFsKICB7CiAgICAibmFtZSI6ICJpZCIsCiAgICAiaGVhZGVyIjogImlkIiwKICAgICJ3ZWlnaHQiOiAiMiIKICB9LAogIHsKICAgICJuYW1lIjogInR4dCIsCiAgICAiaGVhZGVyIjogInR4dCIsCiAgICAid2VpZ2h0IjogIjIiCiAgfSwKICB7CiAgICAibmFtZSI6ICJxdHkiLAogICAgImhlYWRlciI6ICJxdHkiLAogICAgIndlaWdodCI6ICIxIgogIH0KXSwKInJvd3MiOiBbXQp9CgogICAgZm9yIGl0ZW0gaW4gcmVzOgogICAgICAgIGpbJ3Jvd3MnXS5hcHBlbmQoeyJpZCI6aXRlbVsiX2lkIl0sInR4dCI6aXRlbS5nZXQoInR4dCIpLCJxdHkiOml0ZW0uZ2V0KCJjb3VudCIpfSkKCiAgICBoYXNoTWFwLnB1dCgidGFibGUiLGpzb24uZHVtcHMoaixlbnN1cmVfYXNjaWk9RmFsc2UpKQoKICAgIHJldHVybiBoYXNoTWFwICAKCgpkZWYgb3Blbl9kaWFsb2coaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICAgIAoKICAgIGxheW91dCA9IHsKICAgICAgICAgICAgIlZhbHVlIjogIiIsCiAgICAgICAgICAgICJWYXJpYWJsZSI6ICIiLAogICAgICAgICAgICAidHlwZSI6ICJMaW5lYXJMYXlvdXQiLAogICAgICAgICAgICAid2VpZ2h0IjogIjAiLAogICAgICAgICAgICAiaGVpZ2h0IjogIm1hdGNoX3BhcmVudCIsCiAgICAgICAgICAgICJ3aWR0aCI6ICJtYXRjaF9wYXJlbnQiLAogICAgICAgICAgICAib3JpZW50YXRpb24iOiAidmVydGljYWwiLAogICAgICAgICAgICAiRWxlbWVudHMiOiBbCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgInR5cGUiOiAiVGV4dFZpZXciLAogICAgICAgICAgICAgICAgICAgICJoZWlnaHQiOiAid3JhcF9jb250ZW50IiwKICAgICAgICAgICAgICAgICAgICAid2lkdGgiOiAibWF0Y2hfcGFyZW50IiwKICAgICAgICAgICAgICAgICAgICAid2VpZ2h0IjogIjAiLAogICAgICAgICAgICAgICAgICAgICJWYWx1ZSI6ICLQmNC80Y8iLAogICAgICAgICAgICAgICAgICAgICJWYXJpYWJsZSI6ICIiCiAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICJ0eXBlIjogIkVkaXRUZXh0VGV4dCIsCiAgICAgICAgICAgICAgICAgICAgImhlaWdodCI6ICJ3cmFwX2NvbnRlbnQiLAogICAgICAgICAgICAgICAgICAgICJ3aWR0aCI6ICJtYXRjaF9wYXJlbnQiLAogICAgICAgICAgICAgICAgICAgICJ3ZWlnaHQiOiAiMCIsCiAgICAgICAgICAgICAgICAgICAgIlZhbHVlIjogIiIsCiAgICAgICAgICAgICAgICAgICAgIlZhcmlhYmxlIjogIm5hbWUiCiAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICJ0eXBlIjogIlRleHRWaWV3IiwKICAgICAgICAgICAgICAgICAgICAiaGVpZ2h0IjogIndyYXBfY29udGVudCIsCiAgICAgICAgICAgICAgICAgICAgIndpZHRoIjogIm1hdGNoX3BhcmVudCIsCiAgICAgICAgICAgICAgICAgICAgIndlaWdodCI6ICIwIiwKICAgICAgICAgICAgICAgICAgICAiVmFsdWUiOiAi0JTQvtC70LbQvdC+0YHRgtGMIiwKICAgICAgICAgICAgICAgICAgICAiVmFyaWFibGUiOiAiIgogICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAidHlwZSI6ICJFZGl0VGV4dFRleHQiLAogICAgICAgICAgICAgICAgICAgICJoZWlnaHQiOiAid3JhcF9jb250ZW50IiwKICAgICAgICAgICAgICAgICAgICAid2lkdGgiOiAibWF0Y2hfcGFyZW50IiwKICAgICAgICAgICAgICAgICAgICAid2VpZ2h0IjogIjAiLAogICAgICAgICAgICAgICAgICAgICJWYWx1ZSI6ICIiLAogICAgICAgICAgICAgICAgICAgICJWYXJpYWJsZSI6ICJwb3NpdGlvbiIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgXSwKICAgICAgICAgICAgIkJhY2tncm91bmRDb2xvciI6ICIiLAogICAgICAgICAgICAiU3Ryb2tlV2lkdGgiOiAiIiwKICAgICAgICAgICAgIlBhZGRpbmciOiAiIgogICAgICAgIH0KICAgIAoKICAgIGhhc2hNYXAucHV0KCJTaG93RGlhbG9nTGF5b3V0Iixqc29uLmR1bXBzKGxheW91dCxlbnN1cmVfYXNjaWk9RmFsc2UpKQogICAgaGFzaE1hcC5wdXQoIlNob3dEaWFsb2ciLCIiKQoKICAgIHJldHVybiBoYXNoTWFwCgpkZWYgbG9uZ19oYW5kbGVyKGhhc2hNYXAsX2ZpbGVzPU5vbmUsX2RhdGE9Tm9uZSk6CiAgICAKICAgIGltcG9ydCB0aW1lCiAgICB0aW1lLnNsZWVwKDUpCgogICAgaGFzaE1hcC5wdXQoInNwZWFrIiwi0JfQsNC60L7QvdGH0LjQu9GB0Y8g0L7QsdGA0LDQsdC+0YLRh9C40LoiKQogICAgaGFzaE1hcC5wdXQoInRvYXN0Iiwi0JfQsNC60L7QvdGH0LjQu9GB0Y8g0L7QsdGA0LDQsdC+0YLRh9C40LoiKQogICAgaGFzaE1hcC5wdXQoImIiLCIxMDAiKQogICAgaGFzaE1hcC5wdXQoIlJlZnJlc2hTY3JlZW4iLCIiKQogICAgCgogICAgcmV0dXJuIGhhc2hNYXAKCgpkZWYgcnVuX3RpbWVyKGhhc2hNYXAsX2ZpbGVzPU5vbmUsX2RhdGE9Tm9uZSk6CiAgICAKICAgIHRpbWVyX2hhbmRsZXJzID0gW3siYWN0aW9uIjogInJ1biIsInR5cGUiOiAicHl0aG9uIiwibWV0aG9kIjogImxvbmdfaGFuZGxlciIsICJwb3N0RXhlY3V0ZSI6ICIifV0KCiAgICBoYXNoTWFwLnB1dCgiU3RhcnRUaW1lciIsanNvbi5kdW1wcyh7ImhhbmRsZXIiOnRpbWVyX2hhbmRsZXJzLCJwZXJpb2QiOjUwMDB9KSkKICAgIAoKICAgIHJldHVybiBoYXNoTWFwCgpkZWYgdnNfaW5pdChoYXNoTWFwLF9maWxlcz1Ob25lLF9kYXRhPU5vbmUpOgogICAgCiAgICAKCiAgICBoYXNoTWFwLnB1dCgiU2V0VmlzaW9uU2V0dGluZ3MiLGpzb24uZHVtcHMoeyJtaW5fbGVuZ3RoIjozLCJtYXhfbGVuZ3RoIjo1LCJSZXBsYWNlTyI6VHJ1ZSwiVG9VcGNhc2UiOlRydWUsIk9ubHlOdW1iZXJzIjpUcnVlfSkpCiAgICBoYXNoTWFwLnB1dCgiVXNlVmlzaW9uU2V0dGluZ3MiLCIiKQoKICAgIGhhc2hNYXAucHV0KCJvYmplY3RfZGV0ZWN0b3JfbW9kZSIsanNvbi5kdW1wcyhbXSkpCiAgICBoYXNoTWFwLnB1dCgiQ1ZEZXRlY3RvcnMiLCJvY3IiKQogICAgCgogICAgcmV0dXJuIGhhc2hNYXAgCgpkZWYgbXVsdGlzY2FubmVyX29iamVjdChoYXNoTWFwLF9maWxlcz1Ob25lLF9kYXRhPU5vbmUpOgoKICAgIGlmIGhhc2hNYXAuY29udGFpbnNLZXkoIm9iamVjdF9jYXB0aW9uX2xpc3QiKToKICAgICAgICBqb2JqZWN0X2NhcHRpb25fbGlzdCA9IGpzb24ubG9hZHMoaGFzaE1hcC5nZXQoIm9iamVjdF9jYXB0aW9uX2xpc3QiKSkKICAgIGVsc2U6CiAgICAgICAgam9iamVjdF9jYXB0aW9uX2xpc3QgPSBbXSAgCgoKICAgIHJlc3VsdCA9IGpzb24ubG9hZHMoaGFzaE1hcC5nZXQoImN1cnJlbnRfb2JqZWN0IikpCiAgICAKICAgIGlmIGhhc2hNYXAuY29udGFpbnNLZXkoIm9iamVjdF9kZXRlY3Rvcl9tb2RlIik6CiAgICAgZGV0ZWN0b3JzX21vZGU9anNvbi5sb2FkcyhoYXNoTWFwLmdldCgib2JqZWN0X2RldGVjdG9yX21vZGUiKSkKICAgIGVsc2U6ICAgCiAgICAgZGV0ZWN0b3JzX21vZGU9W10KCiAgICBpZiBoYXNoTWFwLmNvbnRhaW5zS2V5KCJncmVlbl9saXN0Iik6CiAgICAgICAgZ3JlZW5fbGlzdCA9IHN0cihoYXNoTWFwLmdldCgiZ3JlZW5fbGlzdCIpKS5zcGxpdCgiOyIpCiAgICBlbHNlOgogICAgICAgIGdyZWVuX2xpc3QgPSBbXSAgIAoKICAgIAoKICAgIG1vZGVpdGVtID0gbmV4dCgoaXRlbSBmb3IgaXRlbSBpbiBkZXRlY3RvcnNfbW9kZSBpZiBpdGVtWyJvYmplY3RfaWQiXSA9PSByZXN1bHRbJ29iamVjdF9pZCddKSwgTm9uZSkKCiAgICBpZiBtb2RlaXRlbSE9Tm9uZToKICAgICBpZiBtb2RlaXRlbVsnbW9kZSddPT0nc3RvcCc6ICAgCiAgICAgIHJldHVybiBoYXNoTWFwCiAgICAgICAgCiAgICBkZXRlY3RvcnNfbW9kZS5hcHBlbmQoeyJvYmplY3RfaWQiOnJlc3VsdFsnb2JqZWN0X2lkJ10sIm1vZGUiOiJzdG9wIn0pCiAgICAKCiAgICBncmVlbl9saXN0LmFwcGVuZChzdHIocmVzdWx0WydvYmplY3RfaWQnXSkpICAgIAoKICAgIGhhc2hNYXAucHV0KCJncmVlbl9saXN0IiwiOyIuam9pbihncmVlbl9saXN0KSkKCiAgCiAgICBoYXNoTWFwLnB1dCgib2JqZWN0X2RldGVjdG9yX21vZGUiLGpzb24uZHVtcHMoZGV0ZWN0b3JzX21vZGUpKQoKICAgIAogICAgCgogICAgam9iamVjdF9jYXB0aW9uX2xpc3QuYXBwZW5kKHsib2JqZWN0IjpzdHIocmVzdWx0WydvYmplY3RfaWQnXSksImNhcHRpb24iOiIgSUQ9PGI+IitzdHIocmVzdWx0WydvYmplY3RfaWQnXSkrIjwvYj4gLCA8Yj4g0KbQtdC90LA6ICIrc3RyKHJlc3VsdFsidmFsdWUiXSkrIjwvYj4ifSApCiAgICBoYXNoTWFwLnB1dCgib2JqZWN0X2NhcHRpb25fbGlzdCIsanNvbi5kdW1wcyhqb2JqZWN0X2NhcHRpb25fbGlzdCxlbnN1cmVfYXNjaWk9RmFsc2UpKQoKICAgIGhhc2hNYXAucHV0KCJiZWVwIiwiMTAiKQogICAgCgogICAgcmV0dXJuIGhhc2hNYXAgCgpkZWYgYmVmb3JlX2h0bWwoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICAgIAogICAgaHRtbCA9ICIiIgo8IURPQ1RZUEUgaHRtbD4KPGh0bWw+CiA8aGVhZD4KICA8dGl0bGU+0JLRgdC1INC30LDQs9C+0LvQvtCy0LrQuCDigJQgc2Nob29sc3czLmNvbTwvdGl0bGU+CiAgPG1ldGEgY2hhcnNldD0idXRmLTgiPgogIDxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MSI+CiA8L2hlYWQ+CiA8Ym9keT4KIAogIDxoMT5IVE1MNSDQktGB0LUg0LfQsNCz0L7Qu9C+0LLQutC4PC9oMT4KICAKICA8aDE+0JfQsNCz0L7Qu9C+0LLQvtC6IDE8L2gxPgogIDxoMj7Ql9Cw0LPQvtC70L7QstC+0LogMjwvaDI+CiAgPGgzPtCX0LDQs9C+0LvQvtCy0L7QuiAzPC9oMz4KICA8aDQ+0JfQsNCz0L7Qu9C+0LLQvtC6IDQ8L2g0PgogIDxoNT7Ql9Cw0LPQvtC70L7QstC+0LogNTwvaDU+CiAgPGg2PtCX0LDQs9C+0LvQvtCy0L7QuiA2PC9oNj4KCiA8L2JvZHk+CjwvaHRtbD4KIiIiCiAgICAKCiAgICAjaGFzaE1hcC5wdXQoIlJ1bkV2ZW50Iixqc29uLmR1bXBzKFt7ImFjdGlvbiI6ICJydW5hc3luYyIsInR5cGUiOiAiaHRtbDJpbWFnZSIsIm1ldGhvZCI6IGh0bWwsICJwb3N0RXhlY3V0ZSI6IGpzb24uZHVtcHMoW3siYWN0aW9uIjogInJ1biIsInR5cGUiOiAicHl0aG9uIiwibWV0aG9kIjogImh0bWwyaW1hZ2VfYWZ0ZXIifV0pICB9XSkpCgogICAgaGFzaE1hcC5wdXQoIlJ1bkV2ZW50Iixqc29uLmR1bXBzKFt7ImFjdGlvbiI6ICJydW5wcm9ncmVzcyIsInR5cGUiOiAiaHRtbDJpbWFnZSIsIm1ldGhvZCI6IGh0bWwsICJwb3N0RXhlY3V0ZSI6IGpzb24uZHVtcHMoW3siYWN0aW9uIjogInJ1biIsInR5cGUiOiAicHl0aG9uIiwibWV0aG9kIjogImh0bWwyaW1hZ2VfYWZ0ZXIifV0pICB9XSkpCgogICAgI9Cc0L7QttC90L4g0LLRi9Cy0L7QtNC40YLRjCDQsiDRhNCw0LnQuyBQTkcKICAgICNmaWxlbmFtZSA9IHN1Q2xhc3MuZ2V0X3RlbXBfZmlsZSgicG5nIikKICAgICNoYXNoTWFwLnB1dCgiaHRtbDJpbWFnZV9Ub0ZpbGUiLGZpbGVuYW1lKQogICAgCgogICAgcmV0dXJuIGhhc2hNYXAgCgoKZGVmIGh0bWwyaW1hZ2VfYWZ0ZXIoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICAgIGhhc2hNYXAucHV0KCJwaWN0dXJlIixoYXNoTWFwLmdldCgiaHRtbDJpbWFnZVJlc3VsdCIpKQogICAgaGFzaE1hcC5wdXQoIlJlZnJlc2hTY3JlZW4iLCIiKQogICAgCgogICAgcmV0dXJuIGhhc2hNYXAgCgoKZGVmIHRlc3Rfc3BlYWsoaGFzaE1hcCxfZmlsZXM9Tm9uZSxfZGF0YT1Ob25lKToKICAgIGZyb20gcnUudHJhdmVsZm9vZC5zaW1wbGVfdWkgaW1wb3J0IE1haW5BY3Rpdml0eSBhcyBNYWluQWN0aXZpdHkKICAgIAogICAgTWFpbkFjdGl2aXR5LnR0cy5zcGVhaygi0LDQsdGL0YDQstCw0LvQsyIsIDEsIE5vbmUpCgogICAgcmV0dXJuIGhhc2hNYXAg",
+        "RunPython": true,
+        "arch2": true,
+        "CommonHandlers": [
+            {
+                "event": "onPelicanInitialized",
+                "action": "run",
+                "listener": "",
+                "type": "set",
+                "method": "toast=Все базы подготовлены",
+                "postExecute": "",
+                "alias": ""
+            },
+            {
+                "event": "onPelicanInitAction",
+                "action": "run",
+                "listener": "",
+                "type": "pythonscript",
+                "method": "aW1wb3J0IGFuZHJvaWQKCmFuZHJvaWQudG9hc3QoaGFzaE1hcC5nZXQoIlBlbGljYW5Jbml0RGF0YWJhc2UiKSsiOiIraGFzaE1hcC5nZXQoIlBlbGljYW5Jbml0QWN0aW9uIikp",
+                "postExecute": "",
+                "alias": ""
+            }
+        ],
+        "ForegroundService": false,
+        "PyTimerTask": [],
+        "host_uid": "7ddf76e29d3e43598752fed753297237",
+        "ConfigurationFileName": "pelican.ui",
+        "agent": false,
+        "StopForegroundServiceOnExit": false,
+        "BroadcastIntent": "",
+        "BroadcastVariable": "",
+        "FaceRecognitionURL": "",
+        "OnKeyboardMain": false,
+        "LaunchProcess": "",
+        "LaunchVar": "",
+        "MenuWebTemplate": "",
+        "Launch": "",
+        "HTMLHead": "",
+        "HTMLdocument_ready": "",
+        "PyGeneral": "aW1wb3J0IGFuZHJvaWQKZnJvbSBwZWxpY2FuIGltcG9ydCBwZWxpY2FucwppbXBvcnQganNvbgoKZGIgPSBwZWxpY2Fuc1sidGVzdCJdCmRiWyJvcGVyYXRpb25zIl0ucmVnaXN0ZXJfaGFzaF9pbmRleCgiaGFzaF90eXBlIiwidHlwZSIsIGR5bmFtaWM9RmFsc2UpCmRiWyJvcGVyYXRpb25zIl0ucmVnaXN0ZXJfdGV4dF9pbmRleCgidGV4dF9yZWd1bGFyIiwidHlwZSIsIGR5bmFtaWM9RmFsc2Up",
+        "PelicanInit": "[\n{\n\"database\":\"test\",\n\"RAM\":false,\n\"singleton\":true,\n\"initialize\":true,\n\"reindex_hash\":[{\"operations\":\"hash_type\"}],\n\"reindex_text\":[{\"operations\":\"text_regular\"}]\n}\n]",
+        "uid": "c723395431a24122b48fb94e878362d5"
+    }
+}
