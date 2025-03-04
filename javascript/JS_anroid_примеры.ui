@@ -1,0 +1,515 @@
+{
+    "ClientConfiguration": {
+        "ConfigurationName": "Примеры на JavaScript для Android",
+        "ConfigurationDescription": "Примеры работы с Java-функциями из JS, а также взаимодействия со стеком переменных и прочими функциями SimpleUI",
+        "ConfigurationVersion": "0.0.1",
+        "Processes": [
+            {
+                "ProcessName": "Простейшие примеры",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "type": "Operation",
+                        "Name": "Новый экран",
+                        "Elements": [
+                            {
+                                "type": "LinearLayout",
+                                "orientation": "vertical",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "Elements": [
+                                    {
+                                        "type": "EditTextNumeric",
+                                        "orientation": "vertical",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "Value": "Число a|@a",
+                                        "Variable": "a",
+                                        "type_s": "Поле ввода число",
+                                        "weight": "0"
+                                    },
+                                    {
+                                        "type": "EditTextNumeric",
+                                        "orientation": "vertical",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "Value": "Число b|@b",
+                                        "Variable": "b",
+                                        "type_s": "Поле ввода число",
+                                        "weight": "0"
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "orientation": "vertical",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "Value": "a+b",
+                                        "Variable": "btn_plus",
+                                        "type_s": "Кнопка",
+                                        "weight": "0"
+                                    }
+                                ],
+                                "type_s": "Контейнер",
+                                "weight": "0"
+                            }
+                        ],
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_plus",
+                                "type": "js",
+                                "method": "dmFyIHJlcz1OdW1iZXIoX2RhdGEuYSkrTnVtYmVyKF9kYXRhLmIpCl9kYXRhWyJ0b2FzdCJdPVN0cmluZyhyZXMpCmFuZHJvaWQuc3BlYWsoU3RyaW5nKHJlcykp",
+                                "postExecute": "",
+                                "alias": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "Process",
+                "ProcessName": "Интерфейсные функции android.*",
+                "PlanFactHeader": "План-факт",
+                "Operations": [
+                    {
+                        "type": "Operation",
+                        "Name": "Новый экран",
+                        "Elements": [
+                            {
+                                "type": "LinearLayout",
+                                "orientation": "vertical",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "Elements": [
+                                    {
+                                        "type": "Button",
+                                        "orientation": "vertical",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "Value": "toast",
+                                        "Variable": "btn_toast",
+                                        "type_s": "Кнопка",
+                                        "weight": "0"
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "orientation": "vertical",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "Value": "Произнести (TTS)",
+                                        "Variable": "btn_speak",
+                                        "type_s": "Кнопка",
+                                        "weight": "0"
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "orientation": "vertical",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "Value": "Уведомление",
+                                        "Variable": "btn_notify",
+                                        "type_s": "Кнопка",
+                                        "weight": "0"
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "orientation": "vertical",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "Value": "Уведомление с прогрессбаром",
+                                        "Variable": "btn_notify_progress",
+                                        "type_s": "Кнопка",
+                                        "weight": "0"
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "orientation": "vertical",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "Value": "Вибрация",
+                                        "Variable": "btn_vibrate",
+                                        "type_s": "Кнопка",
+                                        "weight": "0"
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "orientation": "vertical",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "Value": "beep, beep с параметрами",
+                                        "Variable": "btn_beep",
+                                        "type_s": "Кнопка",
+                                        "weight": "0"
+                                    }
+                                ],
+                                "type_s": "Контейнер",
+                                "weight": "0"
+                            }
+                        ],
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_toast",
+                                "type": "js",
+                                "method": "YW5kcm9pZC50b2FzdCgn0J/RgNC40LLQtdGCINC80LjRgCcp",
+                                "postExecute": "",
+                                "alias": ""
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_speak",
+                                "type": "js",
+                                "method": "YW5kcm9pZC5zcGVhaygi0J/RgNC40LLQtdGCINC80LjRgCIp",
+                                "postExecute": "",
+                                "alias": ""
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_notify",
+                                "type": "js",
+                                "method": "YW5kcm9pZC5ub3RpZmljYXRpb24oItCf0YDQuNCy0LXRgiDQvNC40YAiLCLQo9Cy0LXQtNC+0LzQu9C10L3QuNGPINC40LcgSlMiKQ==",
+                                "postExecute": "",
+                                "alias": ""
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_vibrate",
+                                "type": "js",
+                                "method": "YW5kcm9pZC52aWJyYXRlKCk=",
+                                "postExecute": "",
+                                "alias": ""
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_beep",
+                                "type": "js",
+                                "method": "YW5kcm9pZC5iZWVwKCkKYW5kcm9pZC5iZWVwKDU1LDUwMCw3MCk=",
+                                "postExecute": "",
+                                "alias": ""
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_notify_progress",
+                                "type": "js",
+                                "method": "ZnVuY3Rpb24gc2xlZXAoZGVsYXkpIHsKICAgIHZhciBzdGFydCA9IG5ldyBEYXRlKCkuZ2V0VGltZSgpOwogICAgd2hpbGUgKG5ldyBEYXRlKCkuZ2V0VGltZSgpIDwgc3RhcnQgKyBkZWxheSk7Cn0KCmxldCB0aXRsZSA9ICLQn9GA0L7QstC10YDQutCwINGD0LLQtdC00L7QvNC70LXQvdC40LkiOwpsZXQgbWVzc2FnZSA9ICLQotC10LvQviDRg9Cy0LXQtNC+0LzQu9C10L3QuNGPIjsKYW5kcm9pZC5ub3RpZmljYXRpb25fcHJvZ3Jlc3MobWVzc2FnZSwgdGl0bGUsIDEsIDApOwoKZm9yKGxldCBpPTE7aTwxMTtpKyspewoJc2xlZXAoMTAwMCk7CglhbmRyb2lkLm5vdGlmaWNhdGlvbl9wcm9ncmVzcyhtZXNzYWdlLCB0aXRsZSwgMSwgaSoxMCk7Cn0=",
+                                "postExecute": "",
+                                "alias": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ProcessName": "Работа с key-value NoSQL",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "type": "Operation",
+                        "Name": "Новый экран",
+                        "Elements": [
+                            {
+                                "type": "LinearLayout",
+                                "orientation": "vertical",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "Elements": [
+                                    {
+                                        "type": "EditTextText",
+                                        "orientation": "vertical",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "Value": "Значение 1|@val1",
+                                        "Variable": "val1",
+                                        "type_s": "Поле ввода строка",
+                                        "weight": "0"
+                                    },
+                                    {
+                                        "type": "EditTextNumeric",
+                                        "orientation": "vertical",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "Value": "Значение 2|@val2",
+                                        "Variable": "val2",
+                                        "type_s": "Поле ввода число",
+                                        "weight": "0"
+                                    },
+                                    {
+                                        "type": "Button",
+                                        "orientation": "vertical",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "Value": "#f0c7",
+                                        "Variable": "btn_save",
+                                        "type_s": "Кнопка",
+                                        "weight": "0"
+                                    }
+                                ],
+                                "type_s": "Контейнер",
+                                "weight": "0"
+                            }
+                        ],
+                        "Handlers": [
+                            {
+                                "event": "onStart",
+                                "action": "run",
+                                "listener": "",
+                                "type": "js",
+                                "method": "dmFyIHZhbDE9YW5kcm9pZC5Ob1NRTEdldCgibXlfYm9vayIsInZhbDEiKTsKaWYodmFsMT09bnVsbCl7CnZhbDE9IiI7Cn07Cmhhc2hNYXBbInZhbDEiXT1TdHJpbmcodmFsMSk7Cgp2YXIgdmFsMj1hbmRyb2lkLk5vU1FMR2V0KCJteV9ib29rIiwidmFsMiIpOwppZih2YWwyPT1udWxsKXsKdmFsMj0iIjsKfTsKaGFzaE1hcFsidmFsMiJdPVN0cmluZyh2YWwyKQphbmRyb2lkLnNwZWFrKCLQv9GA0Lgg0YHRgtCw0YDRgtC1Iik7",
+                                "postExecute": "[{\"action\": \"run\", \"type\": \"set\", \"method\": \"RefreshScreen\"}]",
+                                "alias": ""
+                            },
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_save",
+                                "type": "js",
+                                "method": "YW5kcm9pZC5Ob1NRTFB1dCgibXlfYm9vayIsInZhbDEiLGhhc2hNYXAudmFsMSk7CmFuZHJvaWQuTm9TUUxQdXQoIm15X2Jvb2siLCJ2YWwyIixTdHJpbmcoaGFzaE1hcC52YWwyKSk7CmFuZHJvaWQudG9hc3QoItCh0L7RhdGA0LDQvdC40LvQuCIpOw==",
+                                "postExecute": "",
+                                "alias": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ProcessName": "Работа с NoSQL SimpleBase",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "type": "Operation",
+                        "Name": "Новый экран",
+                        "Elements": [
+                            {
+                                "type": "LinearLayout",
+                                "orientation": "vertical",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "Elements": [
+                                    {
+                                        "type": "EditTextText",
+                                        "orientation": "vertical",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "Value": "Имя|@name",
+                                        "Variable": "name",
+                                        "type_s": "Поле ввода строка",
+                                        "weight": "0"
+                                    },
+                                    {
+                                        "type": "EditTextText",
+                                        "orientation": "vertical",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "Value": "Возраст|@age",
+                                        "Variable": "age",
+                                        "type_s": "Поле ввода строка",
+                                        "weight": "0"
+                                    },
+                                    {
+                                        "type": "LinearLayout",
+                                        "orientation": "horizontal",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "Elements": [
+                                            {
+                                                "type": "Button",
+                                                "orientation": "vertical",
+                                                "height": "match_parent",
+                                                "width": "match_parent",
+                                                "Value": "Сохранить",
+                                                "Variable": "btn_add",
+                                                "type_s": "Кнопка",
+                                                "weight": "0"
+                                            }
+                                        ],
+                                        "type_s": "Контейнер",
+                                        "weight": "0"
+                                    },
+                                    {
+                                        "type": "CardsLayout",
+                                        "orientation": "vertical",
+                                        "height": "match_parent",
+                                        "width": "match_parent",
+                                        "Value": "@cards",
+                                        "Variable": "cards",
+                                        "type_s": "Список карточек",
+                                        "weight": "0"
+                                    }
+                                ],
+                                "type_s": "Контейнер",
+                                "weight": "0"
+                            }
+                        ],
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_add",
+                                "type": "js",
+                                "method": "bGV0IG5ld19yZWNvcmQ9eyJuYW1lIjpoYXNoTWFwLm5hbWUsImFnZSI6TnVtYmVyKGhhc2hNYXAuYWdlKX0KdmFyIGlkID0gYW5kcm9pZC5TaW1wbGVCYXNlSW5zZXJ0KCJteV9kYiIsInN0dWRlbnRzIixKU09OLnN0cmluZ2lmeShuZXdfcmVjb3JkKSk7CmFuZHJvaWQudG9hc3QoIklEINC30LDQv9C40YHQuCA9ICIrU3RyaW5nKGlkKSkK",
+                                "postExecute": "[{\"action\": \"run\", \"type\": \"set\", \"method\": \"RefreshScreen\"}]",
+                                "alias": ""
+                            },
+                            {
+                                "event": "onStart",
+                                "action": "run",
+                                "listener": "",
+                                "type": "js",
+                                "method": "bGV0IHJlcyA9IGFuZHJvaWQuU2ltcGxlQmFzZUFsbCgibXlfZGIiLCJzdHVkZW50cyIpOwpsZXQganJlcyA9IEpTT04ucGFyc2UocmVzKQpsZXQgaiA9IHsgImN1c3RvbWNhcmRzIjogICAgICAgICB7CiAgICAgICAgIm9wdGlvbnMiOnsKICAgICAgICAgICJzZWFyY2hfZW5hYmxlZCI6dHJ1ZSwKICAgICAgICAgICJzYXZlX3Bvc2l0aW9uIjp0cnVlCiAgICAgICAgfSwKCiAgICAgICAgImxheW91dCI6IHsKICAgICAgICAidHlwZSI6ICJMaW5lYXJMYXlvdXQiLAogICAgICAgICJvcmllbnRhdGlvbiI6ICJ2ZXJ0aWNhbCIsCiAgICAgICAgImhlaWdodCI6ICJtYXRjaF9wYXJlbnQiLAogICAgICAgICJ3aWR0aCI6ICJtYXRjaF9wYXJlbnQiLAogICAgICAgICJ3ZWlnaHQiOiAiMCIsCiAgICAgICAgIkVsZW1lbnRzIjogWwogICAgIHsKICAgICAgICAgICAgICAgICJ0eXBlIjogIlRleHRWaWV3IiwKICAgICAgICAgICAgICAgICJWYWx1ZSI6ICJAc3RyaW5nMSIsCiAgICAgICAgICAgICAgICAiVmFyaWFibGUiOiAiIgogICAgICAgICAgICB9LAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAidHlwZSI6ICJUZXh0VmlldyIsCiAgICAgICAgICAgICAgICAiVmFsdWUiOiAiQHN0cmluZzIiLAogICAgICAgICAgICAgICAgIlZhcmlhYmxlIjogIiIKICAgICAgICAgICAgfQogICAgICAgICAgCiAgICAgICAgXQogICAgfQoKfQp9OwoKalsiY3VzdG9tY2FyZHMiXVsiY2FyZHNkYXRhIl09W107CgpqcmVzIC5mb3JFYWNoKChpdGVtKSA9PiB7CglqWyJjdXN0b21jYXJkcyJdWyJjYXJkc2RhdGEiXS5wdXNoKHsic3RyaW5nMSI6aXRlbS5uYW1lLCJzdHJpbmcyIjppdGVtLmFnZX0pCn0pOwoKaGFzaE1hcC5jYXJkcyA9IEpTT04uc3RyaW5naWZ5KGopOw==",
+                                "postExecute": "[{\"action\": \"run\", \"type\": \"set\", \"method\": \"RefreshScreen\"}]",
+                                "alias": ""
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "ProcessName": "Работа с SQL",
+                "type": "Process",
+                "Operations": [
+                    {
+                        "type": "Operation",
+                        "Name": "Новый экран",
+                        "Elements": [
+                            {
+                                "type": "LinearLayout",
+                                "orientation": "vertical",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "Elements": [
+                                    {
+                                        "type": "EditTextText",
+                                        "orientation": "vertical",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "Value": "Имя|@name",
+                                        "Variable": "name",
+                                        "type_s": "Поле ввода строка",
+                                        "weight": "0"
+                                    },
+                                    {
+                                        "type": "EditTextText",
+                                        "orientation": "vertical",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "Value": "Возраст|@age",
+                                        "Variable": "age",
+                                        "type_s": "Поле ввода строка",
+                                        "weight": "0"
+                                    },
+                                    {
+                                        "type": "LinearLayout",
+                                        "orientation": "horizontal",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "Elements": [
+                                            {
+                                                "type": "Button",
+                                                "orientation": "vertical",
+                                                "height": "match_parent",
+                                                "width": "match_parent",
+                                                "Value": "Сохранить",
+                                                "Variable": "btn_add",
+                                                "type_s": "Кнопка",
+                                                "weight": "0"
+                                            }
+                                        ],
+                                        "type_s": "Контейнер",
+                                        "weight": "0"
+                                    },
+                                    {
+                                        "type": "CardsLayout",
+                                        "orientation": "vertical",
+                                        "height": "match_parent",
+                                        "width": "match_parent",
+                                        "Value": "@cards",
+                                        "Variable": "cards",
+                                        "type_s": "Список карточек",
+                                        "weight": "0"
+                                    }
+                                ],
+                                "type_s": "Контейнер",
+                                "weight": "0"
+                            }
+                        ],
+                        "Handlers": [
+                            {
+                                "event": "onInput",
+                                "action": "run",
+                                "listener": "btn_add",
+                                "type": "js",
+                                "method": "YW5kcm9pZC5TUUxFeGVjKCJDUkVBVEUgVEFCTEUgSUYgTk9UIEVYSVNUUyBzdHVkZW50cyhuYW1lIFRFWFQsIGFnZSBJTlRFR0VSKSIsIiIpOwpsZXQgbmV3X3JlY29yZD1baGFzaE1hcC5uYW1lLE51bWJlcihoYXNoTWFwLmFnZSldOwpsZXQgcmVzID0gYW5kcm9pZC5TUUxFeGVjKCJpbnNlcnQgaW50byBzdHVkZW50cyhuYW1lLCBhZ2UpIHZhbHVlcyAoPyw/KSIsSlNPTi5zdHJpbmdpZnkobmV3X3JlY29yZCkpOwoKaWYocmVzKSB7CmFuZHJvaWQudG9hc3QoItCX0LDQv9C40YHQsNC70LgiKTsKfQplbHNlIHsKYW5kcm9pZC50b2FzdCgi0J7RiNC40LHQutCwIFNRTCIpOwp9Cg==",
+                                "postExecute": "[{\"action\": \"run\", \"type\": \"set\", \"method\": \"RefreshScreen\"}]",
+                                "alias": ""
+                            },
+                            {
+                                "event": "onStart",
+                                "action": "run",
+                                "listener": "",
+                                "type": "js",
+                                "method": "bGV0IHJlcyA9IGFuZHJvaWQuU1FMUXVlcnkoIlNFTEVDVCAqIGZyb20gc3R1ZGVudHMiLCIiKTsKYW5kcm9pZC50b2FzdChyZXMpOwoKbGV0IGpyZXMgPSBKU09OLnBhcnNlKHJlcykKbGV0IGogPSB7ICJjdXN0b21jYXJkcyI6ICAgICAgICAgewogICAgICAgICJvcHRpb25zIjp7CiAgICAgICAgICAic2VhcmNoX2VuYWJsZWQiOnRydWUsCiAgICAgICAgICAic2F2ZV9wb3NpdGlvbiI6dHJ1ZQogICAgICAgIH0sCgogICAgICAgICJsYXlvdXQiOiB7CiAgICAgICAgInR5cGUiOiAiTGluZWFyTGF5b3V0IiwKICAgICAgICAib3JpZW50YXRpb24iOiAidmVydGljYWwiLAogICAgICAgICJoZWlnaHQiOiAibWF0Y2hfcGFyZW50IiwKICAgICAgICAid2lkdGgiOiAibWF0Y2hfcGFyZW50IiwKICAgICAgICAid2VpZ2h0IjogIjAiLAogICAgICAgICJFbGVtZW50cyI6IFsKICAgICB7CiAgICAgICAgICAgICAgICAidHlwZSI6ICJUZXh0VmlldyIsCiAgICAgICAgICAgICAgICAiVmFsdWUiOiAiQHN0cmluZzEiLAogICAgICAgICAgICAgICAgIlZhcmlhYmxlIjogIiIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgInR5cGUiOiAiVGV4dFZpZXciLAogICAgICAgICAgICAgICAgIlZhbHVlIjogIkBzdHJpbmcyIiwKICAgICAgICAgICAgICAgICJWYXJpYWJsZSI6ICIiCiAgICAgICAgICAgIH0KICAgICAgICAgIAogICAgICAgIF0KICAgIH0KCn0KfTsKCmpbImN1c3RvbWNhcmRzIl1bImNhcmRzZGF0YSJdPVtdOwoKanJlcyAuZm9yRWFjaCgoaXRlbSkgPT4gewoJalsiY3VzdG9tY2FyZHMiXVsiY2FyZHNkYXRhIl0ucHVzaCh7InN0cmluZzEiOml0ZW0ubmFtZSwic3RyaW5nMiI6U3RyaW5nKGl0ZW0uYWdlKX0pCn0pOwoKaGFzaE1hcC5jYXJkcyA9IEpTT04uc3RyaW5naWZ5KGopOwo=",
+                                "postExecute": "[{\"action\": \"run\", \"type\": \"set\", \"method\": \"RefreshScreen\"}]",
+                                "alias": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "ConfigurationSettings": {
+            "uid": "b8ddf44418d546788bf8c92d043493b7",
+            "dictionaries": "",
+            "vendor": "",
+            "vendor_url": "",
+            "vendor_password": "",
+            "handler_split_mode": false,
+            "handler_url": "",
+            "handler_password": ""
+        },
+        "ConfigurationTags": "",
+        "arch2": true,
+        "CommonHandlers": [
+            {
+                "event": "onLaunch",
+                "action": "run",
+                "listener": "",
+                "type": "set",
+                "method": "SQLConnectDatabase=test_js",
+                "postExecute": "",
+                "alias": ""
+            },
+            {
+                "event": "onLaunch",
+                "action": "run",
+                "listener": "",
+                "type": "js",
+                "method": "aGFzaE1hcC50b2FzdD0i0KLQsNCx0LvQuNGG0Ysg0LfQsNC00LDQvdGLIjsKYW5kcm9pZC5iZWVwKCk7CmFuZHJvaWQuU1FMRXhlYygiQ1JFQVRFIFRBQkxFIElGIE5PVCBFWElTVFMgc3R1ZGVudHMobmFtZSBURVhULCBhZ2UgSU5URUdFUikiLCIiKTs=",
+                "postExecute": "",
+                "alias": ""
+            }
+        ],
+        "host_uid": "b35c0f4fba9145d48d6388e693dda081",
+        "ConfigurationFileName": "JS_anroid.ui",
+        "agent": false,
+        "ForegroundService": false,
+        "StopForegroundServiceOnExit": false,
+        "BroadcastIntent": "",
+        "BroadcastVariable": "",
+        "FaceRecognitionURL": "",
+        "OnKeyboardMain": false,
+        "LaunchProcess": "",
+        "LaunchVar": "",
+        "MenuWebTemplate": "",
+        "Launch": "",
+        "HTMLHead": "",
+        "uid": "a38f909bd7354fd5b87765c7631ef7eb",
+        "HTMLdocument_ready": ""
+    }
+}
